@@ -1,269 +1,268 @@
-     1|<!DOCTYPE html>
-     2|<html lang="en">
-     3|<head>
-     4|    <meta charset="UTF-8">
-     5|    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|    <title>NeedsOfMoms — Your Pregnancy Companion</title>
-     7|    <meta name="description" content="Free pregnancy tools, baby name ideas, week-by-week guides, and expert advice for expecting mothers. Everything you need for your pregnancy journey.">
-     8|    <meta name="keywords" content="pregnancy, due date calculator, baby names, ovulation calculator, week by week pregnancy, expecting mom">
-     9|    <meta property="og:title" content="NeedsOfMoms — Your Pregnancy Companion">
-    10|    <meta property="og:description" content="Free pregnancy tools, baby names, and week-by-week guides for expecting mothers.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeedsOfMoms — Your Pregnancy Companion</title>
+    <meta name="description" content="Free pregnancy tools, baby name ideas, week-by-week guides, and expert advice for expecting mothers. Everything you need for your pregnancy journey.">
+    <meta name="keywords" content="pregnancy, due date calculator, baby names, ovulation calculator, week by week pregnancy, expecting mom">
+    <meta property="og:title" content="NeedsOfMoms — Your Pregnancy Companion">
+    <meta property="og:description" content="Free pregnancy tools, baby names, and week-by-week guides for expecting mothers.">
     <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
-    11|    <meta property="og:type" content="website">
-    12|    <meta property="og:url" content="https://needsofmoms.com/">
-    13|    <meta name="twitter:card" content="summary_large_image">
-    14|    <link rel="canonical" href="https://needsofmoms.com/">
-    15|    <link rel="stylesheet" href="/css/style.css">
-    16|    <script type="application/ld+json">
-    17|    {
-    18|        "@context": "https://schema.org",
-    19|        "@type": "WebSite",
-    20|        "name": "NeedsOfMoms",
-    21|        "url": "https://needsofmoms.com",
-    22|        "description": "Free pregnancy tools and resources for expecting mothers.",
-    23|        "potentialAction": {
-    24|            "@type": "SearchAction",
-    25|            "target": "https://needsofmoms.com/baby-names?q={search_term_string}",
-    26|            "query-input": "required name=search_term_string"
-    27|        }
-    28|    }
-    29|    </script>
-    30|</head>
-    31|<body>
-    32|    <!-- Navigation -->
-    33|    <nav class="nav" id="navbar">
-    34|        <div class="nav-container">
-    35|            <a href="/" class="nav-logo">
-    36|                <span class="logo-icon">🌸</span>
-    37|                <span>NeedsOfMoms</span>
-    38|            </a>
-    39|            <ul class="nav-links">
-    40|                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
-    41|                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
-    42|                <li><a href="/baby-names">👶 Baby Names</a></li>
-    43|                <li><a href="/week-by-week">📋 Week by Week</a></li>
-    44|                <li><a href="/about">About</a></li>
-    45|            </ul>
-    46|            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
-    47|        </div>
-    48|    </nav>
-    49|
-    50|    <!-- Mobile Menu -->
-    51|    <div class="mobile-menu" id="mobileMenu">
-    52|        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
-    53|        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
-    54|        <a href="/baby-names">👶 Baby Names</a>
-    55|        <a href="/week-by-week">📋 Week by Week</a>
-    56|        <a href="/about">About</a>
-    57|        <a href="/contact">Contact</a>
-    58|    </div>
-    59|
-    60|    <!-- Hero Section -->
-    61|    <section class="hero">
-    62|        <div class="container">
-    63|            <div class="hero-content">
-    64|                <div class="hero-text">
-    65|                    <div class="hero-badge">✨ Your pregnancy journey starts here</div>
-    66|                    <h1>Everything You Need for Your Pregnancy Journey</h1>
-    67|                    <p class="hero-description">
-    68|                        Free tools, beautiful baby names, week-by-week guides, and expert advice — all designed with love for expecting mothers.
-    69|                    </p>
-    70|                    <div class="hero-cta">
-    71|                        <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg pulse">
-    72|                            📅 Calculate Your Due Date
-    73|                        </a>
-    74|                        <a href="/baby-names" class="btn btn-secondary btn-lg">
-    75|                            👶 Explore Baby Names
-    76|                        </a>
-    77|                    </div>
-    78|                </div>
-    79|                <div class="hero-image">
-    80|                    <img src="/images/hero-mom.png" alt="Beautiful line art illustration of a pregnant mother" width="400" height="500">
-    81|                </div>
-    82|            </div>
-    83|        </div>
-    84|    </section>
-    85|
-    86|    <!-- Tools Section -->
-    87|    <section class="section section-pink">
-    88|        <div class="container">
-    89|            <div class="text-center" style="margin-bottom: var(--space-3xl);">
-    90|                <h2>Free Pregnancy Tools</h2>
-    91|                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Simple, beautiful calculators to help you track every precious moment of your pregnancy.</p>
-    92|            </div>
-    93|            <div class="card-grid">
-    94|                <a href="/tools/due-date-calculator" class="card shine" style="text-decoration:none;">
-    95|                    <div class="card-icon">📅</div>
-    96|                    <div class="card-title">Due Date Calculator</div>
-    97|                    <p class="card-desc">Find out when your little one is expected to arrive based on your last period or conception date.</p>
-    98|                    <span class="card-link">Calculate now →</span>
-    99|                </a>
-   100|                <a href="/tools/ovulation-calculator" class="card shine" style="text-decoration:none;">
-   101|                    <div class="card-icon">🌿</div>
-   102|                    <div class="card-title">Ovulation Calculator</div>
-   103|                    <p class="card-desc">Discover your most fertile days and maximize your chances of conceiving naturally.</p>
-   104|                    <span class="card-link">Find fertile days →</span>
-   105|                </a>
-   106|                <a href="/baby-names" class="card shine" style="text-decoration:none;">
-   107|                    <div class="card-icon">👶</div>
-   108|                    <div class="card-title">Baby Name Explorer</div>
-   109|                    <p class="card-desc">Browse thousands of beautiful baby names by gender, origin, meaning, and popularity.</p>
-   110|                    <span class="card-link">Explore names →</span>
-   111|                </a>
-   112|                <a href="/baby-name-generator" class="card shine" style="text-decoration:none;">
-   113|                    <div class="card-icon">✨</div>
-   114|                    <div class="card-title">Baby Name Generator</div>
-   115|                    <p class="card-desc">Get personalized baby name suggestions based on your preferences and style.</p>
-   116|                    <span class="card-link">Generate names →</span>
-   117|                </a>
-   118|            </div>
-   119|        </div>
-   120|    </section>
-   121|
-   122|    <!-- Week by Week Section -->
-   123|    <section class="section section-white">
-   124|        <div class="container">
-   125|            <div class="text-center" style="margin-bottom: var(--space-3xl);">
-   126|                <h2>Your Week-by-Week Guide</h2>
-   127|                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Track your baby's development from a tiny poppy seed to a full-grown baby. 🌱</p>
-   128|            </div>
-   129|            <div class="card-grid">
-   130|                <a href="/trimester/first-trimester" class="trimester-card">
-   131|                    <div class="card-icon">🌱</div>
-   132|                    <div class="card-title">First Trimester</div>
-   133|                    <p class="card-desc">Weeks 1–12: The beginning of everything. From tiny cells to a recognizable baby shape.</p>
-   134|                    <span class="card-link">Explore weeks 1–12 →</span>
-   135|                </a>
-   136|                <a href="/trimester/second-trimester" class="trimester-card">
-   137|                    <div class="card-icon">🌿</div>
-   138|                    <div class="card-title">Second Trimester</div>
-   139|                    <p class="card-desc">Weeks 13–26: The "golden period" — feel your baby's first kicks and watch them grow.</p>
-   140|                    <span class="card-link">Explore weeks 13–26 →</span>
-   141|                </a>
-   142|                <a href="/trimester/third-trimester" class="trimester-card">
-   143|                    <div class="card-icon">🌸</div>
-   144|                    <div class="card-title">Third Trimester</div>
-   145|                    <p class="card-desc">Weeks 27–40: The home stretch! Your baby is preparing for the big day.</p>
-   146|                    <span class="card-link">Explore weeks 27–40 →</span>
-   147|                </a>
-   148|            </div>
-   149|            <div class="text-center" style="margin-top: var(--space-2xl);">
-   150|                <a href="/week-by-week" class="btn btn-secondary">📋 View All 40 Weeks</a>
-   151|            </div>
-   152|        </div>
-   153|    </section>
-   154|
-   155|    <!-- Resources Section -->
-   156|    <section class="section section-cream">
-   157|        <div class="container">
-   158|            <div class="text-center" style="margin-bottom: var(--space-3xl);">
-   159|                <h2>Helpful Resources</h2>
-   160|                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Expert guides and advice to support you through every stage of motherhood.</p>
-   161|            </div>
-   162|            <div class="feature-grid">
-   163|                <a href="/pregnancy-symptoms" class="card" style="text-decoration:none;">
-   164|                    <div class="feature-icon">🤰</div>
-   165|                    <div class="feature-title">Pregnancy Symptoms</div>
-   166|                    <p class="feature-desc">Know what to expect each trimester and when to call your doctor.</p>
-   167|                </a>
-   168|                <a href="/what-to-expect" class="card" style="text-decoration:none;">
-   169|                    <div class="feature-icon">📋</div>
-   170|                    <div class="feature-title">What to Expect</div>
-   171|                    <p class="feature-desc">Your complete guide to appointments, tests, and preparations.</p>
-   172|                </a>
-   173|                <a href="/baby-shower-ideas" class="card" style="text-decoration:none;">
-   174|                    <div class="feature-icon">🎉</div>
-   175|                    <div class="feature-title">Baby Shower Ideas</div>
-   176|                    <p class="feature-desc">Creative themes, games, and planning tips for the perfect celebration.</p>
-   177|                </a>
-   178|                <a href="/breastfeeding-guide" class="card" style="text-decoration:none;">
-   179|                    <div class="feature-icon">🤱</div>
-   180|                    <div class="feature-title">Breastfeeding Guide</div>
-   181|                    <p class="feature-desc">Tips, positions, and support for your breastfeeding journey.</p>
-   182|                </a>
-   183|                <a href="/postpartum" class="card" style="text-decoration:none;">
-   184|                    <div class="feature-icon">💪</div>
-   185|                    <div class="feature-title">Postpartum Care</div>
-   186|                    <p class="feature-desc">Recovery tips, mental health support, and self-care for new moms.</p>
-   187|                </a>
-   188|                <a href="/baby-milestones" class="card" style="text-decoration:none;">
-   189|                    <div class="feature-icon">⭐</div>
-   190|                    <div class="feature-title">Baby Milestones</div>
-   191|                    <p class="feature-desc">Track your baby's first year — smiles, steps, words, and more.</p>
-   192|                </a>
-   193|            </div>
-   194|        </div>
-   195|    </section>
-   196|
-   197|    <!-- CTA Section -->
-   198|    <section class="section" style="background: linear-gradient(135deg, var(--color-lavender-bg) 0%, var(--color-blush-bg) 50%, var(--color-cream-bg) 100%); text-align: center;">
-   199|        <div class="container">
-   200|            <div class="glass-card" style="max-width: 700px; margin: 0 auto;">
-   201|                <div style="font-size: 3rem; margin-bottom: var(--space-lg);">💕</div>
-   202|                <h2 style="margin-bottom: var(--space-md);">Start Your Journey Today</h2>
-   203|                <p style="margin-bottom: var(--space-2xl); color: var(--text-secondary);">
-   204|                    Join thousands of expecting parents who trust NeedsOfMoms for free, beautiful pregnancy tools and guides.
-   205|                </p>
-   206|                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
-   207|                    <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg">📅 Get Started</a>
-   208|                    <a href="/week-by-week" class="btn btn-secondary btn-lg">📋 Week by Week</a>
-   209|                </div>
-   210|            </div>
-   211|        </div>
-   212|    </section>
-   213|
-   214|    <!-- Disclaimer -->
-   215|    <section class="section" style="padding-top:0;">
-   216|        <div class="container">
-   217|            <div class="disclaimer">
-   218|                <strong>⚠️ Medical Disclaimer</strong>
-   219|                NeedsOfMoms provides general pregnancy information for educational purposes only. Our content is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider with any questions about your pregnancy.
-   220|            </div>
-   221|        </div>
-   222|    </section>
-   223|
-   224|    <!-- Footer -->
-   225|    <footer class="footer">
-   226|        <div class="container">
-   227|            <div class="footer-grid">
-   228|                <div class="footer-brand">
-   229|                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
-   230|                        <span class="logo-icon">🌸</span>
-   231|                        <span>NeedsOfMoms</span>
-   232|                    </a>
-   233|                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
-   234|                </div>
-   235|                <div class="footer-column">
-   236|                    <h4>Tools</h4>
-   237|                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
-   238|                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-   239|                    <a href="/baby-names">Baby Names</a>
-   240|                    <a href="/baby-name-generator">Name Generator</a>
-   241|                </div>
-   242|                <div class="footer-column">
-   243|                    <h4>Resources</h4>
-   244|                    <a href="/week-by-week">Week by Week</a>
-   245|                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
-   246|                    <a href="/what-to-expect">What to Expect</a>
-   247|                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
-   248|                </div>
-   249|                <div class="footer-column">
-   250|                    <h4>Company</h4>
-   251|                    <a href="/about">About Us</a>
-   252|                    <a href="/contact">Contact</a>
-   253|                    <a href="/privacy">Privacy Policy</a>
-   254|                    <a href="/terms">Terms of Use</a>
-   255|                    <a href="/disclaimer">Disclaimer</a>
-   256|                </div>
-   257|            </div>
-   258|            <div class="footer-bottom">
-   259|                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
-   260|                <p>Made with 💕 for expecting parents everywhere</p>
-   261|            </div>
-   262|        </div>
-   263|    </footer>
-   264|
-   265|    <script src="/js/app.js"></script>
-   266|</body>
-   267|</html>
-   268|
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://needsofmoms.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://needsofmoms.com/">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "NeedsOfMoms",
+        "url": "https://needsofmoms.com",
+        "description": "Free pregnancy tools and resources for expecting mothers.",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://needsofmoms.com/baby-names?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">🌸</span>
+                <span>NeedsOfMoms</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+                <li><a href="/baby-names">👶 Baby Names</a></li>
+                <li><a href="/week-by-week">📋 Week by Week</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+        <a href="/baby-names">👶 Baby Names</a>
+        <a href="/week-by-week">📋 Week by Week</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">✨ Your pregnancy journey starts here</div>
+                    <h1>Everything You Need for Your Pregnancy Journey</h1>
+                    <p class="hero-description">
+                        Free tools, beautiful baby names, week-by-week guides, and expert advice — all designed with love for expecting mothers.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg pulse">
+                            📅 Calculate Your Due Date
+                        </a>
+                        <a href="/baby-names" class="btn btn-secondary btn-lg">
+                            👶 Explore Baby Names
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/images/hero-mom.png" alt="Beautiful line art illustration of a pregnant mother" width="400" height="500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section section-pink">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-3xl);">
+                <h2>Free Pregnancy Tools</h2>
+                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Simple, beautiful calculators to help you track every precious moment of your pregnancy.</p>
+            </div>
+            <div class="card-grid">
+                <a href="/tools/due-date-calculator" class="card shine" style="text-decoration:none;">
+                    <div class="card-icon">📅</div>
+                    <div class="card-title">Due Date Calculator</div>
+                    <p class="card-desc">Find out when your little one is expected to arrive based on your last period or conception date.</p>
+                    <span class="card-link">Calculate now →</span>
+                </a>
+                <a href="/tools/ovulation-calculator" class="card shine" style="text-decoration:none;">
+                    <div class="card-icon">🌿</div>
+                    <div class="card-title">Ovulation Calculator</div>
+                    <p class="card-desc">Discover your most fertile days and maximize your chances of conceiving naturally.</p>
+                    <span class="card-link">Find fertile days →</span>
+                </a>
+                <a href="/baby-names" class="card shine" style="text-decoration:none;">
+                    <div class="card-icon">👶</div>
+                    <div class="card-title">Baby Name Explorer</div>
+                    <p class="card-desc">Browse thousands of beautiful baby names by gender, origin, meaning, and popularity.</p>
+                    <span class="card-link">Explore names →</span>
+                </a>
+                <a href="/baby-name-generator" class="card shine" style="text-decoration:none;">
+                    <div class="card-icon">✨</div>
+                    <div class="card-title">Baby Name Generator</div>
+                    <p class="card-desc">Get personalized baby name suggestions based on your preferences and style.</p>
+                    <span class="card-link">Generate names →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Week by Week Section -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-3xl);">
+                <h2>Your Week-by-Week Guide</h2>
+                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Track your baby's development from a tiny poppy seed to a full-grown baby. 🌱</p>
+            </div>
+            <div class="card-grid">
+                <a href="/trimester/first-trimester" class="trimester-card">
+                    <div class="card-icon">🌱</div>
+                    <div class="card-title">First Trimester</div>
+                    <p class="card-desc">Weeks 1–12: The beginning of everything. From tiny cells to a recognizable baby shape.</p>
+                    <span class="card-link">Explore weeks 1–12 →</span>
+                </a>
+                <a href="/trimester/second-trimester" class="trimester-card">
+                    <div class="card-icon">🌿</div>
+                    <div class="card-title">Second Trimester</div>
+                    <p class="card-desc">Weeks 13–26: The "golden period" — feel your baby's first kicks and watch them grow.</p>
+                    <span class="card-link">Explore weeks 13–26 →</span>
+                </a>
+                <a href="/trimester/third-trimester" class="trimester-card">
+                    <div class="card-icon">🌸</div>
+                    <div class="card-title">Third Trimester</div>
+                    <p class="card-desc">Weeks 27–40: The home stretch! Your baby is preparing for the big day.</p>
+                    <span class="card-link">Explore weeks 27–40 →</span>
+                </a>
+            </div>
+            <div class="text-center" style="margin-top: var(--space-2xl);">
+                <a href="/week-by-week" class="btn btn-secondary">📋 View All 40 Weeks</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-3xl);">
+                <h2>Helpful Resources</h2>
+                <p style="max-width: 550px; margin: var(--space-md) auto 0;">Expert guides and advice to support you through every stage of motherhood.</p>
+            </div>
+            <div class="feature-grid">
+                <a href="/pregnancy-symptoms" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">🤰</div>
+                    <div class="feature-title">Pregnancy Symptoms</div>
+                    <p class="feature-desc">Know what to expect each trimester and when to call your doctor.</p>
+                </a>
+                <a href="/what-to-expect" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-title">What to Expect</div>
+                    <p class="feature-desc">Your complete guide to appointments, tests, and preparations.</p>
+                </a>
+                <a href="/baby-shower-ideas" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">🎉</div>
+                    <div class="feature-title">Baby Shower Ideas</div>
+                    <p class="feature-desc">Creative themes, games, and planning tips for the perfect celebration.</p>
+                </a>
+                <a href="/breastfeeding-guide" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">🤱</div>
+                    <div class="feature-title">Breastfeeding Guide</div>
+                    <p class="feature-desc">Tips, positions, and support for your breastfeeding journey.</p>
+                </a>
+                <a href="/postpartum" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-title">Postpartum Care</div>
+                    <p class="feature-desc">Recovery tips, mental health support, and self-care for new moms.</p>
+                </a>
+                <a href="/baby-milestones" class="card" style="text-decoration:none;">
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-title">Baby Milestones</div>
+                    <p class="feature-desc">Track your baby's first year — smiles, steps, words, and more.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, var(--color-lavender-bg) 0%, var(--color-blush-bg) 50%, var(--color-cream-bg) 100%); text-align: center;">
+        <div class="container">
+            <div class="glass-card" style="max-width: 700px; margin: 0 auto;">
+                <div style="font-size: 3rem; margin-bottom: var(--space-lg);">💕</div>
+                <h2 style="margin-bottom: var(--space-md);">Start Your Journey Today</h2>
+                <p style="margin-bottom: var(--space-2xl); color: var(--text-secondary);">
+                    Join thousands of expecting parents who trust NeedsOfMoms for free, beautiful pregnancy tools and guides.
+                </p>
+                <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+                    <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg">📅 Get Started</a>
+                    <a href="/week-by-week" class="btn btn-secondary btn-lg">📋 Week by Week</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="disclaimer">
+                <strong>⚠️ Medical Disclaimer</strong>
+                NeedsOfMoms provides general pregnancy information for educational purposes only. Our content is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider with any questions about your pregnancy.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+                        <span class="logo-icon">🌸</span>
+                        <span>NeedsOfMoms</span>
+                    </a>
+                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Tools</h4>
+                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
+                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+                    <a href="/baby-names">Baby Names</a>
+                    <a href="/baby-name-generator">Name Generator</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="/week-by-week">Week by Week</a>
+                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
+                    <a href="/what-to-expect">What to Expect</a>
+                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+                <p>Made with 💕 for expecting parents everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

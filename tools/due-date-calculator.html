@@ -1,502 +1,623 @@
-     1|<!DOCTYPE html>
-     2|<html lang="en">
-     3|<head>
-     4|  <meta charset="UTF-8">
-     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|  <title>Due Date Calculator | Estimate Your Baby's Due Date | NeedsOfMoms</title>
-     7|  <meta name="description" content="Calculate your estimated due date using Naegele's rule. Enter your last menstrual period date to get your EDD, gestational age, trimester dates, and baby size.">
-     8|  <meta property="og:title" content="Due Date Calculator - NeedsOfMoms">
-     9|  <meta property="og:description" content="Calculate your estimated due date using Naegele's rule. Get trimester dates and week-by-week info.">
-    <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
-    10|  <meta property="og:type" content="website">
-    11|  <meta property="og:url" content="https://needsofmoms.com/tools/due-date-calculator.html">
-    12|  <meta property="og:site_name" content="NeedsOfMoms">
-    13|  <meta name="twitter:card" content="summary_large_image">
-    14|  <meta name="twitter:title" content="Due Date Calculator - NeedsOfMoms">
-    15|  <meta name="twitter:description" content="Calculate your estimated due date using Naegele's rule. Get trimester dates and week-by-week info.">
-    16|  <link rel="canonical" href="https://needsofmoms.com/tools/due-date-calculator.html">
-    17|  <link rel="stylesheet" href="/css/style.css">
-    18|  <script type="application/ld+json">
-    19|  {
-    20|    "@context": "https://schema.org",
-    21|    "@graph": [
-    22|      {
-    23|        "@type": "WebSite",
-    24|        "@id": "https://needsofmoms.com/#website",
-    25|        "url": "https://needsofmoms.com/",
-    26|        "name": "NeedsOfMoms"
-    27|      },
-    28|      {
-    29|        "@type": "Article",
-    30|        "headline": "Due Date Calculator - Estimate Your Baby's Due Date",
-    31|        "description": "Calculate your estimated due date using Naegele's rule based on your last menstrual period.",
-    32|        "url": "https://needsofmoms.com/tools/due-date-calculator.html",
-    33|        "author": {
-    34|          "@type": "Organization",
-    35|          "name": "NeedsOfMoms",
-    36|          "url": "https://needsofmoms.com/"
-    37|        },
-    38|        "publisher": {
-    39|          "@type": "Organization",
-    40|          "name": "NeedsOfMoms",
-    41|          "url": "https://needsofmoms.com/"
-    42|        },
-    43|        "datePublished": "2026-01-15",
-    44|        "dateModified": "2026-05-28"
-    45|      },
-    46|      {
-    47|        "@type": "BreadcrumbList",
-    48|        "@id": "https://needsofmoms.com/tools/due-date-calculator.html#breadcrumb",
-    49|        "itemListElement": [
-    50|          {
-    51|            "@type": "ListItem",
-    52|            "position": 1,
-    53|            "name": "Home",
-    54|            "item": "https://needsofmoms.com/"
-    55|          },
-    56|          {
-    57|            "@type": "ListItem",
-    58|            "position": 2,
-    59|            "name": "Tools",
-    60|            "item": "https://needsofmoms.com/tools/"
-    61|          },
-    62|          {
-    63|            "@type": "ListItem",
-    64|            "position": 3,
-    65|            "name": "Due Date Calculator",
-    66|            "item": "https://needsofmoms.com/tools/due-date-calculator.html"
-    67|          }
-    68|        ]
-    69|      },
-    70|      {
-    71|        "@type": "FAQPage",
-    72|        "mainEntity": [
-    73|          {
-    74|            "@type": "Question",
-    75|            "name": "How accurate is the due date calculator?",
-    76|            "acceptedAnswer": {
-    77|              "@type": "Answer",
-    78|              "text": "Our due date calculator uses Naegele's rule, the standard method used by healthcare providers. While it provides a good estimate, only about 5% of babies arrive on their exact due date. Most babies are born within 2 weeks before or after the estimated due date."
-    79|            }
-    80|          },
-    81|          {
-    82|            "@type": "Question",
-    83|            "name": "What is Naegele's rule?",
-    84|            "acceptedAnswer": {
-    85|              "@type": "Answer",
-    86|              "text": "Naegele's rule is a standard way of calculating the estimated due date (EDD). The rule states that the EDD is 280 days (40 weeks) from the first day of the last menstrual period (LMP). The formula is: LMP + 7 days - 3 months = EDD."
-    87|            }
-    88|          },
-    89|          {
-    90|            "@type": "Question",
-    91|            "name": "What if I don't know my last menstrual period date?",
-    92|            "acceptedAnswer": {
-    93|              "@type": "Answer",
-    94|              "text": "If you don't know your LMP date, you can use the conception date option. If you conceived via IVF, use the embryo transfer date. Your healthcare provider can also estimate your due date using an ultrasound, which is most accurate in the first trimester."
-    95|            }
-    96|          },
-    97|          {
-    98|            "@type": "Question",
-    99|            "name": "What are the three trimesters of pregnancy?",
-   100|            "acceptedAnswer": {
-   101|              "@type": "Answer",
-   102|              "text": "Pregnancy is divided into three trimesters: First trimester (weeks 1-13), Second trimester (weeks 14-27), and Third trimester (weeks 28-40). Each trimester is approximately 13-14 weeks long and marks different stages of baby development and maternal changes."
-   103|            }
-   104|          },
-   105|          {
-   106|            "@type": "Question",
-   107|            "name": "Can my due date change?",
-   108|            "acceptedAnswer": {
-   109|              "@type": "Answer",
-   110|              "text": "Yes, your due date may be adjusted after your first ultrasound, typically done between weeks 8-14. The ultrasound measurement of the baby (crown-rump length) can provide a more accurate gestational age estimate, which may shift your due date by a few days."
-   111|            }
-   112|          }
-   113|        ]
-   114|      }
-   115|    ]
-   116|  }
-   117|  </script>
-   118|  <style>
-   119|    /* Calculator enhancements */
-   120|    .calc-intro {
-   121|      text-align: center;
-   122|      margin-bottom: var(--space-2xl);
-   123|    }
-   124|    .calc-intro .intro-emoji {
-   125|      font-size: 3rem;
-   126|      display: block;
-   127|      margin-bottom: var(--space-sm);
-   128|    }
-   129|    .calc-intro p {
-   130|      max-width: 600px;
-   131|      margin: 0 auto;
-   132|      font-size: var(--text-lg);
-   133|      line-height: 1.6;
-   134|    }
-   135|
-   136|    /* Large friendly input groups */
-   137|    .calc-input-group-friendly {
-   138|      margin-bottom: var(--space-lg);
-   139|    }
-   140|    .calc-input-group-friendly label {
-   141|      display: flex;
-   142|      align-items: center;
-   143|      gap: var(--space-sm);
-   144|      font-weight: 600;
-   145|      font-size: var(--text-base);
-   146|      margin-bottom: var(--space-sm);
-   147|      color: var(--text-primary);
-   148|    }
-   149|    .calc-input-group-friendly label .input-emoji {
-   150|      font-size: 1.5rem;
-   151|    }
-   152|    .input-large-wrapper {
-   153|      position: relative;
-   154|    }
-   155|    .input-large-wrapper input[type="date"] {
-   156|      width: 100%;
-   157|      padding: 16px 20px;
-   158|      font-size: 1.125rem;
-   159|      border: 2px solid var(--border-color, #e0e0e0);
-   160|      border-radius: 12px;
-   161|      background: var(--bg-surface, #fff);
-   162|      color: var(--text-primary);
-   163|      min-height: 56px;
-   164|      cursor: pointer;
-   165|      transition: border-color 0.2s, box-shadow 0.2s;
-   166|      -webkit-appearance: none;
-   167|    }
-   168|    .input-large-wrapper input[type="date"]:focus {
-   169|      border-color: var(--color-primary, #D97F8B);
-   170|      box-shadow: 0 0 0 3px rgba(217, 127, 139, 0.15);
-   171|      outline: none;
-   172|    }
-   173|    .input-large-wrapper .date-placeholder {
-   174|      position: absolute;
-   175|      left: 20px;
-   176|      top: 50%;
-   177|      transform: translateY(-50%);
-   178|      color: var(--text-muted, #999);
-   179|      font-size: 1rem;
-   180|      pointer-events: none;
-   181|      transition: opacity 0.2s;
-   182|    }
-   183|    .input-large-wrapper input[type="date"]:not(:placeholder-shown) + .date-placeholder,
-   184|    .input-large-wrapper input[type="date"]:focus + .date-placeholder {
-   185|      opacity: 0;
-   186|    }
-   187|    .form-hint-friendly {
-   188|      display: block;
-   189|      margin-top: var(--space-xs);
-   190|      font-size: var(--text-sm);
-   191|      color: var(--text-muted, #888);
-   192|      padding-left: 2px;
-   193|    }
-   194|
-   195|    /* Error message box */
-   196|    .error-message {
-   197|      display: none;
-   198|      background: #fef2f2;
-   199|      border: 1px solid #fecaca;
-   200|      border-left: 4px solid #ef4444;
-   201|      color: #dc2626;
-   202|      padding: 12px 16px;
-   203|      border-radius: 8px;
-   204|      margin-bottom: var(--space-md);
-   205|      font-size: var(--text-sm);
-   206|      align-items: center;
-   207|      gap: var(--space-sm);
-   208|    }
-   209|    .error-message.visible {
-   210|      display: flex;
-   211|    }
-   212|    .error-message .error-icon {
-   213|      font-size: 1.25rem;
-   214|      flex-shrink: 0;
-   215|    }
-   216|
-   217|    /* Pill-shaped gradient button */
-   218|    .btn-calculate {
-   219|      display: inline-flex;
-   220|      align-items: center;
-   221|      justify-content: center;
-   222|      gap: var(--space-sm);
-   223|      width: 100%;
-   224|      padding: 18px 32px;
-   225|      font-size: 1.125rem;
-   226|      font-weight: 700;
-   227|      color: #fff;
-   228|      background: linear-gradient(135deg, #D97F8B, #b87ce8);
-   229|      border: none;
-   230|      border-radius: 50px;
-   231|      cursor: pointer;
-   232|      transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
-   233|      box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
-   234|      min-height: 56px;
-   235|      margin-top: var(--space-md);
-   236|    }
-   237|    .btn-calculate:hover {
-   238|      transform: translateY(-1px);
-   239|      box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4);
-   240|    }
-   241|    .btn-calculate:active {
-   242|      transform: translateY(0);
-   243|    }
-   244|    .btn-calculate:disabled {
-   245|      opacity: 0.7;
-   246|      cursor: not-allowed;
-   247|      transform: none;
-   248|    }
-   249|
-   250|    /* Loading animation */
-   251|    .loading-spinner {
-   252|      display: none;
-   253|      text-align: center;
-   254|      padding: var(--space-xl) 0;
-   255|    }
-   256|    .loading-spinner.visible {
-   257|      display: block;
-   258|    }
-   259|    .spinner-dots {
-   260|      display: inline-flex;
-   261|      gap: 8px;
-   262|    }
-   263|    .spinner-dots span {
-   264|      width: 12px;
-   265|      height: 12px;
-   266|      border-radius: 50%;
-   267|      background: var(--color-primary, #D97F8B);
-   268|      animation: bounce 1.4s ease-in-out infinite both;
-   269|    }
-   270|    .spinner-dots span:nth-child(1) { animation-delay: -0.32s; }
-   271|    .spinner-dots span:nth-child(2) { animation-delay: -0.16s; }
-   272|    .spinner-dots span:nth-child(3) { animation-delay: 0s; }
-   273|    @keyframes bounce {
-   274|      0%, 80%, 100% { transform: scale(0); }
-   275|      40% { transform: scale(1); }
-   276|    }
-   277|    .loading-text {
-   278|      margin-top: var(--space-md);
-   279|      color: var(--text-muted, #888);
-   280|      font-size: var(--text-sm);
-   281|    }
-   282|
-   283|    /* Enhanced results with emojis */
-   284|    .result-emoji-large {
-   285|      font-size: 2.5rem;
-   286|      display: block;
-   287|      margin-bottom: var(--space-sm);
-   288|    }
-   289|    .result-card-main {
-   290|      text-align: center;
-   291|      padding: var(--space-xl);
-   292|      background: linear-gradient(135deg, rgba(233, 30, 140, 0.05), rgba(155, 89, 182, 0.05));
-   293|      border-radius: 16px;
-   294|      margin-bottom: var(--space-lg);
-   295|    }
-   296|    .result-card-main .calc-result-value {
-   297|      font-size: 1.75rem;
-   298|    }
-   299|    .result-box-enhanced {
-   300|      text-align: center;
-   301|      padding: var(--space-md);
-   302|      background: var(--bg-surface, #fff);
-   303|      border-radius: 12px;
-   304|      border: 1px solid var(--border-color, #eee);
-   305|    }
-   306|    .result-box-enhanced .result-emoji {
-   307|      font-size: 1.75rem;
-   308|      display: block;
-   309|      margin-bottom: var(--space-xs);
-   310|    }
-   311|    .result-box-enhanced .result-box-value {
-   312|      font-weight: 700;
-   313|      font-size: var(--text-lg);
-   314|      color: var(--text-primary);
-   315|      margin-bottom: var(--space-xs);
-   316|    }
-   317|    .result-box-enhanced .result-box-label {
-   318|      font-size: var(--text-sm);
-   319|      color: var(--text-muted, #888);
-   320|    }
-   321|    .result-boxes-enhanced {
-   322|      display: grid;
-   323|      grid-template-columns: repeat(2, 1fr);
-   324|      gap: var(--space-md);
-   325|      margin-bottom: var(--space-lg);
-   326|    }
-   327|
-   328|    /* Start Over button */
-   329|    .btn-start-over {
-   330|      display: inline-flex;
-   331|      align-items: center;
-   332|      justify-content: center;
-   333|      gap: var(--space-xs);
-   334|      padding: 12px 28px;
-   335|      font-size: var(--text-base);
-   336|      font-weight: 600;
-   337|      color: var(--text-primary);
-   338|      background: var(--bg-surface, #fff);
-   339|      border: 2px solid var(--border-color, #ddd);
-   340|      border-radius: 50px;
-   341|      cursor: pointer;
-   342|      transition: background 0.2s, border-color 0.2s;
-   343|      margin-top: var(--space-lg);
-   344|    }
-   345|    .btn-start-over:hover {
-   346|      background: var(--bg-hover, #f5f5f5);
-   347|      border-color: var(--text-muted, #999);
-   348|    }
-   349|
-   350|    /* FAQ Accordion enhancements */
-   351|    .accordion-item {
-   352|      border: 1px solid var(--border-color, #eee);
-   353|      border-radius: 12px;
-   354|      margin-bottom: var(--space-sm);
-   355|      overflow: hidden;
-   356|      transition: box-shadow 0.2s;
-   357|    }
-   358|    .accordion-item:hover {
-   359|      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-   360|    }
-   361|    .accordion-header {
-   362|      width: 100%;
-   363|      display: flex;
-   364|      align-items: center;
-   365|      justify-content: space-between;
-   366|      padding: 16px 20px;
-   367|      font-size: var(--text-base);
-   368|      font-weight: 600;
-   369|      color: var(--text-primary);
-   370|      background: var(--bg-surface, #fff);
-   371|      border: none;
-   372|      cursor: pointer;
-   373|      text-align: left;
-   374|      min-height: 56px;
-   375|      transition: background 0.2s;
-   376|    }
-   377|    .accordion-header:hover {
-   378|      background: var(--bg-hover, #fafafa);
-   379|    }
-   380|    .accordion-icon {
-   381|      font-size: 1rem;
-   382|      transition: transform 0.3s ease;
-   383|      color: var(--text-muted, #888);
-   384|    }
-   385|    .accordion-item.active .accordion-icon {
-   386|      transform: rotate(180deg);
-   387|    }
-   388|    .accordion-body {
-   389|      max-height: 0;
-   390|      overflow: hidden;
-   391|      transition: max-height 0.35s ease, padding 0.35s ease;
-   392|    }
-   393|    .accordion-item.active .accordion-body {
-   394|      max-height: 300px;
-   395|    }
-   396|    .accordion-content {
-   397|      padding: 0 20px 16px;
-   398|    }
-   399|    .accordion-content p {
-   400|      color: var(--text-secondary);
-   401|      line-height: 1.6;
-   402|      margin: 0;
-   403|    }
-   404|
-   405|    /* Tab enhancements for mobile */
-   406|    .tabs {
-   407|      display: flex;
-   408|      gap: var(--space-xs);
-   409|      background: var(--bg-muted, #f5f5f5);
-   410|      padding: 4px;
-   411|      border-radius: 12px;
-   412|    }
-   413|    .tab {
-   414|      flex: 1;
-   415|      padding: 12px 16px;
-   416|      font-size: var(--text-sm);
-   417|      font-weight: 600;
-   418|      border: none;
-   419|      background: transparent;
-   420|      border-radius: 10px;
-   421|      cursor: pointer;
-   422|      color: var(--text-muted, #888);
-   423|      transition: all 0.2s;
-   424|      min-height: 48px;
-   425|    }
-   426|    .tab.active {
-   427|      background: var(--bg-surface, #fff);
-   428|      color: var(--text-primary);
-   429|      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-   430|    }
-   431|
-   432|    @media (max-width: 640px) {
-   433|      .result-boxes-enhanced {
-   434|        grid-template-columns: 1fr;
-   435|      }
-   436|      .calc-intro .intro-emoji {
-   437|        font-size: 2.5rem;
-   438|      }
-   439|      .btn-calculate {
-   440|        font-size: 1rem;
-   441|        padding: 16px 24px;
-   442|      }
-   443|    }
-   444|  </style>
-   445|</head>
-   446|<body>
-   447|  <header class="site-header">
-   448|    <div class="header-inner">
-   449|      <a href="/" class="logo">
-   450|        <span class="logo-icon">🤰</span>
-   451|        <span class="logo-text">Needs<span>OfMoms</span></span>
-   452|      </a>
-   453|      <nav class="main-nav">
-   454|        <ul class="nav-list">
-   455|          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
-   456|          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
-   457|          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
-   458|          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
-   459|        </ul>
-   460|      </nav>
-   461|      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
-   462|        <span></span>
-   463|        <span></span>
-   464|        <span></span>
-   465|      </button>
-   466|    </div>
-   467|  </header>
-   468|
-   469|  <nav class="breadcrumb" aria-label="Breadcrumb">
-   470|    <div class="container">
-   471|      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-   472|        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-   473|          <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-   474|          <meta itemprop="position" content="1">
-   475|        </li>
-   476|        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-   477|          <a itemprop="item" href="/tools/"><span itemprop="name">Tools</span></a>
-   478|          <meta itemprop="position" content="2">
-   479|        </li>
-   480|        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-   481|          <span itemprop="name">Due Date Calculator</span>
-   482|          <meta itemprop="position" content="3">
-   483|        </li>
-   484|      </ol>
-   485|    </div>
-   486|  </nav>
-   487|
-   488|  <main class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
-   489|    <!-- Page Header with friendly intro -->
-   490|    <div class="calc-intro">
-   491|      <span class="intro-emoji">👶✨</span>
-   492|      <h1 class="text-gradient">Due Date Calculator</h1>
-   493|      <p>Find out when your little one is expected to arrive! Simply enter the date of your last period and we'll do the rest.</p>
-   494|    </div>
-   495|
-   496|    <!-- Calculator -->
-   497|    <div class="calculator" style="max-width: 700px; margin: 0 auto var(--space-2xl);">
-   498|      <div class="calculator-header" style="text-align: center; padding: var(--space-lg) var(--space-lg) 0;">
-   499|        <h3>🤰 Calculate Your Due Date</h3>
-   500|        <p style="color: var(--text-muted, #888);">Choose how you'd like to calculate</p>
-   501|
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Due Date Calculator | Estimate Your Baby's Due Date | NeedsOfMoms</title>
+  <meta name="description" content="Calculate your estimated due date using Naegele's rule. Enter your last menstrual period date to get your EDD, gestational age, trimester dates, and baby size.">
+  <meta property="og:title" content="Due Date Calculator - NeedsOfMoms">
+  <meta property="og:description" content="Calculate your estimated due date using Naegele's rule. Get trimester dates and week-by-week info.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://needsofmoms.com/tools/due-date-calculator">
+  <meta property="og:site_name" content="NeedsOfMoms">
+  <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Due Date Calculator - NeedsOfMoms">
+  <meta name="twitter:description" content="Calculate your estimated due date using Naegele's rule. Get trimester dates and week-by-week info.">
+  <link rel="canonical" href="https://needsofmoms.com/tools/due-date-calculator">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://needsofmoms.com/#website",
+        "url": "https://needsofmoms.com/",
+        "name": "NeedsOfMoms"
+      },
+      {
+        "@type": "Article",
+        "headline": "Due Date Calculator - Estimate Your Baby's Due Date",
+        "description": "Calculate your estimated due date using Naegele's rule based on your last menstrual period.",
+        "url": "https://needsofmoms.com/tools/due-date-calculator",
+        "author": {
+          "@type": "Organization",
+          "name": "NeedsOfMoms",
+          "url": "https://needsofmoms.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "NeedsOfMoms",
+          "url": "https://needsofmoms.com/"
+        },
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-05-28"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://needsofmoms.com/tools/due-date-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://needsofmoms.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://needsofmoms.com/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Due Date Calculator",
+            "item": "https://needsofmoms.com/tools/due-date-calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How accurate is the due date calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our due date calculator uses Naegele's rule, the standard method used by healthcare providers. While it provides a good estimate, only about 5% of babies arrive on their exact due date. Most babies are born within 2 weeks before or after the estimated due date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Naegele's rule?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Naegele's rule is a standard way of calculating the estimated due date (EDD). The rule states that the EDD is 280 days (40 weeks) from the first day of the last menstrual period (LMP). The formula is: LMP + 7 days - 3 months = EDD."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if I don't know my last menstrual period date?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If you don't know your LMP date, you can use the conception date option. If you conceived via IVF, use the embryo transfer date. Your healthcare provider can also estimate your due date using an ultrasound, which is most accurate in the first trimester."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the three trimesters of pregnancy?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pregnancy is divided into three trimesters: First trimester (weeks 1-13), Second trimester (weeks 14-27), and Third trimester (weeks 28-40). Each trimester is approximately 13-14 weeks long and marks different stages of baby development and maternal changes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can my due date change?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, your due date may be adjusted after your first ultrasound, typically done between weeks 8-14. The ultrasound measurement of the baby (crown-rump length) can provide a more accurate gestational age estimate, which may shift your due date by a few days."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🌸</span>
+        <span class="logo-text">Needs<span>OfMoms</span></span>
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
+          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
+          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
+          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/tools/"><span itemprop="name">Tools</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Due Date Calculator</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
+    <!-- Page Header -->
+    <div style="text-align: center; margin-bottom: var(--space-2xl);">
+      <h1 class="text-gradient">Due Date Calculator</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: var(--text-lg);">
+        Find out when your baby is due using Naegele's rule — the standard method trusted by healthcare providers.
+      </p>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator" style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <div class="calculator-header">
+        <h3>Calculate Your Due Date</h3>
+        <p>Enter the date of your last menstrual period (LMP)</p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div data-tabs style="margin-bottom: var(--space-lg);">
+        <div class="tabs" style="justify-content: center;">
+          <button class="tab active" data-tab="lmp" type="button">Last Period (LMP)</button>
+          <button class="tab" data-tab="conception" type="button">Conception Date</button>
+        </div>
+      </div>
+
+      <div class="calculator-body">
+        <!-- LMP Input Panel -->
+        <div data-tab-panel="lmp" class="tab-panel active">
+          <div class="calc-input-group">
+            <label for="lmp-date">First Day of Last Menstrual Period</label>
+            <div class="input-wrapper">
+              <input type="date" id="lmp-date" placeholder="Select date" max="">
+            </div>
+            <span class="form-hint">This is the first day of your most recent period.</span>
+          </div>
+        </div>
+
+        <!-- Conception Date Input Panel -->
+        <div data-tab-panel="conception" class="tab-panel" style="display: none;">
+          <div class="calc-input-group">
+            <label for="conception-date">Estimated Conception Date</label>
+            <div class="input-wrapper">
+              <input type="date" id="conception-date" placeholder="Select date" max="">
+            </div>
+            <span class="form-hint">Conception typically occurs about 14 days after the start of your last period.</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block btn-lg" id="calculate-btn">
+          Calculate Due Date
+        </button>
+      </div>
+
+      <!-- Results Section (hidden by default) -->
+      <div id="results" style="display: none; margin-top: var(--space-xl);">
+        <hr>
+        <h3 class="text-center" style="margin-bottom: var(--space-lg);">Your Results</h3>
+
+        <!-- Main Result -->
+        <div class="calc-result" style="margin-bottom: var(--space-lg);">
+          <div class="calc-result-label">Estimated Due Date</div>
+          <div class="calc-result-value" id="due-date-result">—</div>
+          <div class="calc-result-detail" id="days-remaining">—</div>
+        </div>
+
+        <!-- Result Boxes -->
+        <div class="result-boxes" style="margin-bottom: var(--space-lg);">
+          <div class="result-box">
+            <div class="result-box-value" id="gestational-age">—</div>
+            <div class="result-box-label">Gestational Age</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="current-trimester">—</div>
+            <div class="result-box-label">Current Trimester</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="baby-size">—</div>
+            <div class="result-box-label">Baby Size</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="days-pregnant">—</div>
+            <div class="result-box-label">Days Pregnant</div>
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div style="margin-bottom: var(--space-lg);">
+          <div class="progress-label">
+            <span>Week 1</span>
+            <span id="progress-weeks">Week 0 of 40</span>
+            <span>Week 40</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" id="pregnancy-progress" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Trimester Dates -->
+        <div class="card" style="margin-bottom: var(--space-lg);">
+          <div class="card-body">
+            <h4 style="margin-bottom: var(--space-md);">Trimester Breakdown</h4>
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <div class="flex items-center gap-3">
+                <span class="trimester-badge trimester-1">1st Trimester</span>
+                <span style="color: var(--text-secondary); font-size: var(--text-sm);" id="trimester-1-dates">—</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="trimester-badge trimester-2">2nd Trimester</span>
+                <span style="color: var(--text-secondary); font-size: var(--text-sm);" id="trimester-2-dates">—</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="trimester-badge trimester-3">3rd Trimester</span>
+                <span style="color: var(--text-secondary); font-size: var(--text-sm);" id="trimester-3-dates">—</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Week Info -->
+        <div class="card" id="week-info-card" style="display: none;">
+          <div class="card-body">
+            <h4 style="margin-bottom: var(--space-md);" id="week-info-title">Your Baby This Week</h4>
+            <p id="week-info-desc" style="margin-bottom: var(--space-md);"></p>
+            <div id="week-info-devs"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How It Works -->
+    <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <h2 class="text-center" style="margin-bottom: var(--space-lg);">How Does the Due Date Calculator Work?</h2>
+      <div class="card">
+        <div class="card-body">
+          <h4>Naegele's Rule</h4>
+          <p>The most widely used method for calculating the estimated due date (EDD) is <strong>Naegele's rule</strong>. This standard obstetric formula calculates your due date as:</p>
+          <div class="alert alert-info" style="margin: var(--space-lg) 0;">
+            <div class="alert-content">
+              <strong>EDD = Last Menstrual Period (LMP) + 280 days (40 weeks)</strong>
+            </div>
+          </div>
+          <p>The rule can also be simplified as: add 7 days to the first day of your LMP, then subtract 3 months.</p>
+          <p style="margin-bottom: 0;"><strong>Example:</strong> If your LMP was January 1, your estimated due date would be October 8.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <h2 class="text-center" style="margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>How accurate is the due date calculator?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Our due date calculator uses Naegele's rule, the standard method used by healthcare providers. While it provides a good estimate, only about 5% of babies arrive on their exact due date. Most babies are born within 2 weeks before or after the estimated due date.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What is Naegele's rule?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Naegele's rule is a standard way of calculating the estimated due date (EDD). The rule states that the EDD is 280 days (40 weeks) from the first day of the last menstrual period (LMP). The formula is: LMP + 7 days - 3 months = EDD.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What if I don't know my last menstrual period date?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>If you don't know your LMP date, you can use the conception date option in our calculator. If you conceived via IVF, use the embryo transfer date. Your healthcare provider can also estimate your due date using an ultrasound, which is most accurate in the first trimester.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What are the three trimesters of pregnancy?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Pregnancy is divided into three trimesters: First trimester (weeks 1-13), Second trimester (weeks 14-27), and Third trimester (weeks 28-40). Each trimester is approximately 13-14 weeks long and marks different stages of baby development and maternal changes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>Can my due date change?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Yes, your due date may be adjusted after your first ultrasound, typically done between weeks 8-14. The ultrasound measurement of the baby (crown-rump length) can provide a more accurate gestational age estimate, which may shift your due date by a few days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="alert alert-warning" style="max-width: 700px; margin: 0 auto;">
+      <div class="alert-content">
+        <p style="margin: 0;"><strong>Disclaimer:</strong> This calculator provides estimates only and should not replace professional medical advice. Please consult your healthcare provider for accurate due date confirmation and prenatal care.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>NeedsOfMoms</h4>
+        <p>Your trusted companion through pregnancy. Free calculators, baby names, and week-by-week guides for expecting parents.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <div class="footer-links">
+          <a href="/tools/due-date-calculator">Due Date Calculator</a>
+          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <div class="footer-links">
+          <a href="/baby-names">Baby Names</a>
+          <a href="/week-by-week">Week by Week Guide</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <div class="footer-links">
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NeedsOfMoms. All rights reserved.</p>
+      <p style="font-size: var(--text-xs);">This site is for informational purposes only and does not constitute medical advice.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    // Pregnancy week data (subset for calculator)
+    var PREGNANCY_WEEKS = [
+      { week: 4, trimester: 1, fruitComparison: "poppy seed", babySizeCm: 0.1, babyWeight: "<1g" },
+      { week: 5, trimester: 1, fruitComparison: "sesame seed", babySizeCm: 0.2, babyWeight: "<1g" },
+      { week: 6, trimester: 1, fruitComparison: "lentil", babySizeCm: 0.6, babyWeight: "<1g" },
+      { week: 7, trimester: 1, fruitComparison: "blueberry", babySizeCm: 1.3, babyWeight: "<1g" },
+      { week: 8, trimester: 1, fruitComparison: "raspberry", babySizeCm: 1.6, babyWeight: "1g" },
+      { week: 9, trimester: 1, fruitComparison: "grape", babySizeCm: 2.3, babyWeight: "2g" },
+      { week: 10, trimester: 1, fruitComparison: "kumquat", babySizeCm: 3.1, babyWeight: "4g" },
+      { week: 11, trimester: 1, fruitComparison: "fig", babySizeCm: 4.1, babyWeight: "7g" },
+      { week: 12, trimester: 1, fruitComparison: "lime", babySizeCm: 5.4, babyWeight: "14g" },
+      { week: 13, trimester: 1, fruitComparison: "lemon", babySizeCm: 7.4, babyWeight: "23g" },
+      { week: 14, trimester: 2, fruitComparison: "peach", babySizeCm: 8.7, babyWeight: "43g" },
+      { week: 15, trimester: 2, fruitComparison: "apple", babySizeCm: 10.1, babyWeight: "70g" },
+      { week: 16, trimester: 2, fruitComparison: "avocado", babySizeCm: 11.6, babyWeight: "100g" },
+      { week: 17, trimester: 2, fruitComparison: "pear", babySizeCm: 13, babyWeight: "140g" },
+      { week: 18, trimester: 2, fruitComparison: "bell pepper", babySizeCm: 14.2, babyWeight: "190g" },
+      { week: 19, trimester: 2, fruitComparison: "mango", babySizeCm: 15.3, babyWeight: "240g" },
+      { week: 20, trimester: 2, fruitComparison: "banana", babySizeCm: 25.6, babyWeight: "300g" },
+      { week: 21, trimester: 2, fruitComparison: "carrot", babySizeCm: 26.7, babyWeight: "360g" },
+      { week: 22, trimester: 2, fruitComparison: "papaya", babySizeCm: 27.8, babyWeight: "430g" },
+      { week: 23, trimester: 2, fruitComparison: "grapefruit", babySizeCm: 28.9, babyWeight: "500g" },
+      { week: 24, trimester: 2, fruitComparison: "ear of corn", babySizeCm: 30, babyWeight: "600g" },
+      { week: 25, trimester: 2, fruitComparison: "cauliflower", babySizeCm: 34.6, babyWeight: "660g" },
+      { week: 26, trimester: 2, fruitComparison: "scallion", babySizeCm: 35.6, babyWeight: "760g" },
+      { week: 27, trimester: 2, fruitComparison: "rutabaga", babySizeCm: 36.6, babyWeight: "875g" },
+      { week: 28, trimester: 3, fruitComparison: "eggplant", babySizeCm: 37.6, babyWeight: "1kg" },
+      { week: 29, trimester: 3, fruitComparison: "butternut squash", babySizeCm: 38.6, babyWeight: "1.15kg" },
+      { week: 30, trimester: 3, fruitComparison: "cabbage", babySizeCm: 39.9, babyWeight: "1.3kg" },
+      { week: 31, trimester: 3, fruitComparison: "coconut", babySizeCm: 41.1, babyWeight: "1.5kg" },
+      { week: 32, trimester: 3, fruitComparison: "jicama", babySizeCm: 42.4, babyWeight: "1.7kg" },
+      { week: 33, trimester: 3, fruitComparison: "pineapple", babySizeCm: 43.7, babyWeight: "1.9kg" },
+      { week: 34, trimester: 3, fruitComparison: "cantaloupe", babySizeCm: 45, babyWeight: "2.1kg" },
+      { week: 35, trimester: 3, fruitComparison: "honeydew melon", babySizeCm: 46.2, babyWeight: "2.4kg" },
+      { week: 36, trimester: 3, fruitComparison: "romaine lettuce", babySizeCm: 47.4, babyWeight: "2.6kg" },
+      { week: 37, trimester: 3, fruitComparison: "winter melon", babySizeCm: 48.6, babyWeight: "2.9kg" },
+      { week: 38, trimester: 3, fruitComparison: "leek", babySizeCm: 49.8, babyWeight: "3.1kg" },
+      { week: 39, trimester: 3, fruitComparison: "watermelon", babySizeCm: 50.7, babyWeight: "3.3kg" },
+      { week: 40, trimester: 3, fruitComparison: "pumpkin", babySizeCm: 51.2, babyWeight: "3.5kg" }
+    ];
+
+    var NOM = window.NeedsOfMoms || {};
+
+    // DOM Elements
+    var lmpDateInput = document.getElementById('lmp-date');
+    var conceptionDateInput = document.getElementById('conception-date');
+    var calculateBtn = document.getElementById('calculate-btn');
+    var resultsDiv = document.getElementById('results');
+    var dueDateResult = document.getElementById('due-date-result');
+    var daysRemaining = document.getElementById('days-remaining');
+    var gestationalAge = document.getElementById('gestational-age');
+    var currentTrimester = document.getElementById('current-trimester');
+    var babySize = document.getElementById('baby-size');
+    var daysPregnant = document.getElementById('days-pregnant');
+    var progressWeeks = document.getElementById('progress-weeks');
+    var pregnancyProgress = document.getElementById('pregnancy-progress');
+    var trimester1Dates = document.getElementById('trimester-1-dates');
+    var trimester2Dates = document.getElementById('trimester-2-dates');
+    var trimester3Dates = document.getElementById('trimester-3-dates');
+    var weekInfoCard = document.getElementById('week-info-card');
+    var weekInfoTitle = document.getElementById('week-info-title');
+    var weekInfoDesc = document.getElementById('week-info-desc');
+    var weekInfoDevs = document.getElementById('week-info-devs');
+
+    // Set max date to today
+    var today = new Date();
+    var todayStr = today.toISOString().split('T')[0];
+    if (lmpDateInput) lmpDateInput.setAttribute('max', todayStr);
+    if (conceptionDateInput) conceptionDateInput.setAttribute('max', todayStr);
+
+    // Active input mode
+    var activeMode = 'lmp';
+
+    // Tab switching (uses app.js initTabs)
+    document.addEventListener('click', function(e) {
+      var tab = e.target.closest('[data-tab]');
+      if (!tab) return;
+      activeMode = tab.getAttribute('data-tab');
+    });
+
+    function getWeekData(week) {
+      for (var i = 0; i < PREGNANCY_WEEKS.length; i++) {
+        if (PREGNANCY_WEEKS[i].week === week) return PREGNANCY_WEEKS[i];
+      }
+      return null;
+    }
+
+    function calculateDueDate() {
+      var startDate;
+      var dateVal;
+
+      if (activeMode === 'conception') {
+        dateVal = conceptionDateInput.value;
+        if (!dateVal) {
+          alert('Please enter your estimated conception date.');
+          return;
+        }
+        startDate = new Date(dateVal + 'T00:00:00');
+        // Conception is typically 14 days after LMP, so add 266 days (280 - 14)
+        startDate.setDate(startDate.getDate() + 266);
+      } else {
+        dateVal = lmpDateInput.value;
+        if (!dateVal) {
+          alert('Please enter the first day of your last menstrual period.');
+          return;
+        }
+        startDate = new Date(dateVal + 'T00:00:00');
+        // Naegele's rule: LMP + 280 days
+        startDate.setDate(startDate.getDate() + 280);
+      }
+
+      var dueDate = startDate;
+      var lmpDate;
+
+      if (activeMode === 'conception') {
+        // Calculate LMP from conception date (conception - 14 days)
+        lmpDate = new Date(conceptionDateInput.value + 'T00:00:00');
+        lmpDate.setDate(lmpDate.getDate() - 14);
+      } else {
+        lmpDate = new Date(lmpDateInput.value + 'T00:00:00');
+      }
+
+      // Calculate gestational age (weeks since LMP)
+      var now = new Date();
+      var daysPreg = Math.floor((now - lmpDate) / (1000 * 60 * 60 * 24));
+      var weeksPreg = Math.floor(daysPreg / 7);
+      var remainingDays = daysPreg % 7;
+
+      // Clamp to valid range
+      if (weeksPreg < 0) weeksPreg = 0;
+      if (weeksPreg > 42) weeksPreg = 42;
+
+      // Days remaining until due date
+      var daysUntilDue = Math.ceil((dueDate - now) / (1000 * 60 * 60 * 24));
+
+      // Current trimester
+      var trimester;
+      if (weeksPreg <= 13) trimester = 1;
+      else if (weeksPreg <= 27) trimester = 2;
+      else trimester = 3;
+
+      // Trimester dates
+      var tri1End = new Date(lmpDate);
+      tri1End.setDate(tri1End.getDate() + (13 * 7));
+      var tri2Start = new Date(tri1End);
+      tri2Start.setDate(tri2Start.getDate() + 1);
+      var tri2End = new Date(lmpDate);
+      tri2End.setDate(tri2End.getDate() + (27 * 7));
+      var tri3Start = new Date(tri2End);
+      tri3Start.setDate(tri3Start.getDate() + 1);
+
+      // Get week data
+      var weekNum = Math.min(Math.max(weeksPreg, 4), 40);
+      var weekData = getWeekData(weekNum);
+
+      // Display results
+      resultsDiv.style.display = 'block';
+      dueDateResult.textContent = NOM.formatDate ? NOM.formatDate(dueDate) : formatDateFallback(dueDate);
+      daysRemaining.textContent = daysUntilDue > 0
+        ? daysUntilDue + ' days remaining until your due date'
+        : (daysUntilDue === 0 ? 'Today is your due date!' : 'You are ' + Math.abs(daysUntilDue) + ' days past your due date');
+      gestationalAge.textContent = weeksPreg + ' weeks' + (remainingDays > 0 ? ' ' + remainingDays + ' days' : '');
+      currentTrimester.innerHTML = '<span class="trimester-badge trimester-' + trimester + '">Trimester ' + trimester + '</span>';
+      babySize.textContent = weekData ? (weekData.fruitComparison.charAt(0).toUpperCase() + weekData.fruitComparison.slice(1)) : '—';
+      daysPregnant.textContent = daysPreg;
+
+      // Progress bar
+      var progressPct = Math.min((weeksPreg / 40) * 100, 100);
+      pregnancyProgress.style.width = progressPct + '%';
+      progressWeeks.textContent = 'Week ' + weeksPreg + ' of 40';
+
+      // Trimester dates
+      trimester1Dates.textContent = NOM.formatDate ? (NOM.formatDate(lmpDate) + ' — ' + NOM.formatDate(tri1End)) : (formatDateFallback(lmpDate) + ' — ' + formatDateFallback(tri1End));
+      trimester2Dates.textContent = NOM.formatDate ? (NOM.formatDate(tri2Start) + ' — ' + NOM.formatDate(tri2End)) : (formatDateFallback(tri2Start) + ' — ' + formatDateFallback(tri2End));
+      trimester3Dates.textContent = NOM.formatDate ? (NOM.formatDate(tri3Start) + ' — ' + NOM.formatDate(dueDate)) : (formatDateFallback(tri3Start) + ' — ' + formatDateFallback(dueDate));
+
+      // Week info
+      if (weekData) {
+        weekInfoCard.style.display = '';
+        weekInfoTitle.textContent = 'Your Baby at Week ' + weekNum;
+        weekInfoDesc.textContent = 'Your baby is about the size of a ' + weekData.fruitComparison + ', measuring approximately ' + weekData.babySizeCm + ' cm and weighing around ' + weekData.babyWeight + '.';
+      }
+
+      // Scroll to results
+      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function formatDateFallback(date) {
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      return months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+    }
+
+    calculateBtn.addEventListener('click', calculateDueDate);
+
+    // Allow Enter key to trigger calculation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && (e.target === lmpDateInput || e.target === conceptionDateInput)) {
+        calculateDueDate();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
