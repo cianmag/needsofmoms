@@ -1,528 +1,502 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Names Explorer - Find the Perfect Name for Your Baby | NeedsOfMoms</title>
-  <meta name="description" content="Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search and filter by gender, origin, and more to find the perfect name for your little one.">
-  <meta property="og:title" content="Baby Names Explorer - Find the Perfect Name">
-  <meta property="og:description" content="Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Find the perfect name for your baby.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://needsofmoms.com/baby-names">
-  <meta property="og:site_name" content="NeedsOfMoms">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://needsofmoms.com/baby-names">
-  <link rel="stylesheet" href="/css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://needsofmoms.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Baby Names",
-        "item": "https://needsofmoms.com/baby-names"
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I choose the perfect baby name?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Choosing the perfect baby name involves considering factors like meaning, origin, how it sounds with your last name, family traditions, and current popularity. Our explorer lets you search by meaning and origin, filter by gender, and see popularity rankings to help narrow down your options."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the most popular baby names right now?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Popular baby names change each year, but consistently top-ranked names include Olivia, Emma, Charlotte, Liam, Noah, and Oliver for girls and boys respectively. Our database tracks popularity rankings so you can see which names are trending."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Should I pick a unique or common baby name?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "There's no right answer — it depends on your preference. Common names are familiar and easy to spell, while unique names help your child stand out. Many parents find a balance by choosing a classic name with a less common spelling or a name that's recognizable but not overly popular."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does a baby name's origin mean?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A name's origin refers to the cultural, linguistic, or geographic roots of the name. For example, Hebrew names like Noah have biblical roots, while Latin names like Olivia come from Roman tradition. Understanding origin can help you find names that connect to your heritage or simply appeal to you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use a unisex name for my baby?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! Unisex names like Riley, Jordan, Avery, and Quinn work beautifully for any gender. They've become increasingly popular as parents look for names that are flexible and modern. Our explorer has a dedicated Unisex filter to help you browse these names."
-        }
-      }
-    ]
-  }
-  </script>
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <span class="logo-icon">🤰</span>
-        <span class="logo-text"><span>NeedsOfMoms</span></span>
-      </a>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
-          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
-          <li><a href="/baby-names" class="nav-link active">Baby Names</a></li>
-          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="mobile-nav">
-      <ul class="nav-list">
-        <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
-        <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
-        <li><a href="/baby-names" class="nav-link active">Baby Names</a></li>
-        <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Breadcrumb -->
-    <div class="container" style="padding-top: var(--space-lg);">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <ol style="display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;gap:var(--space-xs);">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Baby Names</li>
-        </ol>
-      </nav>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero container">
-      <h1 class="text-gradient">Find the Perfect Baby Name</h1>
-      <p>Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search, filter, and discover the name that's just right for your little one.</p>
-    </section>
-
-    <!-- Search & Filter Section -->
-    <section class="container">
-      <!-- Search Bar -->
-      <div style="max-width:560px;margin:0 auto var(--space-xl);">
-        <div class="search-input-wrapper">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="nameSearch" class="search-input" placeholder="Search by name, meaning, or origin..." aria-label="Search baby names">
-          <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
-        </div>
-      </div>
-
-      <!-- Filter Chips & Origin Dropdown -->
-      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-md);margin-bottom:var(--space-xl);">
-        <div class="filter-chips" style="margin-bottom:0;">
-          <button class="filter-chip active" data-filter="all">All</button>
-          <button class="filter-chip" data-filter="girl">👧 Girls</button>
-          <button class="filter-chip" data-filter="boy">👦 Boys</button>
-          <button class="filter-chip" data-filter="unisex">🧑 Unisex</button>
-        </div>
-        <select id="originFilter" class="form-select" style="width:auto;min-width:160px;" aria-label="Filter by origin">
-          <option value="">All Origins</option>
-        </select>
-      </div>
-
-      <!-- Results Count -->
-      <div id="resultsInfo" style="text-align:center;margin-bottom:var(--space-lg);color:var(--text-muted);font-size:var(--text-sm);"></div>
-    </section>
-
-    <!-- Names Grid -->
-    <section class="container">
-      <div id="namesGrid" class="names-grid"></div>
-      <div id="noResults" style="display:none;text-align:center;padding:var(--space-3xl) 0;">
-        <div style="font-size:3rem;margin-bottom:var(--space-md);">🤷</div>
-        <h3>No names found</h3>
-        <p class="text-muted">Try adjusting your search or filters.</p>
-      </div>
-      <div id="loadingSpinner" style="text-align:center;padding:var(--space-3xl) 0;">
-        <div style="font-size:2rem;margin-bottom:var(--space-md);">⏳</div>
-        <p class="text-muted">Loading names...</p>
-      </div>
-    </section>
-
-    <!-- Load More -->
-    <div class="container" style="text-align:center;padding:var(--space-xl) 0;">
-      <button id="loadMoreBtn" class="btn btn-secondary btn-lg" style="display:none;">Load More Names</button>
-    </div>
-
-    <!-- FAQ Section -->
-    <section class="section container">
-      <div class="section-header">
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about choosing a baby name</p>
-      </div>
-
-      <div class="accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>How do I choose the perfect baby name?</span>
-            <span class="accordion-icon">▼</span>
-          </button>
-          <div class="accordion-body">
-            <div class="accordion-content">
-              <p>Choosing the perfect baby name involves considering factors like meaning, origin, how it sounds with your last name, family traditions, and current popularity. Our explorer lets you search by meaning and origin, filter by gender, and see popularity rankings to help narrow down your options.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>What are the most popular baby names right now?</span>
-            <span class="accordion-icon">▼</span>
-          </button>
-          <div class="accordion-body">
-            <div class="accordion-content">
-              <p>Popular baby names change each year, but consistently top-ranked names include Olivia, Emma, Charlotte for girls, and Liam, Noah, Oliver for boys. Our database tracks popularity rankings so you can see which names are trending.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>Should I pick a unique or common baby name?</span>
-            <span class="accordion-icon">▼</span>
-          </button>
-          <div class="accordion-body">
-            <div class="accordion-content">
-              <p>There's no right answer — it depends on your preference. Common names are familiar and easy to spell, while unique names help your child stand out. Many parents find a balance by choosing a classic name with a less common spelling or a name that's recognizable but not overly popular.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>What does a baby name's origin mean?</span>
-            <span class="accordion-icon">▼</span>
-          </button>
-          <div class="accordion-body">
-            <div class="accordion-content">
-              <p>A name's origin refers to the cultural, linguistic, or geographic roots of the name. For example, Hebrew names like Noah have biblical roots, while Latin names like Olivia come from Roman tradition. Understanding origin can help you find names that connect to your heritage or simply appeal to you.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            <span>Can I use a unisex name for my baby?</span>
-            <span class="accordion-icon">▼</span>
-          </button>
-          <div class="accordion-body">
-            <div class="accordion-content">
-              <p>Absolutely! Unisex names like Riley, Jordan, Avery, and Quinn work beautifully for any gender. They've become increasingly popular as parents look for names that are flexible and modern. Our explorer has a dedicated Unisex filter to help you browse these names.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>NeedsOfMoms</h4>
-        <p>Trusted pregnancy and parenting resources to guide you through every step of your journey — from conception to birth and beyond.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Tools</h4>
-        <div class="footer-links">
-          <a href="/tools/due-date-calculator">Due Date Calculator</a>
-          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-          <a href="/baby-names">Baby Names Explorer</a>
-          <a href="/week-by-week">Week by Week Guide</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Baby Names</h4>
-        <div class="footer-links">
-          <a href="/baby-names">All Baby Names</a>
-          <a href="/baby-names/girls">Girl Names</a>
-          <a href="/baby-names/boys">Boy Names</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <div class="footer-links">
-          <a href="/about">About Us</a>
-          <a href="/contact">Contact</a>
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 NeedsOfMoms. All rights reserved. This site does not provide medical advice. Always consult your healthcare provider.</p>
-    </div>
-  </footer>
-
-  <script src="/js/app.js"></script>
-
-  <script>
-  (function() {
-    'use strict';
-
-    // =========================================================================
-    // STATE
-    // =========================================================================
-    var allNames = [];
-    var filteredNames = [];
-    var currentFilter = 'all';
-    var currentOrigin = '';
-    var currentSearch = '';
-    var pageSize = 60;
-    var currentPage = 0;
-
-    // =========================================================================
-    // DOM ELEMENTS
-    // =========================================================================
-    var searchInput = document.getElementById('nameSearch');
-    var searchClear = document.getElementById('searchClear');
-    var originSelect = document.getElementById('originFilter');
-    var namesGrid = document.getElementById('namesGrid');
-    var noResults = document.getElementById('noResults');
-    var loadingSpinner = document.getElementById('loadingSpinner');
-    var resultsInfo = document.getElementById('resultsInfo');
-    var loadMoreBtn = document.getElementById('loadMoreBtn');
-    var filterChips = document.querySelectorAll('.filter-chip[data-filter]');
-
-    // =========================================================================
-    // GENDER ICONS
-    // =========================================================================
-    var genderIcons = {
-      girl: { icon: '♀', cls: 'female', label: 'Girl' },
-      boy: { icon: '♂', cls: 'male', label: 'Boy' },
-      unisex: { icon: '⚧', cls: 'unisex', label: 'Unisex' }
-    };
-
-    // =========================================================================
-    // LOAD NAMES
-    // =========================================================================
-    function loadNames() {
-      fetch('/data/baby-names.json')
-        .then(function(res) {
-          if (!res.ok) throw new Error('Failed to load names');
-          return res.json();
-        })
-        .then(function(data) {
-          allNames = data;
-          loadingSpinner.style.display = 'none';
-          populateOrigins();
-          applyFilters();
-        })
-        .catch(function(err) {
-          loadingSpinner.innerHTML = '<p style="color:var(--color-danger);">Failed to load names. Please refresh the page.</p>';
-          console.error('Error loading names:', err);
-        });
-    }
-
-    // =========================================================================
-    // POPULATE ORIGIN DROPDOWN
-    // =========================================================================
-    function populateOrigins() {
-      var origins = {};
-      allNames.forEach(function(n) {
-        if (n.origin) origins[n.origin] = true;
-      });
-      var sorted = Object.keys(origins).sort();
-      sorted.forEach(function(o) {
-        var opt = document.createElement('option');
-        opt.value = o;
-        opt.textContent = o;
-        originSelect.appendChild(opt);
-      });
-    }
-
-    // =========================================================================
-    // FILTER & SEARCH
-    // =========================================================================
-    function applyFilters() {
-      var search = currentSearch.toLowerCase().trim();
-
-      filteredNames = allNames.filter(function(n) {
-        // Gender filter
-        if (currentFilter !== 'all' && n.gender !== currentFilter) return false;
-
-        // Origin filter
-        if (currentOrigin && n.origin !== currentOrigin) return false;
-
-        // Search filter
-        if (search) {
-          var nameMatch = n.name.toLowerCase().indexOf(search) !== -1;
-          var meaningMatch = n.meaning.toLowerCase().indexOf(search) !== -1;
-          var originMatch = n.origin.toLowerCase().indexOf(search) !== -1;
-          if (!nameMatch && !meaningMatch && !originMatch) return false;
-        }
-
-        return true;
-      });
-
-      currentPage = 0;
-      namesGrid.innerHTML = '';
-      renderPage();
-      updateResultsInfo();
-    }
-
-    // =========================================================================
-    // RENDER PAGE OF NAMES
-    // =========================================================================
-    function renderPage() {
-      var start = currentPage * pageSize;
-      var end = start + pageSize;
-      var page = filteredNames.slice(start, end);
-
-      if (filteredNames.length === 0) {
-        noResults.style.display = 'block';
-        loadMoreBtn.style.display = 'none';
-        return;
-      }
-
-      noResults.style.display = 'none';
-
-      var fragment = document.createDocumentFragment();
-      page.forEach(function(n) {
-        fragment.appendChild(createNameCard(n));
-      });
-      namesGrid.appendChild(fragment);
-
-      // Show/hide load more
-      if (end < filteredNames.length) {
-        loadMoreBtn.style.display = 'inline-flex';
-      } else {
-        loadMoreBtn.style.display = 'none';
-      }
-    }
-
-    // =========================================================================
-    // CREATE NAME CARD
-    // =========================================================================
-    function createNameCard(name) {
-      var gi = genderIcons[name.gender] || genderIcons.unisex;
-
-      var card = document.createElement('div');
-      card.className = 'baby-name-card';
-      card.innerHTML =
-        '<div class="gender-icon ' + gi.cls + '" title="' + gi.label + '">' + gi.icon + '</div>' +
-        '<div class="name">' + escapeHtml(name.name) + '</div>' +
-        '<div class="meaning">' + escapeHtml(name.meaning) + '</div>' +
-        '<span class="origin">' + escapeHtml(name.origin) + '</span>' +
-        '<div class="popularity">⭐ #' + name.popularity + ' popularity</div>';
-
-      return card;
-    }
-
-    // =========================================================================
-    // UPDATE RESULTS INFO
-    // =========================================================================
-    function updateResultsInfo() {
-      var total = filteredNames.length;
-      var label = 'name' + (total !== 1 ? 's' : '');
-      resultsInfo.textContent = 'Showing ' + total + ' ' + label;
-    }
-
-    // =========================================================================
-    // ESCAPE HTML
-    // =========================================================================
-    function escapeHtml(str) {
-      var div = document.createElement('div');
-      div.appendChild(document.createTextNode(str));
-      return div.innerHTML;
-    }
-
-    // =========================================================================
-    // DEBOUNCE
-    // =========================================================================
-    function debounce(fn, delay) {
-      var timer;
-      return function() {
-        clearTimeout(timer);
-        var args = arguments;
-        var ctx = this;
-        timer = setTimeout(function() { fn.apply(ctx, args); }, delay);
-      };
-    }
-
-    // =========================================================================
-    // EVENT LISTENERS
-    // =========================================================================
-
-    // Search input
-    searchInput.addEventListener('input', debounce(function() {
-      currentSearch = searchInput.value;
-      searchClear.style.display = currentSearch ? 'flex' : 'none';
-      searchInput.parentElement.classList.toggle('has-value', !!currentSearch);
-      applyFilters();
-    }, 250));
-
-    // Search clear
-    searchClear.addEventListener('click', function() {
-      searchInput.value = '';
-      currentSearch = '';
-      searchClear.style.display = 'none';
-      searchInput.parentElement.classList.remove('has-value');
-      applyFilters();
-      searchInput.focus();
-    });
-
-    // Filter chips
-    filterChips.forEach(function(chip) {
-      chip.addEventListener('click', function() {
-        filterChips.forEach(function(c) { c.classList.remove('active'); });
-        chip.classList.add('active');
-        currentFilter = chip.getAttribute('data-filter');
-        applyFilters();
-      });
-    });
-
-    // Origin select
-    originSelect.addEventListener('change', function() {
-      currentOrigin = originSelect.value;
-      applyFilters();
-    });
-
-    // Load more
-    loadMoreBtn.addEventListener('click', function() {
-      currentPage++;
-      renderPage();
-    });
-
-    // =========================================================================
-    // INIT
-    // =========================================================================
-    loadNames();
-
-  })();
-  </script>
-
-</body>
-</html>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|  <meta charset="UTF-8">
+     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|  <title>Baby Names Explorer - Find the Perfect Name for Your Baby | NeedsOfMoms</title>
+     7|  <meta name="description" content="Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search and filter by gender, origin, and more to find the perfect name for your little one.">
+     8|  <meta property="og:title" content="Baby Names Explorer - Find the Perfect Name">
+     9|  <meta property="og:description" content="Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Find the perfect name for your baby.">
+    <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
+    10|  <meta property="og:type" content="website">
+    11|  <meta property="og:url" content="https://needsofmoms.com/baby-names">
+    12|  <meta property="og:site_name" content="NeedsOfMoms">
+    13|  <meta name="twitter:card" content="summary_large_image">
+    14|  <link rel="canonical" href="https://needsofmoms.com/baby-names">
+    15|  <link rel="stylesheet" href="/css/style.css">
+    16|
+    17|  <script type="application/ld+json">
+    18|  {
+    19|    "@context": "https://schema.org",
+    20|    "@type": "BreadcrumbList",
+    21|    "itemListElement": [
+    22|      {
+    23|        "@type": "ListItem",
+    24|        "position": 1,
+    25|        "name": "Home",
+    26|        "item": "https://needsofmoms.com/"
+    27|      },
+    28|      {
+    29|        "@type": "ListItem",
+    30|        "position": 2,
+    31|        "name": "Baby Names",
+    32|        "item": "https://needsofmoms.com/baby-names"
+    33|      }
+    34|    ]
+    35|  }
+    36|  </script>
+    37|  <script type="application/ld+json">
+    38|  {
+    39|    "@context": "https://schema.org",
+    40|    "@type": "FAQPage",
+    41|    "mainEntity": [
+    42|      {
+    43|        "@type": "Question",
+    44|        "name": "How do I choose the perfect baby name?",
+    45|        "acceptedAnswer": {
+    46|          "@type": "Answer",
+    47|          "text": "Choosing the perfect baby name involves considering factors like meaning, origin, how it sounds with your last name, family traditions, and current popularity. Our explorer lets you search by meaning and origin, filter by gender, and see popularity rankings to help narrow down your options."
+    48|        }
+    49|      },
+    50|      {
+    51|        "@type": "Question",
+    52|        "name": "What are the most popular baby names right now?",
+    53|        "acceptedAnswer": {
+    54|          "@type": "Answer",
+    55|          "text": "Popular baby names change each year, but consistently top-ranked names include Olivia, Emma, Charlotte, Liam, Noah, and Oliver for girls and boys respectively. Our database tracks popularity rankings so you can see which names are trending."
+    56|        }
+    57|      },
+    58|      {
+    59|        "@type": "Question",
+    60|        "name": "Should I pick a unique or common baby name?",
+    61|        "acceptedAnswer": {
+    62|          "@type": "Answer",
+    63|          "text": "There's no right answer — it depends on your preference. Common names are familiar and easy to spell, while unique names help your child stand out. Many parents find a balance by choosing a classic name with a less common spelling or a name that's recognizable but not overly popular."
+    64|        }
+    65|      },
+    66|      {
+    67|        "@type": "Question",
+    68|        "name": "What does a baby name's origin mean?",
+    69|        "acceptedAnswer": {
+    70|          "@type": "Answer",
+    71|          "text": "A name's origin refers to the cultural, linguistic, or geographic roots of the name. For example, Hebrew names like Noah have biblical roots, while Latin names like Olivia come from Roman tradition. Understanding origin can help you find names that connect to your heritage or simply appeal to you."
+    72|        }
+    73|      },
+    74|      {
+    75|        "@type": "Question",
+    76|        "name": "Can I use a unisex name for my baby?",
+    77|        "acceptedAnswer": {
+    78|          "@type": "Answer",
+    79|          "text": "Absolutely! Unisex names like Riley, Jordan, Avery, and Quinn work beautifully for any gender. They've become increasingly popular as parents look for names that are flexible and modern. Our explorer has a dedicated Unisex filter to help you browse these names."
+    80|        }
+    81|      }
+    82|    ]
+    83|  }
+    84|  </script>
+    85|</head>
+    86|<body>
+    87|
+    88|  <header class="site-header">
+    89|    <div class="header-inner">
+    90|      <a href="/" class="logo">
+    91|        <span class="logo-icon">🤰</span>
+    92|        <span class="logo-text"><span>NeedsOfMoms</span></span>
+    93|      </a>
+    94|      <nav class="main-nav">
+    95|        <ul class="nav-list">
+    96|          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
+    97|          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
+    98|          <li><a href="/baby-names" class="nav-link active">Baby Names</a></li>
+    99|          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
+   100|        </ul>
+   101|      </nav>
+   102|      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+   103|        <span></span><span></span><span></span>
+   104|      </button>
+   105|    </div>
+   106|    <nav class="mobile-nav">
+   107|      <ul class="nav-list">
+   108|        <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
+   109|        <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
+   110|        <li><a href="/baby-names" class="nav-link active">Baby Names</a></li>
+   111|        <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
+   112|      </ul>
+   113|    </nav>
+   114|  </header>
+   115|
+   116|  <main>
+   117|    <!-- Breadcrumb -->
+   118|    <div class="container" style="padding-top: var(--space-lg);">
+   119|      <nav class="breadcrumb" aria-label="Breadcrumb">
+   120|        <ol style="display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;gap:var(--space-xs);">
+   121|          <li class="breadcrumb-item"><a href="/">Home</a></li>
+   122|          <li class="breadcrumb-item active" aria-current="page">Baby Names</li>
+   123|        </ol>
+   124|      </nav>
+   125|    </div>
+   126|
+   127|    <!-- Hero Section -->
+   128|    <section class="hero container">
+   129|      <h1 class="text-gradient">Find the Perfect Baby Name</h1>
+   130|      <p>Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search, filter, and discover the name that's just right for your little one.</p>
+   131|    </section>
+   132|
+   133|    <!-- Search & Filter Section -->
+   134|    <section class="container">
+   135|      <!-- Search Bar -->
+   136|      <div style="max-width:560px;margin:0 auto var(--space-xl);">
+   137|        <div class="search-input-wrapper">
+   138|          <span class="search-icon">🔍</span>
+   139|          <input type="text" id="nameSearch" class="search-input" placeholder="Search by name, meaning, or origin..." aria-label="Search baby names">
+   140|          <button class="search-clear" id="searchClear" aria-label="Clear search">&times;</button>
+   141|        </div>
+   142|      </div>
+   143|
+   144|      <!-- Filter Chips & Origin Dropdown -->
+   145|      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:var(--space-md);margin-bottom:var(--space-xl);">
+   146|        <div class="filter-chips" style="margin-bottom:0;">
+   147|          <button class="filter-chip active" data-filter="all">All</button>
+   148|          <button class="filter-chip" data-filter="girl">👧 Girls</button>
+   149|          <button class="filter-chip" data-filter="boy">👦 Boys</button>
+   150|          <button class="filter-chip" data-filter="unisex">🧑 Unisex</button>
+   151|        </div>
+   152|        <select id="originFilter" class="form-select" style="width:auto;min-width:160px;" aria-label="Filter by origin">
+   153|          <option value="">All Origins</option>
+   154|        </select>
+   155|      </div>
+   156|
+   157|      <!-- Results Count -->
+   158|      <div id="resultsInfo" style="text-align:center;margin-bottom:var(--space-lg);color:var(--text-muted);font-size:var(--text-sm);"></div>
+   159|    </section>
+   160|
+   161|    <!-- Names Grid -->
+   162|    <section class="container">
+   163|      <div id="namesGrid" class="names-grid"></div>
+   164|      <div id="noResults" style="display:none;text-align:center;padding:var(--space-3xl) 0;">
+   165|        <div style="font-size:3rem;margin-bottom:var(--space-md);">🤷</div>
+   166|        <h3>No names found</h3>
+   167|        <p class="text-muted">Try adjusting your search or filters.</p>
+   168|      </div>
+   169|      <div id="loadingSpinner" style="text-align:center;padding:var(--space-3xl) 0;">
+   170|        <div style="font-size:2rem;margin-bottom:var(--space-md);">⏳</div>
+   171|        <p class="text-muted">Loading names...</p>
+   172|      </div>
+   173|    </section>
+   174|
+   175|    <!-- Load More -->
+   176|    <div class="container" style="text-align:center;padding:var(--space-xl) 0;">
+   177|      <button id="loadMoreBtn" class="btn btn-secondary btn-lg" style="display:none;">Load More Names</button>
+   178|    </div>
+   179|
+   180|    <!-- FAQ Section -->
+   181|    <section class="section container">
+   182|      <div class="section-header">
+   183|        <h2>Frequently Asked Questions</h2>
+   184|        <p>Everything you need to know about choosing a baby name</p>
+   185|      </div>
+   186|
+   187|      <div class="accordion" id="faqAccordion">
+   188|        <div class="accordion-item">
+   189|          <button class="accordion-header" aria-expanded="false">
+   190|            <span>How do I choose the perfect baby name?</span>
+   191|            <span class="accordion-icon">▼</span>
+   192|          </button>
+   193|          <div class="accordion-body">
+   194|            <div class="accordion-content">
+   195|              <p>Choosing the perfect baby name involves considering factors like meaning, origin, how it sounds with your last name, family traditions, and current popularity. Our explorer lets you search by meaning and origin, filter by gender, and see popularity rankings to help narrow down your options.</p>
+   196|            </div>
+   197|          </div>
+   198|        </div>
+   199|
+   200|        <div class="accordion-item">
+   201|          <button class="accordion-header" aria-expanded="false">
+   202|            <span>What are the most popular baby names right now?</span>
+   203|            <span class="accordion-icon">▼</span>
+   204|          </button>
+   205|          <div class="accordion-body">
+   206|            <div class="accordion-content">
+   207|              <p>Popular baby names change each year, but consistently top-ranked names include Olivia, Emma, Charlotte for girls, and Liam, Noah, Oliver for boys. Our database tracks popularity rankings so you can see which names are trending.</p>
+   208|            </div>
+   209|          </div>
+   210|        </div>
+   211|
+   212|        <div class="accordion-item">
+   213|          <button class="accordion-header" aria-expanded="false">
+   214|            <span>Should I pick a unique or common baby name?</span>
+   215|            <span class="accordion-icon">▼</span>
+   216|          </button>
+   217|          <div class="accordion-body">
+   218|            <div class="accordion-content">
+   219|              <p>There's no right answer — it depends on your preference. Common names are familiar and easy to spell, while unique names help your child stand out. Many parents find a balance by choosing a classic name with a less common spelling or a name that's recognizable but not overly popular.</p>
+   220|            </div>
+   221|          </div>
+   222|        </div>
+   223|
+   224|        <div class="accordion-item">
+   225|          <button class="accordion-header" aria-expanded="false">
+   226|            <span>What does a baby name's origin mean?</span>
+   227|            <span class="accordion-icon">▼</span>
+   228|          </button>
+   229|          <div class="accordion-body">
+   230|            <div class="accordion-content">
+   231|              <p>A name's origin refers to the cultural, linguistic, or geographic roots of the name. For example, Hebrew names like Noah have biblical roots, while Latin names like Olivia come from Roman tradition. Understanding origin can help you find names that connect to your heritage or simply appeal to you.</p>
+   232|            </div>
+   233|          </div>
+   234|        </div>
+   235|
+   236|        <div class="accordion-item">
+   237|          <button class="accordion-header" aria-expanded="false">
+   238|            <span>Can I use a unisex name for my baby?</span>
+   239|            <span class="accordion-icon">▼</span>
+   240|          </button>
+   241|          <div class="accordion-body">
+   242|            <div class="accordion-content">
+   243|              <p>Absolutely! Unisex names like Riley, Jordan, Avery, and Quinn work beautifully for any gender. They've become increasingly popular as parents look for names that are flexible and modern. Our explorer has a dedicated Unisex filter to help you browse these names.</p>
+   244|            </div>
+   245|          </div>
+   246|        </div>
+   247|      </div>
+   248|    </section>
+   249|  </main>
+   250|
+   251|  <footer class="footer">
+   252|    <div class="footer-grid">
+   253|      <div class="footer-col">
+   254|        <h4>NeedsOfMoms</h4>
+   255|        <p>Trusted pregnancy and parenting resources to guide you through every step of your journey — from conception to birth and beyond.</p>
+   256|      </div>
+   257|      <div class="footer-col">
+   258|        <h4>Tools</h4>
+   259|        <div class="footer-links">
+   260|          <a href="/tools/due-date-calculator">Due Date Calculator</a>
+   261|          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+   262|          <a href="/baby-names">Baby Names Explorer</a>
+   263|          <a href="/week-by-week">Week by Week Guide</a>
+   264|        </div>
+   265|      </div>
+   266|      <div class="footer-col">
+   267|        <h4>Baby Names</h4>
+   268|        <div class="footer-links">
+   269|          <a href="/baby-names">All Baby Names</a>
+   270|          <a href="/baby-names/girls">Girl Names</a>
+   271|          <a href="/baby-names/boys">Boy Names</a>
+   272|        </div>
+   273|      </div>
+   274|      <div class="footer-col">
+   275|        <h4>Company</h4>
+   276|        <div class="footer-links">
+   277|          <a href="/about">About Us</a>
+   278|          <a href="/contact">Contact</a>
+   279|          <a href="/privacy">Privacy Policy</a>
+   280|          <a href="/terms">Terms of Service</a>
+   281|        </div>
+   282|      </div>
+   283|    </div>
+   284|    <div class="footer-bottom">
+   285|      <p>&copy; 2026 NeedsOfMoms. All rights reserved. This site does not provide medical advice. Always consult your healthcare provider.</p>
+   286|    </div>
+   287|  </footer>
+   288|
+   289|  <script src="/js/app.js"></script>
+   290|
+   291|  <script>
+   292|  (function() {
+   293|    'use strict';
+   294|
+   295|    // =========================================================================
+   296|    // STATE
+   297|    // =========================================================================
+   298|    var allNames = [];
+   299|    var filteredNames = [];
+   300|    var currentFilter = 'all';
+   301|    var currentOrigin = '';
+   302|    var currentSearch = '';
+   303|    var pageSize = 60;
+   304|    var currentPage = 0;
+   305|
+   306|    // =========================================================================
+   307|    // DOM ELEMENTS
+   308|    // =========================================================================
+   309|    var searchInput = document.getElementById('nameSearch');
+   310|    var searchClear = document.getElementById('searchClear');
+   311|    var originSelect = document.getElementById('originFilter');
+   312|    var namesGrid = document.getElementById('namesGrid');
+   313|    var noResults = document.getElementById('noResults');
+   314|    var loadingSpinner = document.getElementById('loadingSpinner');
+   315|    var resultsInfo = document.getElementById('resultsInfo');
+   316|    var loadMoreBtn = document.getElementById('loadMoreBtn');
+   317|    var filterChips = document.querySelectorAll('.filter-chip[data-filter]');
+   318|
+   319|    // =========================================================================
+   320|    // GENDER ICONS
+   321|    // =========================================================================
+   322|    var genderIcons = {
+   323|      girl: { icon: '♀', cls: 'female', label: 'Girl' },
+   324|      boy: { icon: '♂', cls: 'male', label: 'Boy' },
+   325|      unisex: { icon: '⚧', cls: 'unisex', label: 'Unisex' }
+   326|    };
+   327|
+   328|    // =========================================================================
+   329|    // LOAD NAMES
+   330|    // =========================================================================
+   331|    function loadNames() {
+   332|      fetch('/data/baby-names.json')
+   333|        .then(function(res) {
+   334|          if (!res.ok) throw new Error('Failed to load names');
+   335|          return res.json();
+   336|        })
+   337|        .then(function(data) {
+   338|          allNames = data;
+   339|          loadingSpinner.style.display = 'none';
+   340|          populateOrigins();
+   341|          applyFilters();
+   342|        })
+   343|        .catch(function(err) {
+   344|          loadingSpinner.innerHTML = '<p style="color:var(--color-danger);">Failed to load names. Please refresh the page.</p>';
+   345|          console.error('Error loading names:', err);
+   346|        });
+   347|    }
+   348|
+   349|    // =========================================================================
+   350|    // POPULATE ORIGIN DROPDOWN
+   351|    // =========================================================================
+   352|    function populateOrigins() {
+   353|      var origins = {};
+   354|      allNames.forEach(function(n) {
+   355|        if (n.origin) origins[n.origin] = true;
+   356|      });
+   357|      var sorted = Object.keys(origins).sort();
+   358|      sorted.forEach(function(o) {
+   359|        var opt = document.createElement('option');
+   360|        opt.value = o;
+   361|        opt.textContent = o;
+   362|        originSelect.appendChild(opt);
+   363|      });
+   364|    }
+   365|
+   366|    // =========================================================================
+   367|    // FILTER & SEARCH
+   368|    // =========================================================================
+   369|    function applyFilters() {
+   370|      var search = currentSearch.toLowerCase().trim();
+   371|
+   372|      filteredNames = allNames.filter(function(n) {
+   373|        // Gender filter
+   374|        if (currentFilter !== 'all' && n.gender !== currentFilter) return false;
+   375|
+   376|        // Origin filter
+   377|        if (currentOrigin && n.origin !== currentOrigin) return false;
+   378|
+   379|        // Search filter
+   380|        if (search) {
+   381|          var nameMatch = n.name.toLowerCase().indexOf(search) !== -1;
+   382|          var meaningMatch = n.meaning.toLowerCase().indexOf(search) !== -1;
+   383|          var originMatch = n.origin.toLowerCase().indexOf(search) !== -1;
+   384|          if (!nameMatch && !meaningMatch && !originMatch) return false;
+   385|        }
+   386|
+   387|        return true;
+   388|      });
+   389|
+   390|      currentPage = 0;
+   391|      namesGrid.innerHTML = '';
+   392|      renderPage();
+   393|      updateResultsInfo();
+   394|    }
+   395|
+   396|    // =========================================================================
+   397|    // RENDER PAGE OF NAMES
+   398|    // =========================================================================
+   399|    function renderPage() {
+   400|      var start = currentPage * pageSize;
+   401|      var end = start + pageSize;
+   402|      var page = filteredNames.slice(start, end);
+   403|
+   404|      if (filteredNames.length === 0) {
+   405|        noResults.style.display = 'block';
+   406|        loadMoreBtn.style.display = 'none';
+   407|        return;
+   408|      }
+   409|
+   410|      noResults.style.display = 'none';
+   411|
+   412|      var fragment = document.createDocumentFragment();
+   413|      page.forEach(function(n) {
+   414|        fragment.appendChild(createNameCard(n));
+   415|      });
+   416|      namesGrid.appendChild(fragment);
+   417|
+   418|      // Show/hide load more
+   419|      if (end < filteredNames.length) {
+   420|        loadMoreBtn.style.display = 'inline-flex';
+   421|      } else {
+   422|        loadMoreBtn.style.display = 'none';
+   423|      }
+   424|    }
+   425|
+   426|    // =========================================================================
+   427|    // CREATE NAME CARD
+   428|    // =========================================================================
+   429|    function createNameCard(name) {
+   430|      var gi = genderIcons[name.gender] || genderIcons.unisex;
+   431|
+   432|      var card = document.createElement('div');
+   433|      card.className = 'baby-name-card';
+   434|      card.innerHTML =
+   435|        '<div class="gender-icon ' + gi.cls + '" title="' + gi.label + '">' + gi.icon + '</div>' +
+   436|        '<div class="name">' + escapeHtml(name.name) + '</div>' +
+   437|        '<div class="meaning">' + escapeHtml(name.meaning) + '</div>' +
+   438|        '<span class="origin">' + escapeHtml(name.origin) + '</span>' +
+   439|        '<div class="popularity">⭐ #' + name.popularity + ' popularity</div>';
+   440|
+   441|      return card;
+   442|    }
+   443|
+   444|    // =========================================================================
+   445|    // UPDATE RESULTS INFO
+   446|    // =========================================================================
+   447|    function updateResultsInfo() {
+   448|      var total = filteredNames.length;
+   449|      var label = 'name' + (total !== 1 ? 's' : '');
+   450|      resultsInfo.textContent = 'Showing ' + total + ' ' + label;
+   451|    }
+   452|
+   453|    // =========================================================================
+   454|    // ESCAPE HTML
+   455|    // =========================================================================
+   456|    function escapeHtml(str) {
+   457|      var div = document.createElement('div');
+   458|      div.appendChild(document.createTextNode(str));
+   459|      return div.innerHTML;
+   460|    }
+   461|
+   462|    // =========================================================================
+   463|    // DEBOUNCE
+   464|    // =========================================================================
+   465|    function debounce(fn, delay) {
+   466|      var timer;
+   467|      return function() {
+   468|        clearTimeout(timer);
+   469|        var args = arguments;
+   470|        var ctx = this;
+   471|        timer = setTimeout(function() { fn.apply(ctx, args); }, delay);
+   472|      };
+   473|    }
+   474|
+   475|    // =========================================================================
+   476|    // EVENT LISTENERS
+   477|    // =========================================================================
+   478|
+   479|    // Search input
+   480|    searchInput.addEventListener('input', debounce(function() {
+   481|      currentSearch = searchInput.value;
+   482|      searchClear.style.display = currentSearch ? 'flex' : 'none';
+   483|      searchInput.parentElement.classList.toggle('has-value', !!currentSearch);
+   484|      applyFilters();
+   485|    }, 250));
+   486|
+   487|    // Search clear
+   488|    searchClear.addEventListener('click', function() {
+   489|      searchInput.value = '';
+   490|      currentSearch = '';
+   491|      searchClear.style.display = 'none';
+   492|      searchInput.parentElement.classList.remove('has-value');
+   493|      applyFilters();
+   494|      searchInput.focus();
+   495|    });
+   496|
+   497|    // Filter chips
+   498|    filterChips.forEach(function(chip) {
+   499|      chip.addEventListener('click', function() {
+   500|        filterChips.forEach(function(c) { c.classList.remove('active'); });
+   501|
