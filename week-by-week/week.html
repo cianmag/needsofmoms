@@ -1,458 +1,466 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pregnancy Week by Week | NeedsOfMoms</title>
-  <meta name="description" content="Week by week pregnancy guide. Learn about your baby's development, your changing body, and tips for each week of pregnancy.">
-  <meta property="og:title" content="Pregnancy Week Guide | NeedsOfMoms">
-  <meta property="og:description" content="Week by week pregnancy guide with baby development, symptoms, and tips.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://needsofmoms.com/week-by-week/week.html">
-  <meta property="og:site_name" content="NeedsOfMoms">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://needsofmoms.com/week-by-week/week.html">
-  <link rel="stylesheet" href="/css/style.css">
-  <script type="application/ld+json" id="schema-breadcrumb">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://needsofmoms.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Week by Week", "item": "https://needsofmoms.com/week-by-week"},
-      {"@type": "ListItem", "position": 3, "name": "Week", "item": "https://needsofmoms.com/week-by-week/week.html"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json" id="schema-article">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Pregnancy Week Guide",
-    "description": "Week by week pregnancy guide with baby development, symptoms, and tips.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "NeedsOfMoms",
-      "url": "https://needsofmoms.com"
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://needsofmoms.com/week-by-week/week.html"
-    }
-  }
-  </script>
-  <script type="application/ld+json" id="schema-faq">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": []
-  }
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <span class="logo-icon">🤰</span>
-        <span class="logo-text">Needs<span>OfMoms</span></span>
-      </a>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
-          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
-          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
-          <li><a href="/week-by-week" class="nav-link active">Week by Week</a></li>
-        </ul>
-      </nav>
-      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- Loading State -->
-    <div id="week-loading" class="text-center" style="padding: 4rem 0;">
-      <div class="spinner spinner-lg"></div>
-      <p class="text-muted mt-3">Loading week data...</p>
-    </div>
-
-    <!-- Week Content (hidden until loaded) -->
-    <div id="week-content" style="display: none;">
-      <!-- Breadcrumb -->
-      <div class="container" style="padding-top: var(--space-lg);">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item"><a href="/week-by-week">Week by Week</a></li>
-            <li class="breadcrumb-item active" id="breadcrumb-week">Week</li>
-          </ol>
-        </nav>
-      </div>
-
-      <!-- Hero -->
-      <section class="hero" style="padding-bottom: var(--space-xl);">
-        <div class="container">
-          <span id="hero-trimester-badge" class="trimester-badge"></span>
-          <h1 id="hero-title" style="margin-top: var(--space-md);"></h1>
-          <p id="hero-subtitle"></p>
+     1|<!DOCTYPE html>
+     2|<html lang="en">
+     3|<head>
+     4|  <meta charset="UTF-8">
+     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     6|  <title>Pregnancy Week by Week | NeedsOfMoms</title>
+     7|  <meta name="description" content="Week by week pregnancy guide. Learn about your baby's development, your changing body, and tips for each week of pregnancy.">
+     8|  <meta property="og:title" content="Pregnancy Week Guide | NeedsOfMoms">
+     9|  <meta property="og:description" content="Week by week pregnancy guide with baby development, symptoms, and tips.">
+    10|  <meta property="og:type" content="article">
+    11|  <meta property="og:url" content="https://needsofmoms.com/week-by-week/week.html">
+    12|  <meta property="og:site_name" content="NeedsOfMoms">
+    13|  <meta name="twitter:card" content="summary_large_image">
+    14|  <link rel="canonical" href="https://needsofmoms.com/week-by-week/week.html">
+    15|  <link rel="stylesheet" href="/css/style.css">
+    16|  <script type="application/ld+json" id="schema-breadcrumb">
+    17|  {
+    18|    "@context": "https://schema.org",
+    19|    "@type": "BreadcrumbList",
+    20|    "itemListElement": [
+    21|      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://needsofmoms.com/"},
+    22|      {"@type": "ListItem", "position": 2, "name": "Week by Week", "item": "https://needsofmoms.com/week-by-week"},
+    23|      {"@type": "ListItem", "position": 3, "name": "Week", "item": "https://needsofmoms.com/week-by-week/week.html"}
+    24|    ]
+    25|  }
+    26|  </script>
+    27|  <script type="application/ld+json" id="schema-article">
+    28|  {
+    29|    "@context": "https://schema.org",
+    30|    "@type": "Article",
+    31|    "headline": "Pregnancy Week Guide",
+    32|    "description": "Week by week pregnancy guide with baby development, symptoms, and tips.",
+    33|    "publisher": {
+    34|      "@type": "Organization",
+    35|      "name": "NeedsOfMoms",
+    36|      "url": "https://needsofmoms.com"
+    37|    },
+    38|    "mainEntityOfPage": {
+    39|      "@type": "WebPage",
+    40|      "@id": "https://needsofmoms.com/week-by-week/week.html"
+    41|    }
+    42|  }
+    43|  </script>
+    44|  <script type="application/ld+json" id="schema-faq">
+    45|  {
+    46|    "@context": "https://schema.org",
+    47|    "@type": "FAQPage",
+    48|    "mainEntity": []
+    49|  }
+    50|  </script>
+    51|</head>
+    52|<body>
+    53|      <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">🌸</span>
+                <span>NeedsOfMoms</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+                <li><a href="/baby-names">👶 Baby Names</a></li>
+                <li><a href="/week-by-week">📋 Week by Week</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
         </div>
-      </section>
+    </nav>
 
-      <!-- Size Comparison Card -->
-      <section class="container" style="margin-top: calc(-1 * var(--space-xl));">
-        <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-          <div class="card-body" style="padding: var(--space-2xl);">
-            <div id="size-emoji" style="font-size: 3rem; margin-bottom: var(--space-md);"></div>
-            <h2 id="size-title" style="font-size: var(--text-xl); margin-bottom: var(--space-sm);"></h2>
-            <div class="flex flex-wrap gap-3 justify-center" style="margin-top: var(--space-md);">
-              <span class="tag tag-primary" id="size-length"></span>
-              <span class="tag tag-secondary" id="size-weight"></span>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+        <a href="/baby-names">👶 Baby Names</a>
+        <a href="/week-by-week">📋 Week by Week</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>74|
+    75|  <main>
+    76|    <!-- Loading State -->
+    77|    <div id="week-loading" class="text-center" style="padding: 4rem 0;">
+    78|      <div class="spinner spinner-lg"></div>
+    79|      <p class="text-muted mt-3">Loading week data...</p>
+    80|    </div>
+    81|
+    82|    <!-- Week Content (hidden until loaded) -->
+    83|    <div id="week-content" style="display: none;">
+    84|      <!-- Breadcrumb -->
+    85|      <div class="container" style="padding-top: var(--space-lg);">
+    86|        <nav class="breadcrumb" aria-label="Breadcrumb">
+    87|          <ol class="breadcrumb-list">
+    88|            <li class="breadcrumb-item"><a href="/">Home</a></li>
+    89|            <li class="breadcrumb-item"><a href="/week-by-week">Week by Week</a></li>
+    90|            <li class="breadcrumb-item active" id="breadcrumb-week">Week</li>
+    91|          </ol>
+    92|        </nav>
+    93|      </div>
+    94|
+    95|      <!-- Hero -->
+    96|      <section class="hero" style="padding-bottom: var(--space-xl);">
+    97|        <div class="container">
+    98|          <span id="hero-trimester-badge" class="trimester-badge"></span>
+    99|          <h1 id="hero-title" style="margin-top: var(--space-md);"></h1>
+   100|          <p id="hero-subtitle"></p>
+   101|        </div>
+   102|      </section>
+   103|
+   104|      <!-- Size Comparison Card -->
+   105|      <section class="container" style="margin-top: calc(-1 * var(--space-xl));">
+   106|        <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+   107|          <div class="card-body" style="padding: var(--space-2xl);">
+   108|            <div id="size-emoji" style="font-size: 3rem; margin-bottom: var(--space-md);"></div>
+   109|            <h2 id="size-title" style="font-size: var(--text-xl); margin-bottom: var(--space-sm);"></h2>
+   110|            <div class="flex flex-wrap gap-3 justify-center" style="margin-top: var(--space-md);">
+   111|              <span class="tag tag-primary" id="size-length"></span>
+   112|              <span class="tag tag-secondary" id="size-weight"></span>
+   113|            </div>
+   114|          </div>
+   115|        </div>
+   116|      </section>
+   117|
+   118|      <!-- Baby Description -->
+   119|      <section class="section">
+   120|        <div class="container article-content">
+   121|          <h2 id="baby-desc-title">Your Baby This Week</h2>
+   122|          <p id="baby-description"></p>
+   123|
+   124|          <!-- Developments -->
+   125|          <h3>Baby's Development</h3>
+   126|          <ul id="baby-developments"></ul>
+   127|
+   128|          <!-- Mom's Symptoms -->
+   129|          <h3>What Mom May Experience</h3>
+   130|          <ul id="mom-symptoms"></ul>
+   131|
+   132|          <!-- Tips -->
+   133|          <h3>Tips for This Week</h3>
+   134|          <ul id="tips-list"></ul>
+   135|        </div>
+   136|      </section>
+   137|
+   138|      <!-- Navigation -->
+   139|      <section class="container" style="padding-bottom: var(--space-2xl);">
+   140|        <div class="flex justify-between items-center" style="gap: var(--space-md); flex-wrap: wrap;">
+   141|          <a id="nav-prev" href="#" class="btn btn-secondary" style="visibility: hidden;">← Previous Week</a>
+   142|          <a href="/week-by-week" class="btn btn-secondary">All Weeks</a>
+   143|          <a id="nav-next" href="#" class="btn btn-primary" style="visibility: hidden;">Next Week →</a>
+   144|        </div>
+   145|      </section>
+   146|
+   147|      <!-- Related Weeks -->
+   148|      <section class="section" style="background: var(--bg-surface);">
+   149|        <div class="container">
+   150|          <div class="section-header">
+   151|            <h2>Nearby Weeks</h2>
+   152|            <p>Explore weeks close to this one</p>
+   153|          </div>
+   154|          <div id="related-weeks" class="grid grid-3"></div>
+   155|        </div>
+   156|      </section>
+   157|
+   158|      <!-- FAQ -->
+   159|      <section class="section">
+   160|        <div class="container">
+   161|          <div class="section-header">
+   162|            <h2>Common Questions</h2>
+   163|          </div>
+   164|          <div id="faq-container" class="accordion" style="max-width: 720px; margin: 0 auto;"></div>
+   165|        </div>
+   166|      </section>
+   167|    </div>
+   168|  </main>
+   169|
+   170|      <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+                        <span class="logo-icon">🌸</span>
+                        <span>NeedsOfMoms</span>
+                    </a>
+                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Tools</h4>
+                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
+                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+                    <a href="/baby-names">Baby Names</a>
+                    <a href="/baby-name-generator">Name Generator</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="/week-by-week">Week by Week</a>
+                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
+                    <a href="/what-to-expect">What to Expect</a>
+                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
             </div>
-          </div>
+            <div class="footer-bottom">
+                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+                <p>Made with 💕 for expecting parents everywhere</p>
+            </div>
         </div>
-      </section>
-
-      <!-- Baby Description -->
-      <section class="section">
-        <div class="container article-content">
-          <h2 id="baby-desc-title">Your Baby This Week</h2>
-          <p id="baby-description"></p>
-
-          <!-- Developments -->
-          <h3>Baby's Development</h3>
-          <ul id="baby-developments"></ul>
-
-          <!-- Mom's Symptoms -->
-          <h3>What Mom May Experience</h3>
-          <ul id="mom-symptoms"></ul>
-
-          <!-- Tips -->
-          <h3>Tips for This Week</h3>
-          <ul id="tips-list"></ul>
-        </div>
-      </section>
-
-      <!-- Navigation -->
-      <section class="container" style="padding-bottom: var(--space-2xl);">
-        <div class="flex justify-between items-center" style="gap: var(--space-md); flex-wrap: wrap;">
-          <a id="nav-prev" href="#" class="btn btn-secondary" style="visibility: hidden;">← Previous Week</a>
-          <a href="/week-by-week" class="btn btn-secondary">All Weeks</a>
-          <a id="nav-next" href="#" class="btn btn-primary" style="visibility: hidden;">Next Week →</a>
-        </div>
-      </section>
-
-      <!-- Related Weeks -->
-      <section class="section" style="background: var(--bg-surface);">
-        <div class="container">
-          <div class="section-header">
-            <h2>Nearby Weeks</h2>
-            <p>Explore weeks close to this one</p>
-          </div>
-          <div id="related-weeks" class="grid grid-3"></div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="section">
-        <div class="container">
-          <div class="section-header">
-            <h2>Common Questions</h2>
-          </div>
-          <div id="faq-container" class="accordion" style="max-width: 720px; margin: 0 auto;"></div>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>NeedsOfMoms</h4>
-        <p>Trusted pregnancy and maternity resources for expectant mothers. Your journey to motherhood starts here.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Tools</h4>
-        <div class="footer-links">
-          <a href="/tools/due-date-calculator">Due Date Calculator</a>
-          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-          <a href="/baby-names">Baby Names</a>
-          <a href="/week-by-week">Week by Week Guide</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <div class="footer-links">
-          <a href="/trimester/first-trimester">First Trimester</a>
-          <a href="/trimester/second-trimester">Second Trimester</a>
-          <a href="/trimester/third-trimester">Third Trimester</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <div class="footer-links">
-          <a href="/privacy">Privacy Policy</a>
-          <a href="/terms">Terms of Use</a>
-          <a href="/disclaimer">Disclaimer</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 NeedsOfMoms. All rights reserved.</p>
-      <p style="font-size: var(--text-xs);">This site is for informational purposes only and does not constitute medical advice.</p>
-    </div>
-  </footer>
-
-  <script src="/js/app.js"></script>
-  <script>
-  (function() {
-    'use strict';
-
-    var DATA_URL = '/data/pregnancy-weeks.json';
-
-    // Get week number from URL
-    var params = new URLSearchParams(window.location.search);
-    var requestedWeek = parseInt(params.get('week'), 10);
-
-    if (!requestedWeek || requestedWeek < 4 || requestedWeek > 42) {
-      requestedWeek = 4;
-    }
-
-    var loading = document.getElementById('week-loading');
-    var content = document.getElementById('week-content');
-
-    // Fruit emoji map for visual appeal
-    var fruitEmojis = {
-      'poppy seed': '🌰', 'sesame seed': '🌾', 'lentil': '🫘', 'blueberry': '🫐',
-      'raspberry': '🍇', 'cherry': '🍒', 'strawberry': '🍓', 'fig': '🥝',
-      'lime': '🍋', 'peapod': '🫛', 'lemon': '🍋', 'apple': '🍎',
-      'avocado': '🥑', 'turnip': '🥕', 'pear': '🍐', 'banana': '🍌',
-      'mango': '🥭', 'eggplant': '🍆', 'cauliflower': '🥦', 'lettuce': '🥬',
-      'coconut': '🥥', 'pineapple': '🍍', 'butternut squash': '🎃',
-      'papaya': '🍈', 'cantaloupe': '🍈', 'honeydew melon': '🍈',
-      'rutabaga': '🥔', 'jicama': '🥔', 'leek': '🧅', 'romaine lettuce': '🥬',
-      'large cabbage': '🥬', 'pumpkin': '🎃', 'small pumpkin': '🎃',
-      'large pumpkin': '🎃', 'watermelon': '🍉', 'small watermelon': '🍉'
-    };
-
-    function getTrimesterName(t) {
-      if (t === 1) return 'First Trimester';
-      if (t === 2) return 'Second Trimester';
-      return 'Third Trimester';
-    }
-
-    function getTrimesterClass(t) {
-      return 't' + t;
-    }
-
-    function getTrimesterUrl(t) {
-      if (t === 1) return '/trimester/first-trimester.html';
-      if (t === 2) return '/trimester/second-trimester.html';
-      return '/trimester/third-trimester.html';
-    }
-
-    function getEmoji(fruit) {
-      var key = fruit.toLowerCase();
-      if (fruitEmojis[key]) return fruitEmojis[key];
-      // Partial match
-      for (var k in fruitEmojis) {
-        if (key.indexOf(k) !== -1 || k.indexOf(key) !== -1) return fruitEmojis[k];
-      }
-      return '🍼';
-    }
-
-    // Generate FAQ for a specific week
-    function generateFAQ(week) {
-      return [
-        {
-          q: 'How big is my baby at ' + week.week + ' weeks pregnant?',
-          a: 'At ' + week.week + ' weeks, your baby is about the size of a ' + week.fruitComparison + ', measuring approximately ' + week.babySizeCm + ' cm long and weighing about ' + week.babyWeight + '.'
-        },
-        {
-          q: 'What is my baby doing at ' + week.week + ' weeks?',
-          a: week.babyDescription
-        },
-        {
-          q: 'What symptoms might I experience at ' + week.week + ' weeks?',
-          a: 'Common symptoms at ' + week.week + ' weeks include: ' + week.momSymptoms.join(', ') + '. Every pregnancy is different, so you may experience some, all, or none of these.'
-        }
-      ];
-    }
-
-    // Update schemas dynamically
-    function updateSchemas(week) {
-      // Breadcrumb
-      var breadcrumb = JSON.parse(document.getElementById('schema-breadcrumb').textContent);
-      breadcrumb.itemListElement[2].name = 'Week ' + week.week;
-      breadcrumb.itemListElement[2].item = 'https://needsofmoms.com/week-by-week/week.html?week=' + week.week;
-      document.getElementById('schema-breadcrumb').textContent = JSON.stringify(breadcrumb);
-
-      // Article
-      var article = JSON.parse(document.getElementById('schema-article').textContent);
-      article.headline = 'Pregnancy Week ' + week.week + ' Guide';
-      article.description = week.babyDescription;
-      article.mainEntityOfPage['@id'] = 'https://needsofmoms.com/week-by-week/week.html?week=' + week.week;
-      document.getElementById('schema-article').textContent = JSON.stringify(article);
-
-      // FAQ
-      var faqs = generateFAQ(week);
-      var faq = JSON.parse(document.getElementById('schema-faq').textContent);
-      faq.mainEntity = faqs.map(function(f) {
-        return {
-          "@type": "Question",
-          "name": f.q,
-          "acceptedAnswer": { "@type": "Answer", "text": f.a }
-        };
-      });
-      document.getElementById('schema-faq').textContent = JSON.stringify(faq);
-
-      // Page title and meta
-      document.title = 'Pregnancy Week ' + week.week + ' - Baby Development & Tips | NeedsOfMoms';
-      document.querySelector('meta[name="description"]').content =
-        'Week ' + week.week + ' of pregnancy: your baby is the size of a ' + week.fruitComparison + '. Learn about development, symptoms, and tips.';
-    }
-
-    function renderWeek(week, allWeeks) {
-      updateSchemas(week);
-
-      // Breadcrumb
-      document.getElementById('breadcrumb-week').textContent = 'Week ' + week.week;
-
-      // Hero
-      document.getElementById('hero-trimester-badge').className = 'trimester-badge ' + getTrimesterClass(week.trimester);
-      document.getElementById('hero-trimester-badge').textContent = getTrimesterName(week.trimester);
-      document.getElementById('hero-title').textContent = 'Pregnancy Week ' + week.week;
-      document.getElementById('hero-subtitle').textContent = 'Your baby is the size of a ' + week.fruitComparison;
-
-      // Size card
-      document.getElementById('size-emoji').textContent = getEmoji(week.fruitComparison);
-      document.getElementById('size-title').textContent = 'Size: ' + week.fruitComparison.charAt(0).toUpperCase() + week.fruitComparison.slice(1);
-      document.getElementById('size-length').textContent = '📏 ' + week.babySizeCm + ' cm';
-      document.getElementById('size-weight').textContent = '⚖️ ' + week.babyWeight;
-
-      // Description
-      document.getElementById('baby-desc-title').textContent = 'Your Baby at Week ' + week.week;
-      document.getElementById('baby-description').textContent = week.babyDescription;
-
-      // Developments
-      var devList = document.getElementById('baby-developments');
-      devList.innerHTML = '';
-      week.babyDevelopments.forEach(function(d) {
-        var li = document.createElement('li');
-        li.textContent = d;
-        devList.appendChild(li);
-      });
-
-      // Symptoms
-      var symList = document.getElementById('mom-symptoms');
-      symList.innerHTML = '';
-      week.momSymptoms.forEach(function(s) {
-        var li = document.createElement('li');
-        li.textContent = s;
-        symList.appendChild(li);
-      });
-
-      // Tips
-      var tipList = document.getElementById('tips-list');
-      tipList.innerHTML = '';
-      week.tips.forEach(function(t) {
-        var li = document.createElement('li');
-        li.textContent = t;
-        tipList.appendChild(li);
-      });
-
-      // Navigation
-      var prevWeek = week.week - 1;
-      var nextWeek = week.week + 1;
-      var prevBtn = document.getElementById('nav-prev');
-      var nextBtn = document.getElementById('nav-next');
-
-      if (prevWeek >= 4) {
-        prevBtn.href = '/week-by-week/week.html?week=' + prevWeek;
-        prevBtn.textContent = '← Week ' + prevWeek;
-        prevBtn.style.visibility = 'visible';
-      }
-
-      if (nextWeek <= 42) {
-        nextBtn.href = '/week-by-week/week.html?week=' + nextWeek;
-        nextBtn.textContent = 'Week ' + nextWeek + ' →';
-        nextBtn.style.visibility = 'visible';
-      }
-
-      // Related weeks (2 before, 2 after)
-      var related = document.getElementById('related-weeks');
-      related.innerHTML = '';
-      var nearbyWeeks = allWeeks.filter(function(w) {
-        return Math.abs(w.week - week.week) <= 2 && w.week !== week.week;
-      }).slice(0, 4);
-
-      nearbyWeeks.forEach(function(w) {
-        var card = document.createElement('a');
-        card.href = '/week-by-week/week.html?week=' + w.week;
-        card.className = 'card';
-        card.style.textDecoration = 'none';
-        card.innerHTML =
-          '<div class="card-body">' +
-            '<div class="flex items-center gap-2" style="margin-bottom: var(--space-sm);">' +
-              '<span class="trimester-badge ' + getTrimesterClass(w.trimester) + '">Week ' + w.week + '</span>' +
-            '</div>' +
-            '<div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">' + getEmoji(w.fruitComparison) + '</div>' +
-            '<p style="color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-xs);">Size of a ' + w.fruitComparison + '</p>' +
-            '<p class="text-muted" style="font-size: var(--text-sm);">' + w.babyDevelopments[0] + '</p>' +
-          '</div>';
-        related.appendChild(card);
-      });
-
-      // FAQ
-      var faqContainer = document.getElementById('faq-container');
-      faqContainer.innerHTML = '';
-      var faqs = generateFAQ(week);
-      faqs.forEach(function(f) {
-        var item = document.createElement('div');
-        item.className = 'accordion-item';
-        item.innerHTML =
-          '<div class="accordion-header" role="button" tabindex="0">' +
-            '<h3>' + f.q + '</h3>' +
-            '<span class="accordion-icon">+</span>' +
-          '</div>' +
-          '<div class="accordion-body">' +
-            '<div class="accordion-content"><p>' + f.a + '</p></div>' +
-          '</div>';
-        faqContainer.appendChild(item);
-      });
-
-      // Re-init accordion listeners
-      if (window.NOM && window.NOM.initAccordions) {
-        window.NOM.initAccordions();
-      } else {
-        // Fallback accordion toggle
-        faqContainer.querySelectorAll('.accordion-header').forEach(function(header) {
-          header.addEventListener('click', function() {
-            var item = header.parentElement;
-            item.classList.toggle('active');
-          });
-        });
-      }
-    }
-
-    // Fetch data and render
-    fetch(DATA_URL)
-      .then(function(r) { return r.json(); })
-      .then(function(allWeeks) {
-        var week = allWeeks.find(function(w) { return w.week === requestedWeek; });
-        if (!week) {
-          week = allWeeks[0];
-        }
-        renderWeek(week, allWeeks);
-        loading.style.display = 'none';
-        content.style.display = 'block';
-      })
-      .catch(function() {
-        loading.innerHTML = '<p class="text-muted">Failed to load week data. Please refresh the page.</p>';
-      });
-  })();
-  </script>
-</body>
-</html>
+    </footer>
+   207|
+   208|  <script src="/js/app.js"></script>
+   209|  <script>
+   210|  (function() {
+   211|    'use strict';
+   212|
+   213|    var DATA_URL = '/data/pregnancy-weeks.json';
+   214|
+   215|    // Get week number from URL
+   216|    var params = new URLSearchParams(window.location.search);
+   217|    var requestedWeek = parseInt(params.get('week'), 10);
+   218|
+   219|    if (!requestedWeek || requestedWeek < 4 || requestedWeek > 42) {
+   220|      requestedWeek = 4;
+   221|    }
+   222|
+   223|    var loading = document.getElementById('week-loading');
+   224|    var content = document.getElementById('week-content');
+   225|
+   226|    // Fruit emoji map for visual appeal
+   227|    var fruitEmojis = {
+   228|      'poppy seed': '🌰', 'sesame seed': '🌾', 'lentil': '🫘', 'blueberry': '🫐',
+   229|      'raspberry': '🍇', 'cherry': '🍒', 'strawberry': '🍓', 'fig': '🥝',
+   230|      'lime': '🍋', 'peapod': '🫛', 'lemon': '🍋', 'apple': '🍎',
+   231|      'avocado': '🥑', 'turnip': '🥕', 'pear': '🍐', 'banana': '🍌',
+   232|      'mango': '🥭', 'eggplant': '🍆', 'cauliflower': '🥦', 'lettuce': '🥬',
+   233|      'coconut': '🥥', 'pineapple': '🍍', 'butternut squash': '🎃',
+   234|      'papaya': '🍈', 'cantaloupe': '🍈', 'honeydew melon': '🍈',
+   235|      'rutabaga': '🥔', 'jicama': '🥔', 'leek': '🧅', 'romaine lettuce': '🥬',
+   236|      'large cabbage': '🥬', 'pumpkin': '🎃', 'small pumpkin': '🎃',
+   237|      'large pumpkin': '🎃', 'watermelon': '🍉', 'small watermelon': '🍉'
+   238|    };
+   239|
+   240|    function getTrimesterName(t) {
+   241|      if (t === 1) return 'First Trimester';
+   242|      if (t === 2) return 'Second Trimester';
+   243|      return 'Third Trimester';
+   244|    }
+   245|
+   246|    function getTrimesterClass(t) {
+   247|      return 't' + t;
+   248|    }
+   249|
+   250|    function getTrimesterUrl(t) {
+   251|      if (t === 1) return '/trimester/first-trimester.html';
+   252|      if (t === 2) return '/trimester/second-trimester.html';
+   253|      return '/trimester/third-trimester.html';
+   254|    }
+   255|
+   256|    function getEmoji(fruit) {
+   257|      var key = fruit.toLowerCase();
+   258|      if (fruitEmojis[key]) return fruitEmojis[key];
+   259|      // Partial match
+   260|      for (var k in fruitEmojis) {
+   261|        if (key.indexOf(k) !== -1 || k.indexOf(key) !== -1) return fruitEmojis[k];
+   262|      }
+   263|      return '🍼';
+   264|    }
+   265|
+   266|    // Generate FAQ for a specific week
+   267|    function generateFAQ(week) {
+   268|      return [
+   269|        {
+   270|          q: 'How big is my baby at ' + week.week + ' weeks pregnant?',
+   271|          a: 'At ' + week.week + ' weeks, your baby is about the size of a ' + week.fruitComparison + ', measuring approximately ' + week.babySizeCm + ' cm long and weighing about ' + week.babyWeight + '.'
+   272|        },
+   273|        {
+   274|          q: 'What is my baby doing at ' + week.week + ' weeks?',
+   275|          a: week.babyDescription
+   276|        },
+   277|        {
+   278|          q: 'What symptoms might I experience at ' + week.week + ' weeks?',
+   279|          a: 'Common symptoms at ' + week.week + ' weeks include: ' + week.momSymptoms.join(', ') + '. Every pregnancy is different, so you may experience some, all, or none of these.'
+   280|        }
+   281|      ];
+   282|    }
+   283|
+   284|    // Update schemas dynamically
+   285|    function updateSchemas(week) {
+   286|      // Breadcrumb
+   287|      var breadcrumb = JSON.parse(document.getElementById('schema-breadcrumb').textContent);
+   288|      breadcrumb.itemListElement[2].name = 'Week ' + week.week;
+   289|      breadcrumb.itemListElement[2].item = 'https://needsofmoms.com/week-by-week/week.html?week=' + week.week;
+   290|      document.getElementById('schema-breadcrumb').textContent = JSON.stringify(breadcrumb);
+   291|
+   292|      // Article
+   293|      var article = JSON.parse(document.getElementById('schema-article').textContent);
+   294|      article.headline = 'Pregnancy Week ' + week.week + ' Guide';
+   295|      article.description = week.babyDescription;
+   296|      article.mainEntityOfPage['@id'] = 'https://needsofmoms.com/week-by-week/week.html?week=' + week.week;
+   297|      document.getElementById('schema-article').textContent = JSON.stringify(article);
+   298|
+   299|      // FAQ
+   300|      var faqs = generateFAQ(week);
+   301|      var faq = JSON.parse(document.getElementById('schema-faq').textContent);
+   302|      faq.mainEntity = faqs.map(function(f) {
+   303|        return {
+   304|          "@type": "Question",
+   305|          "name": f.q,
+   306|          "acceptedAnswer": { "@type": "Answer", "text": f.a }
+   307|        };
+   308|      });
+   309|      document.getElementById('schema-faq').textContent = JSON.stringify(faq);
+   310|
+   311|      // Page title and meta
+   312|      document.title = 'Pregnancy Week ' + week.week + ' - Baby Development & Tips | NeedsOfMoms';
+   313|      document.querySelector('meta[name="description"]').content =
+   314|        'Week ' + week.week + ' of pregnancy: your baby is the size of a ' + week.fruitComparison + '. Learn about development, symptoms, and tips.';
+   315|    }
+   316|
+   317|    function renderWeek(week, allWeeks) {
+   318|      updateSchemas(week);
+   319|
+   320|      // Breadcrumb
+   321|      document.getElementById('breadcrumb-week').textContent = 'Week ' + week.week;
+   322|
+   323|      // Hero
+   324|      document.getElementById('hero-trimester-badge').className = 'trimester-badge ' + getTrimesterClass(week.trimester);
+   325|      document.getElementById('hero-trimester-badge').textContent = getTrimesterName(week.trimester);
+   326|      document.getElementById('hero-title').textContent = 'Pregnancy Week ' + week.week;
+   327|      document.getElementById('hero-subtitle').textContent = 'Your baby is the size of a ' + week.fruitComparison;
+   328|
+   329|      // Size card
+   330|      document.getElementById('size-emoji').textContent = getEmoji(week.fruitComparison);
+   331|      document.getElementById('size-title').textContent = 'Size: ' + week.fruitComparison.charAt(0).toUpperCase() + week.fruitComparison.slice(1);
+   332|      document.getElementById('size-length').textContent = '📏 ' + week.babySizeCm + ' cm';
+   333|      document.getElementById('size-weight').textContent = '⚖️ ' + week.babyWeight;
+   334|
+   335|      // Description
+   336|      document.getElementById('baby-desc-title').textContent = 'Your Baby at Week ' + week.week;
+   337|      document.getElementById('baby-description').textContent = week.babyDescription;
+   338|
+   339|      // Developments
+   340|      var devList = document.getElementById('baby-developments');
+   341|      devList.innerHTML = '';
+   342|      week.babyDevelopments.forEach(function(d) {
+   343|        var li = document.createElement('li');
+   344|        li.textContent = d;
+   345|        devList.appendChild(li);
+   346|      });
+   347|
+   348|      // Symptoms
+   349|      var symList = document.getElementById('mom-symptoms');
+   350|      symList.innerHTML = '';
+   351|      week.momSymptoms.forEach(function(s) {
+   352|        var li = document.createElement('li');
+   353|        li.textContent = s;
+   354|        symList.appendChild(li);
+   355|      });
+   356|
+   357|      // Tips
+   358|      var tipList = document.getElementById('tips-list');
+   359|      tipList.innerHTML = '';
+   360|      week.tips.forEach(function(t) {
+   361|        var li = document.createElement('li');
+   362|        li.textContent = t;
+   363|        tipList.appendChild(li);
+   364|      });
+   365|
+   366|      // Navigation
+   367|      var prevWeek = week.week - 1;
+   368|      var nextWeek = week.week + 1;
+   369|      var prevBtn = document.getElementById('nav-prev');
+   370|      var nextBtn = document.getElementById('nav-next');
+   371|
+   372|      if (prevWeek >= 4) {
+   373|        prevBtn.href = '/week-by-week/week.html?week=' + prevWeek;
+   374|        prevBtn.textContent = '← Week ' + prevWeek;
+   375|        prevBtn.style.visibility = 'visible';
+   376|      }
+   377|
+   378|      if (nextWeek <= 42) {
+   379|        nextBtn.href = '/week-by-week/week.html?week=' + nextWeek;
+   380|        nextBtn.textContent = 'Week ' + nextWeek + ' →';
+   381|        nextBtn.style.visibility = 'visible';
+   382|      }
+   383|
+   384|      // Related weeks (2 before, 2 after)
+   385|      var related = document.getElementById('related-weeks');
+   386|      related.innerHTML = '';
+   387|      var nearbyWeeks = allWeeks.filter(function(w) {
+   388|        return Math.abs(w.week - week.week) <= 2 && w.week !== week.week;
+   389|      }).slice(0, 4);
+   390|
+   391|      nearbyWeeks.forEach(function(w) {
+   392|        var card = document.createElement('a');
+   393|        card.href = '/week-by-week/week.html?week=' + w.week;
+   394|        card.className = 'card';
+   395|        card.style.textDecoration = 'none';
+   396|        card.innerHTML =
+   397|          '<div class="card-body">' +
+   398|            '<div class="flex items-center gap-2" style="margin-bottom: var(--space-sm);">' +
+   399|              '<span class="trimester-badge ' + getTrimesterClass(w.trimester) + '">Week ' + w.week + '</span>' +
+   400|            '</div>' +
+   401|            '<div style="font-size: 1.5rem; margin-bottom: var(--space-sm);">' + getEmoji(w.fruitComparison) + '</div>' +
+   402|            '<p style="color: var(--text-primary); font-weight: 600; margin-bottom: var(--space-xs);">Size of a ' + w.fruitComparison + '</p>' +
+   403|            '<p class="text-muted" style="font-size: var(--text-sm);">' + w.babyDevelopments[0] + '</p>' +
+   404|          '</div>';
+   405|        related.appendChild(card);
+   406|      });
+   407|
+   408|      // FAQ
+   409|      var faqContainer = document.getElementById('faq-container');
+   410|      faqContainer.innerHTML = '';
+   411|      var faqs = generateFAQ(week);
+   412|      faqs.forEach(function(f) {
+   413|        var item = document.createElement('div');
+   414|        item.className = 'accordion-item';
+   415|        item.innerHTML =
+   416|          '<div class="accordion-header" role="button" tabindex="0">' +
+   417|            '<h3>' + f.q + '</h3>' +
+   418|            '<span class="accordion-icon">+</span>' +
+   419|          '</div>' +
+   420|          '<div class="accordion-body">' +
+   421|            '<div class="accordion-content"><p>' + f.a + '</p></div>' +
+   422|          '</div>';
+   423|        faqContainer.appendChild(item);
+   424|      });
+   425|
+   426|      // Re-init accordion listeners
+   427|      if (window.NOM && window.NOM.initAccordions) {
+   428|        window.NOM.initAccordions();
+   429|      } else {
+   430|        // Fallback accordion toggle
+   431|        faqContainer.querySelectorAll('.accordion-header').forEach(function(header) {
+   432|          header.addEventListener('click', function() {
+   433|            var item = header.parentElement;
+   434|            item.classList.toggle('active');
+   435|          });
+   436|        });
+   437|      }
+   438|    }
+   439|
+   440|    // Fetch data and render
+   441|    fetch(DATA_URL)
+   442|      .then(function(r) { return r.json(); })
+   443|      .then(function(allWeeks) {
+   444|        var week = allWeeks.find(function(w) { return w.week === requestedWeek; });
+   445|        if (!week) {
+   446|          week = allWeeks[0];
+   447|        }
+   448|        renderWeek(week, allWeeks);
+   449|        loading.style.display = 'none';
+   450|        content.style.display = 'block';
+   451|      })
+   452|      .catch(function() {
+   453|        loading.innerHTML = '<p class="text-muted">Failed to load week data. Please refresh the page.</p>';
+   454|      });
+   455|  })();
+   456|  </script>
+   457|</body>
+   458|</html>
+   459|

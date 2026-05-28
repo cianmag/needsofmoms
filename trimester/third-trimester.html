@@ -82,22 +82,31 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="/" class="logo"><span>NeedsOfMoms</span></a>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
-          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
-          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
-          <li><a href="/week-by-week" class="nav-link active">Week by Week</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <span class="logo-icon">🌸</span>
+        <span>NeedsOfMoms</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+        <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+        <li><a href="/baby-names">👶 Baby Names</a></li>
+        <li><a href="/week-by-week">📋 Week by Week</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
     </div>
-  </header>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+    <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+    <a href="/baby-names">👶 Baby Names</a>
+    <a href="/week-by-week">📋 Week by Week</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
 
   <main>
     <!-- Breadcrumb -->
@@ -322,47 +331,43 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>NeedsOfMoms</h4>
-        <p>Trusted pregnancy and maternity resources for expectant mothers.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Tools</h4>
-        <div class="footer-links">
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+            <span class="logo-icon">🌸</span>
+            <span>NeedsOfMoms</span>
+          </a>
+          <p>Free pregnancy tools and resources for expecting parents.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Tools</h4>
           <a href="/tools/due-date-calculator">Due Date Calculator</a>
           <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
           <a href="/baby-names">Baby Names</a>
-          <a href="/week-by-week">Week by Week Guide</a>
+          <a href="/baby-name-generator">Name Generator</a>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <div class="footer-links">
-          <a href="/trimester/first-trimester">First Trimester</a>
-          <a href="/trimester/second-trimester">Second Trimester</a>
-          <a href="/trimester/third-trimester">Third Trimester</a>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="/week-by-week">Week by Week</a>
           <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
           <a href="/what-to-expect">What to Expect</a>
-          <a href="/baby-shower-ideas">Baby Shower Ideas</a>
-          <a href="/postpartum">Postpartum Recovery</a>
           <a href="/breastfeeding-guide">Breastfeeding Guide</a>
-          <a href="/baby-milestones">Baby Milestones</a>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Use</a>
-          <a href="/disclaimer">Medical Disclaimer</a>
+          <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 NeedsOfMoms. All rights reserved.</p>
-      <p class="text-muted" style="font-size: var(--text-xs);">This site does not provide medical advice. Always consult your healthcare provider.</p>
+      <div class="footer-bottom">
+        <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+        <p>Made with 💕 for expecting parents everywhere</p>
+      </div>
     </div>
   </footer>
 
