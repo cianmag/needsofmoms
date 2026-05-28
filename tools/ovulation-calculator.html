@@ -115,6 +115,411 @@
     ]
   }
   </script>
+  <style>
+    /* Calculator enhancements */
+    .calc-intro {
+      text-align: center;
+      margin-bottom: var(--space-2xl);
+    }
+    .calc-intro .intro-emoji {
+      font-size: 3rem;
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+    .calc-intro p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: var(--text-lg);
+      line-height: 1.6;
+    }
+
+    /* Large friendly input groups */
+    .calc-input-group-friendly {
+      margin-bottom: var(--space-lg);
+    }
+    .calc-input-group-friendly label {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      font-weight: 600;
+      font-size: var(--text-base);
+      margin-bottom: var(--space-sm);
+      color: var(--text-primary);
+    }
+    .calc-input-group-friendly label .input-emoji {
+      font-size: 1.5rem;
+    }
+    .input-large-wrapper {
+      position: relative;
+    }
+    .input-large-wrapper input[type="date"],
+    .input-large-wrapper select {
+      width: 100%;
+      padding: 16px 20px;
+      font-size: 1.125rem;
+      border: 2px solid var(--border-color, #e0e0e0);
+      border-radius: 12px;
+      background: var(--bg-surface, #fff);
+      color: var(--text-primary);
+      min-height: 56px;
+      cursor: pointer;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .input-large-wrapper input[type="date"]:focus,
+    .input-large-wrapper select:focus {
+      border-color: var(--color-primary, #e91e8c);
+      box-shadow: 0 0 0 3px rgba(233, 30, 140, 0.15);
+      outline: none;
+    }
+    .input-large-wrapper .select-arrow {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      font-size: 1rem;
+      color: var(--text-muted, #888);
+    }
+    .form-hint-friendly {
+      display: block;
+      margin-top: var(--space-xs);
+      font-size: var(--text-sm);
+      color: var(--text-muted, #888);
+      padding-left: 2px;
+    }
+
+    /* Error message box */
+    .error-message {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #ef4444;
+      color: #dc2626;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-bottom: var(--space-md);
+      font-size: var(--text-sm);
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .error-message.visible {
+      display: flex;
+    }
+    .error-message .error-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    /* Gradient button */
+    .btn-calculate {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      width: 100%;
+      padding: 18px 32px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #e91e8c, #9b59b6);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+      box-shadow: 0 4px 15px rgba(233, 30, 140, 0.3);
+      min-height: 56px;
+      margin-top: var(--space-md);
+    }
+    .btn-calculate:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(233, 30, 140, 0.4);
+    }
+    .btn-calculate:active {
+      transform: translateY(0);
+    }
+    .btn-calculate:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Loading animation */
+    .loading-spinner {
+      display: none;
+      text-align: center;
+      padding: var(--space-xl) 0;
+    }
+    .loading-spinner.visible {
+      display: block;
+    }
+    .spinner-dots {
+      display: inline-flex;
+      gap: 8px;
+    }
+    .spinner-dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--color-primary, #e91e8c);
+      animation: bounce 1.4s ease-in-out infinite both;
+    }
+    .spinner-dots span:nth-child(1) { animation-delay: -0.32s; }
+    .spinner-dots span:nth-child(2) { animation-delay: -0.16s; }
+    .spinner-dots span:nth-child(3) { animation-delay: 0s; }
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1); }
+    }
+    .loading-text {
+      margin-top: var(--space-md);
+      color: var(--text-muted, #888);
+      font-size: var(--text-sm);
+    }
+
+    /* Enhanced results */
+    .result-card-main {
+      text-align: center;
+      padding: var(--space-xl);
+      background: linear-gradient(135deg, rgba(233, 30, 140, 0.05), rgba(155, 89, 182, 0.05));
+      border-radius: 16px;
+      margin-bottom: var(--space-lg);
+    }
+    .result-emoji-large {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+    .result-box-enhanced {
+      text-align: center;
+      padding: var(--space-md);
+      background: var(--bg-surface, #fff);
+      border-radius: 12px;
+      border: 1px solid var(--border-color, #eee);
+    }
+    .result-box-enhanced .result-emoji {
+      font-size: 1.75rem;
+      display: block;
+      margin-bottom: var(--space-xs);
+    }
+    .result-box-enhanced .result-box-value {
+      font-weight: 700;
+      font-size: var(--text-lg);
+      color: var(--text-primary);
+      margin-bottom: var(--space-xs);
+    }
+    .result-box-enhanced .result-box-label {
+      font-size: var(--text-sm);
+      color: var(--text-muted, #888);
+    }
+    .result-boxes-enhanced {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Start Over button */
+    .btn-start-over {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-xs);
+      padding: 12px 28px;
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-surface, #fff);
+      border: 2px solid var(--border-color, #ddd);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      margin-top: var(--space-lg);
+    }
+    .btn-start-over:hover {
+      background: var(--bg-hover, #f5f5f5);
+      border-color: var(--text-muted, #999);
+    }
+
+    /* Calendar enhancements */
+    .fertility-calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      text-align: center;
+    }
+    .cal-day-header {
+      padding: 8px 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted, #888);
+      text-transform: uppercase;
+    }
+    .cal-day {
+      padding: 10px 4px;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      cursor: default;
+      transition: transform 0.1s;
+      position: relative;
+    }
+    .cal-day .day-label {
+      font-size: 0.5rem;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    .cal-day-today {
+      box-shadow: inset 0 0 0 2px var(--color-info, #3b82f6);
+    }
+    .cal-day-ovulation {
+      background: linear-gradient(135deg, #e91e8c, #9b59b6);
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 0 2px 10px rgba(233, 30, 140, 0.4);
+    }
+    .cal-day-best {
+      background: rgba(233, 30, 140, 0.25);
+      color: #e91e8c;
+      font-weight: 600;
+    }
+    .cal-day-fertile {
+      background: rgba(34, 197, 94, 0.15);
+      color: #16a34a;
+      font-weight: 500;
+    }
+    .cal-day-period {
+      background: rgba(233, 30, 140, 0.08);
+      color: var(--text-muted, #888);
+    }
+
+    /* FAQ Accordion */
+    .accordion-item {
+      border: 1px solid var(--border-color, #eee);
+      border-radius: 12px;
+      margin-bottom: var(--space-sm);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .accordion-item:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .accordion-header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-surface, #fff);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      min-height: 56px;
+      transition: background 0.2s;
+    }
+    .accordion-header:hover {
+      background: var(--bg-hover, #fafafa);
+    }
+    .accordion-icon {
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+      color: var(--text-muted, #888);
+    }
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .accordion-item.active .accordion-body {
+      max-height: 300px;
+    }
+    .accordion-content {
+      padding: 0 20px 16px;
+    }
+    .accordion-content p {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Tips section */
+    .tip-card {
+      background: var(--bg-surface, #fff);
+      border: 1px solid var(--border-color, #eee);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      transition: box-shadow 0.2s;
+    }
+    .tip-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+    .tip-card h4 {
+      font-size: var(--text-base);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+    .tip-card p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Best days list */
+    .best-day-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--bg-surface, #fff);
+      border-radius: 10px;
+      border-left: 4px solid #e91e8c;
+      gap: var(--space-sm);
+    }
+    .best-day-item .day-date {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .best-day-item .day-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted, #888);
+    }
+    .best-day-item .chance-badge {
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .chance-high { background: rgba(233, 30, 140, 0.1); color: #e91e8c; }
+    .chance-very-high { background: rgba(233, 30, 140, 0.2); color: #e91e8c; }
+    .chance-peak { background: rgba(155, 89, 182, 0.2); color: #9b59b6; }
+
+    @media (max-width: 640px) {
+      .result-boxes-enhanced {
+        grid-template-columns: 1fr;
+      }
+      .calc-intro .intro-emoji {
+        font-size: 2.5rem;
+      }
+      .btn-calculate {
+        font-size: 1rem;
+        padding: 16px 24px;
+      }
+      .best-day-item {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -125,10 +530,10 @@
       </a>
       <nav class="main-nav">
         <ul class="nav-list">
-          <li><a href="/tools/due-date-calculator.html" class="nav-link">Due Date Calculator</a></li>
-          <li><a href="/tools/ovulation-calculator.html" class="nav-link">Ovulation Calculator</a></li>
-          <li><a href="/baby-names.html" class="nav-link">Baby Names</a></li>
-          <li><a href="/week-by-week.html" class="nav-link">Week by Week</a></li>
+          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
+          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
+          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
+          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
         </ul>
       </nav>
       <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
@@ -159,33 +564,47 @@
   </nav>
 
   <main class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
-    <!-- Page Header -->
-    <div style="text-align: center; margin-bottom: var(--space-2xl);">
+    <!-- Page Header with friendly intro -->
+    <div class="calc-intro">
+      <span class="intro-emoji">🌸✨</span>
       <h1 class="text-gradient">Ovulation Calculator</h1>
-      <p style="max-width: 600px; margin: 0 auto; font-size: var(--text-lg);">
-        Discover your fertile window and find the best days to conceive. Calculate your ovulation date based on your cycle.
-      </p>
+      <p>Discover your most fertile days to maximize your chances of conceiving. We'll help you find your perfect window! 💕</p>
     </div>
 
     <!-- Calculator -->
     <div class="calculator" style="max-width: 700px; margin: 0 auto var(--space-2xl);">
-      <div class="calculator-header">
-        <h3>Find Your Fertile Window</h3>
-        <p>Enter your last period date and average cycle length</p>
+      <div class="calculator-header" style="text-align: center; padding: var(--space-lg) var(--space-lg) 0;">
+        <h3>🌺 Find Your Fertile Window</h3>
+        <p style="color: var(--text-muted, #888);">Enter your details below</p>
       </div>
 
-      <div class="calculator-body">
-        <div class="calc-input-group">
-          <label for="last-period-date">First Day of Last Period</label>
-          <div class="input-wrapper">
-            <input type="date" id="last-period-date" placeholder="Select date" max="">
-          </div>
+      <div class="calculator-body" style="padding: var(--space-lg);">
+        <!-- Error Message -->
+        <div class="error-message" id="error-message">
+          <span class="error-icon">⚠️</span>
+          <span id="error-text">Please enter your last period date.</span>
         </div>
 
-        <div class="calc-input-group">
-          <label for="cycle-length">Average Cycle Length</label>
-          <div class="input-wrapper">
-            <select id="cycle-length" style="flex: 1; background: transparent; border: none; color: var(--text-primary); padding: 0.625rem 0.875rem; font-size: var(--text-base); outline: none; appearance: none; cursor: pointer;">
+        <!-- Date Input -->
+        <div class="calc-input-group-friendly">
+          <label for="last-period-date">
+            <span class="input-emoji">📅</span>
+            First Day of Last Period
+          </label>
+          <div class="input-large-wrapper">
+            <input type="date" id="last-period-date" placeholder=" " max="">
+          </div>
+          <span class="form-hint-friendly">When did your most recent period start?</span>
+        </div>
+
+        <!-- Cycle Length Input -->
+        <div class="calc-input-group-friendly">
+          <label for="cycle-length">
+            <span class="input-emoji">🔄</span>
+            Average Cycle Length
+          </label>
+          <div class="input-large-wrapper">
+            <select id="cycle-length">
               <option value="21">21 days</option>
               <option value="22">22 days</option>
               <option value="23">23 days</option>
@@ -202,92 +621,111 @@
               <option value="34">34 days</option>
               <option value="35">35 days</option>
             </select>
+            <span class="select-arrow">▼</span>
           </div>
-          <span class="form-hint">Most women have a 28-day cycle, but 21-35 days is normal.</span>
+          <span class="form-hint-friendly">Most women have a 28-day cycle, but 21-35 days is completely normal.</span>
         </div>
 
-        <button type="button" class="btn btn-primary btn-block btn-lg" id="calc-ovulation-btn">
-          Calculate Fertile Window
+        <button type="button" class="btn-calculate" id="calc-ovulation-btn">
+          🔍 Find My Fertile Window
         </button>
+
+        <!-- Loading Spinner -->
+        <div class="loading-spinner" id="loading-spinner">
+          <div class="spinner-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <p class="loading-text">Finding your fertile days...</p>
+        </div>
       </div>
 
       <!-- Results Section -->
-      <div id="ovulation-results" style="display: none; margin-top: var(--space-xl);">
-        <hr>
+      <div id="ovulation-results" style="display: none; margin-top: var(--space-xl); padding: 0 var(--space-lg) var(--space-lg);">
+        <hr style="border: none; border-top: 1px solid var(--border-color, #eee); margin-bottom: var(--space-xl);">
 
-        <!-- Main Results -->
-        <div class="calc-result" style="margin-bottom: var(--space-lg);">
-          <div class="calc-result-label">Estimated Ovulation Date</div>
-          <div class="calc-result-value" id="ovulation-date-result">—</div>
-          <div class="calc-result-detail" id="cycle-day-result">—</div>
+        <!-- Main Result -->
+        <div class="result-card-main">
+          <span class="result-emoji-large">🥚</span>
+          <div class="calc-result-label" style="font-size: var(--text-sm); color: var(--text-muted, #888); margin-bottom: var(--space-xs);">Estimated Ovulation Date</div>
+          <div class="calc-result-value" id="ovulation-date-result" style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary);">—</div>
+          <div class="calc-result-detail" id="cycle-day-result" style="margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--text-secondary);">—</div>
         </div>
 
-        <!-- Result Boxes -->
-        <div class="result-boxes" style="margin-bottom: var(--space-lg);">
-          <div class="result-box">
+        <!-- Result Boxes with Emojis -->
+        <div class="result-boxes-enhanced">
+          <div class="result-box-enhanced">
+            <span class="result-emoji">💚</span>
             <div class="result-box-value" id="fertile-start">—</div>
             <div class="result-box-label">Fertile Window Start</div>
           </div>
-          <div class="result-box">
+          <div class="result-box-enhanced">
+            <span class="result-emoji">💚</span>
             <div class="result-box-value" id="fertile-end">—</div>
             <div class="result-box-label">Fertile Window End</div>
           </div>
-          <div class="result-box">
+          <div class="result-box-enhanced">
+            <span class="result-emoji">💕</span>
             <div class="result-box-value" id="best-days">—</div>
             <div class="result-box-label">Best Days to Conceive</div>
           </div>
-          <div class="result-box">
+          <div class="result-box-enhanced">
+            <span class="result-emoji">📅</span>
             <div class="result-box-value" id="next-period">—</div>
             <div class="result-box-label">Next Period Expected</div>
           </div>
         </div>
 
         <!-- Calendar Visualization -->
-        <div class="card" style="margin-bottom: var(--space-lg);">
-          <div class="card-body">
-            <h4 style="margin-bottom: var(--space-md); text-align: center;">Your Fertile Window Calendar</h4>
-            <div id="fertility-calendar"></div>
-          </div>
+        <div style="background: var(--bg-surface, #fff); border: 1px solid var(--border-color, #eee); border-radius: 12px; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+          <h4 style="margin-bottom: var(--space-md); text-align: center; display: flex; align-items: center; justify-content: center; gap: var(--space-sm);">🗓️ Your Fertile Window Calendar</h4>
+          <div id="fertility-calendar"></div>
         </div>
 
         <!-- Best Days Info -->
-        <div class="card" style="margin-bottom: var(--space-lg);">
-          <div class="card-body">
-            <h4 style="margin-bottom: var(--space-md);">Best Days to Conceive</h4>
-            <p>Based on your cycle, here are the days with the highest probability of conception:</p>
-            <div id="best-days-list" style="margin-top: var(--space-md);"></div>
-          </div>
+        <div style="background: var(--bg-surface, #fff); border: 1px solid var(--border-color, #eee); border-radius: 12px; padding: var(--space-lg); margin-bottom: var(--space-lg);">
+          <h4 style="margin-bottom: var(--space-md); display: flex; align-items: center; gap: var(--space-sm);">💕 Best Days to Conceive</h4>
+          <p style="color: var(--text-secondary); margin-bottom: var(--space-md);">Based on your cycle, here are the days with the highest probability of conception:</p>
+          <div id="best-days-list" style="display: flex; flex-direction: column; gap: 8px;"></div>
+        </div>
+
+        <!-- Start Over Button -->
+        <div style="text-align: center;">
+          <button type="button" class="btn-start-over" id="start-over-btn">
+            🔄 Start Over
+          </button>
         </div>
       </div>
     </div>
 
     <!-- Tips Section -->
     <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
-      <h2 class="text-center" style="margin-bottom: var(--space-lg);">Tips for Conception</h2>
-      <div class="grid grid-2" style="gap: var(--space-md);">
-        <div class="card">
-          <div class="card-body">
-            <h4 style="font-size: var(--text-base);">🕐 Time It Right</h4>
-            <p style="font-size: var(--text-sm);">Have intercourse every 1-2 days during your fertile window. The 2-3 days before ovulation have the highest conception rates.</p>
-          </div>
+      <h2 class="text-center" style="margin-bottom: var(--space-lg);">💡 Tips for Conception</h2>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md);">
+        <div class="tip-card">
+          <h4>🕐 Time It Right</h4>
+          <p>Have intercourse every 1-2 days during your fertile window. The 2-3 days before ovulation have the highest conception rates!</p>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h4 style="font-size: var(--text-base);">💊 Take Prenatal Vitamins</h4>
-            <p style="font-size: var(--text-sm);">Start taking folic acid (400-800mcg daily) at least 3 months before trying to conceive to reduce neural tube defects.</p>
-          </div>
+        <div class="tip-card">
+          <h4>💊 Take Prenatal Vitamins</h4>
+          <p>Start taking folic acid (400-800mcg daily) at least 3 months before trying to conceive to help prevent neural tube defects.</p>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h4 style="font-size: var(--text-base);">🥗 Eat Healthy</h4>
-            <p style="font-size: var(--text-sm);">Maintain a balanced diet rich in iron, calcium, and omega-3 fatty acids. Limit caffeine and avoid alcohol and smoking.</p>
-          </div>
+        <div class="tip-card">
+          <h4>🥗 Eat Healthy</h4>
+          <p>Maintain a balanced diet rich in iron, calcium, and omega-3 fatty acids. Limit caffeine and avoid alcohol and smoking.</p>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h4 style="font-size: var(--text-base);">📊 Track Your Signs</h4>
-            <p style="font-size: var(--text-sm);">Monitor cervical mucus, basal body temperature, and use ovulation predictor kits for more accurate ovulation detection.</p>
-          </div>
+        <div class="tip-card">
+          <h4>📊 Track Your Signs</h4>
+          <p>Monitor cervical mucus, basal body temperature, and use ovulation predictor kits (OPKs) for more accurate ovulation detection.</p>
+        </div>
+        <div class="tip-card">
+          <h4>😴 Get Enough Sleep</h4>
+          <p>Aim for 7-9 hours of quality sleep each night. Good sleep supports hormonal balance and overall reproductive health.</p>
+        </div>
+        <div class="tip-card">
+          <h4>🧘 Manage Stress</h4>
+          <p>Practice relaxation techniques like yoga, meditation, or gentle exercise. High stress levels can affect ovulation and fertility.</p>
         </div>
       </div>
     </section>
@@ -296,56 +734,56 @@
     <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
       <h2 class="text-center" style="margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
       <div class="accordion">
-        <div class="accordion-item faq-item">
-          <button class="accordion-header faq-question" type="button">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
             <span>How is the ovulation date calculated?</span>
             <span class="accordion-icon">▼</span>
           </button>
-          <div class="accordion-body faq-answer">
+          <div class="accordion-body">
             <div class="accordion-content">
               <p>Ovulation typically occurs 14 days before the start of your next period. For a 28-day cycle, ovulation usually happens around day 14. For other cycle lengths, subtract 14 from your total cycle length to estimate ovulation day. For example, with a 30-day cycle, ovulation would be around day 16.</p>
             </div>
           </div>
         </div>
-        <div class="accordion-item faq-item">
-          <button class="accordion-header faq-question" type="button">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
             <span>What is the fertile window?</span>
             <span class="accordion-icon">▼</span>
           </button>
-          <div class="accordion-body faq-answer">
+          <div class="accordion-body">
             <div class="accordion-content">
               <p>The fertile window is the 6-day period ending on the day of ovulation. Sperm can survive up to 5 days inside the female reproductive tract, and the egg survives 12-24 hours after ovulation. The best days to conceive are the 2-3 days before ovulation and the day of ovulation itself.</p>
             </div>
           </div>
         </div>
-        <div class="accordion-item faq-item">
-          <button class="accordion-header faq-question" type="button">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
             <span>What if my cycles are irregular?</span>
             <span class="accordion-icon">▼</span>
           </button>
-          <div class="accordion-body faq-answer">
+          <div class="accordion-body">
             <div class="accordion-content">
               <p>If your cycles are irregular, this calculator provides an estimate based on your average cycle length. For more accurate results, consider tracking your basal body temperature (BBT), using ovulation predictor kits (OPKs), or monitoring cervical mucus changes. Consult your healthcare provider if you have consistently irregular cycles.</p>
             </div>
           </div>
         </div>
-        <div class="accordion-item faq-item">
-          <button class="accordion-header faq-question" type="button">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
             <span>How can I increase my chances of conceiving?</span>
             <span class="accordion-icon">▼</span>
           </button>
-          <div class="accordion-body faq-answer">
+          <div class="accordion-body">
             <div class="accordion-content">
               <p>To increase your chances: have intercourse every 1-2 days during your fertile window, maintain a healthy lifestyle, take prenatal vitamins with folic acid, track your ovulation signs, manage stress, and avoid smoking and excessive alcohol. The highest chances of conception are from intercourse in the 2-3 days leading up to ovulation.</p>
             </div>
           </div>
         </div>
-        <div class="accordion-item faq-item">
-          <button class="accordion-header faq-question" type="button">
+        <div class="accordion-item">
+          <button class="accordion-header" type="button">
             <span>What are signs of ovulation?</span>
             <span class="accordion-icon">▼</span>
           </button>
-          <div class="accordion-body faq-answer">
+          <div class="accordion-body">
             <div class="accordion-content">
               <p>Common signs of ovulation include: changes in cervical mucus (becomes clear, slippery, and stretchy like egg whites), a slight rise in basal body temperature, mild pelvic pain (mittelschmerz), increased libido, breast tenderness, and light spotting. Ovulation predictor kits (OPKs) can also detect the LH surge that precedes ovulation.</p>
             </div>
@@ -371,23 +809,23 @@
       <div class="footer-col">
         <h4>Tools</h4>
         <div class="footer-links">
-          <a href="/tools/due-date-calculator.html">Due Date Calculator</a>
-          <a href="/tools/ovulation-calculator.html">Ovulation Calculator</a>
+          <a href="/tools/due-date-calculator">Due Date Calculator</a>
+          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <div class="footer-links">
-          <a href="/baby-names.html">Baby Names</a>
-          <a href="/week-by-week.html">Week by Week Guide</a>
+          <a href="/baby-names">Baby Names</a>
+          <a href="/week-by-week">Week by Week Guide</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <div class="footer-links">
-          <a href="/privacy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms of Use</a>
-          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
     </div>
@@ -417,11 +855,59 @@
     var nextPeriod = document.getElementById('next-period');
     var calendarContainer = document.getElementById('fertility-calendar');
     var bestDaysList = document.getElementById('best-days-list');
+    var errorMessage = document.getElementById('error-message');
+    var errorText = document.getElementById('error-text');
+    var loadingSpinner = document.getElementById('loading-spinner');
+    var startOverBtn = document.getElementById('start-over-btn');
 
     // Set max date to today
     var today = new Date();
     var todayStr = today.toISOString().split('T')[0];
     if (lastPeriodInput) lastPeriodInput.setAttribute('max', todayStr);
+
+    // Error handling functions
+    function showError(msg) {
+      errorText.textContent = msg;
+      errorMessage.classList.add('visible');
+    }
+    function hideError() {
+      errorMessage.classList.remove('visible');
+    }
+
+    // Loading functions
+    function showLoading() {
+      loadingSpinner.classList.add('visible');
+      calcBtn.disabled = true;
+    }
+    function hideLoading() {
+      loadingSpinner.classList.remove('visible');
+      calcBtn.disabled = false;
+    }
+
+    // Start Over
+    function startOver() {
+      resultsDiv.style.display = 'none';
+      lastPeriodInput.value = '';
+      cycleLengthSelect.value = '28';
+      hideError();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    if (startOverBtn) startOverBtn.addEventListener('click', startOver);
+
+    // Accordion toggle
+    document.addEventListener('click', function(e) {
+      var header = e.target.closest('.accordion-header');
+      if (!header) return;
+      var item = header.closest('.accordion-item');
+      if (!item) return;
+      var isActive = item.classList.contains('active');
+      document.querySelectorAll('.accordion-item.active').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
 
     function formatDate(date) {
       var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -451,52 +937,61 @@
     }
 
     function calculateOvulation() {
+      hideError();
       var dateVal = lastPeriodInput.value;
       if (!dateVal) {
-        alert('Please enter the first day of your last period.');
+        showError('Please enter the first day of your last period to find your fertile window.');
         return;
       }
 
-      var cycleLength = parseInt(cycleLengthSelect.value, 10);
-      var lastPeriod = new Date(dateVal + 'T00:00:00');
+      // Show loading
+      showLoading();
+      resultsDiv.style.display = 'none';
 
-      // Ovulation occurs ~14 days before next period
-      var ovulationDay = cycleLength - 14;
-      var ovulationDate = addDays(lastPeriod, ovulationDay);
+      // Brief delay for UX
+      setTimeout(function() {
+        var cycleLength = parseInt(cycleLengthSelect.value, 10);
+        var lastPeriod = new Date(dateVal + 'T00:00:00');
 
-      // Fertile window: 5 days before ovulation + ovulation day
-      var fertileWindowStart = addDays(ovulationDate, -5);
-      var fertileWindowEnd = ovulationDate;
+        // Ovulation occurs ~14 days before next period
+        var ovulationDay = cycleLength - 14;
+        var ovulationDate = addDays(lastPeriod, ovulationDay);
 
-      // Best days: 2-3 days before ovulation
-      var bestDay1 = addDays(ovulationDate, -2);
-      var bestDay2 = addDays(ovulationDate, -1);
-      var bestDay3 = ovulationDate;
+        // Fertile window: 5 days before ovulation + ovulation day
+        var fertileWindowStart = addDays(ovulationDate, -5);
+        var fertileWindowEnd = ovulationDate;
 
-      // Next period
-      var nextPeriodDate = addDays(lastPeriod, cycleLength);
+        // Best days: 2-3 days before ovulation
+        var bestDay1 = addDays(ovulationDate, -2);
+        var bestDay2 = addDays(ovulationDate, -1);
+        var bestDay3 = ovulationDate;
 
-      // Current cycle day
-      var daysSincePeriod = Math.floor((today - lastPeriod) / (1000 * 60 * 60 * 24));
-      var currentCycleDay = daysSincePeriod + 1;
+        // Next period
+        var nextPeriodDate = addDays(lastPeriod, cycleLength);
 
-      // Display results
-      resultsDiv.style.display = 'block';
-      ovulationDateResult.textContent = NOM.formatDate ? NOM.formatDate(ovulationDate) : formatDate(ovulationDate);
-      cycleDayResult.textContent = 'Day ' + ovulationDay + ' of your ' + cycleLength + '-day cycle';
-      fertileStart.textContent = formatShortDate(fertileWindowStart);
-      fertileEnd.textContent = formatShortDate(fertileWindowEnd);
-      bestDaysEl.textContent = formatShortDate(bestDay1) + ' - ' + formatShortDate(bestDay3);
-      nextPeriod.textContent = NOM.formatDate ? NOM.formatDate(nextPeriodDate) : formatDate(nextPeriodDate);
+        // Current cycle day
+        var daysSincePeriod = Math.floor((today - lastPeriod) / (1000 * 60 * 60 * 24));
+        var currentCycleDay = daysSincePeriod + 1;
 
-      // Render calendar
-      renderCalendar(lastPeriod, cycleLength, ovulationDate, fertileWindowStart, fertileWindowEnd, bestDay1, bestDay2, bestDay3);
+        // Display results
+        hideLoading();
+        resultsDiv.style.display = 'block';
+        ovulationDateResult.textContent = NOM.formatDate ? NOM.formatDate(ovulationDate) : formatDate(ovulationDate);
+        cycleDayResult.textContent = '🗓️ Day ' + ovulationDay + ' of your ' + cycleLength + '-day cycle';
+        fertileStart.textContent = formatShortDate(fertileWindowStart);
+        fertileEnd.textContent = formatShortDate(fertileWindowEnd);
+        bestDaysEl.textContent = formatShortDate(bestDay1) + ' - ' + formatShortDate(bestDay3);
+        nextPeriod.textContent = NOM.formatDate ? NOM.formatDate(nextPeriodDate) : formatDate(nextPeriodDate);
 
-      // Render best days list
-      renderBestDaysList(bestDay1, bestDay2, bestDay3, ovulationDate);
+        // Render calendar
+        renderCalendar(lastPeriod, cycleLength, ovulationDate, fertileWindowStart, fertileWindowEnd, bestDay1, bestDay2, bestDay3);
 
-      // Scroll to results
-      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Render best days list
+        renderBestDaysList(bestDay1, bestDay2, bestDay3, ovulationDate);
+
+        // Scroll to results
+        resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 600);
     }
 
     function renderCalendar(lastPeriod, cycleLength, ovulationDate, fertileStart, fertileEnd, bestDay1, bestDay2, bestDay3) {
@@ -504,73 +999,58 @@
       var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
       var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-      // Show calendar for the month containing the fertile window
       var calMonth = fertileStart.getMonth();
       var calYear = fertileStart.getFullYear();
 
-      // If fertile window spans two months, show the month with ovulation
       if (fertileStart.getMonth() !== fertileEnd.getMonth()) {
         calMonth = ovulationDate.getMonth();
         calYear = ovulationDate.getFullYear();
       }
 
-      // Build calendar header
+      // Calendar header
       html += '<div style="text-align: center; margin-bottom: var(--space-md);">';
       html += '<h4 style="margin: 0; color: var(--text-primary);">' + monthNames[calMonth] + ' ' + calYear + '</h4>';
       html += '</div>';
 
       // Calendar grid
-      html += '<div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center;">';
+      html += '<div class="fertility-calendar-grid">';
 
       // Day name headers
       for (var d = 0; d < 7; d++) {
-        html += '<div style="padding: 8px 4px; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">' + dayNames[d] + '</div>';
+        html += '<div class="cal-day-header">' + dayNames[d] + '</div>';
       }
 
-      // First day of month
       var firstDay = new Date(calYear, calMonth, 1);
       var startDayOfWeek = firstDay.getDay();
 
-      // Empty cells before first day
       for (var i = 0; i < startDayOfWeek; i++) {
         html += '<div style="padding: 8px 4px;"></div>';
       }
 
-      // Days of the month
       var daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
       for (var day = 1; day <= daysInMonth; day++) {
         var currentDate = new Date(calYear, calMonth, day);
-        var cellStyle = 'padding: 10px 4px; border-radius: 8px; font-size: 0.875rem; cursor: default;';
+        var cellClasses = 'cal-day';
         var dayLabel = '';
-        var bgColor = 'transparent';
-        var textColor = 'var(--text-secondary)';
-        var fontWeight = '400';
 
         if (isSameDay(currentDate, ovulationDate)) {
-          bgColor = 'linear-gradient(135deg, #e91e8c, #9b59b6)';
-          textColor = '#fff';
-          fontWeight = '700';
-          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; opacity: 0.8;">Ovulation</div>';
+          cellClasses += ' cal-day-ovulation';
+          dayLabel = '<div class="day-label">🥚 Ovulation</div>';
         } else if (isSameDay(currentDate, bestDay1) || isSameDay(currentDate, bestDay2)) {
-          bgColor = 'rgba(233, 30, 140, 0.3)';
-          textColor = '#fff';
-          fontWeight = '600';
-          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; color: #e91e8c;">Best</div>';
+          cellClasses += ' cal-day-best';
+          dayLabel = '<div class="day-label" style="color: #e91e8c;">💕 Best</div>';
         } else if (isInRange(currentDate, fertileStart, fertileEnd)) {
-          bgColor = 'rgba(155, 89, 182, 0.2)';
-          textColor = 'var(--text-primary)';
-          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; color: var(--color-secondary);">Fertile</div>';
+          cellClasses += ' cal-day-fertile';
+          dayLabel = '<div class="day-label" style="color: #16a34a;">💚 Fertile</div>';
         } else if (isSameDay(currentDate, lastPeriod) || (currentDate > lastPeriod && currentDate < addDays(lastPeriod, 5))) {
-          bgColor = 'rgba(233, 30, 140, 0.1)';
-          textColor = 'var(--text-secondary)';
+          cellClasses += ' cal-day-period';
         }
 
-        // Check if this is today
         if (isSameDay(currentDate, today)) {
-          cellStyle += ' border: 2px solid var(--color-info);';
+          cellClasses += ' cal-day-today';
         }
 
-        html += '<div style="' + cellStyle + ' background: ' + bgColor + '; color: ' + textColor + '; font-weight: ' + fontWeight + ';">';
+        html += '<div class="' + cellClasses + '">';
         html += day;
         html += dayLabel;
         html += '</div>';
@@ -580,10 +1060,10 @@
 
       // Legend
       html += '<div style="display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; margin-top: var(--space-lg); font-size: 0.75rem;">';
-      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: linear-gradient(135deg, #e91e8c, #9b59b6);"></span> Ovulation Day</div>';
-      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: rgba(233, 30, 140, 0.3);"></span> Best Days</div>';
-      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: rgba(155, 89, 182, 0.2);"></span> Fertile Window</div>';
-      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; border: 2px solid var(--color-info);"></span> Today</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; height: 14px; border-radius: 4px; background: linear-gradient(135deg, #e91e8c, #9b59b6); display: inline-block;"></span> 🥚 Ovulation Day</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; height: 14px; border-radius: 4px; background: rgba(233, 30, 140, 0.25); display: inline-block;"></span> 💕 Best Days</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; height: 14px; border-radius: 4px; background: rgba(34, 197, 94, 0.15); display: inline-block;"></span> 💚 Fertile Window</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 14px; height: 14px; border-radius: 4px; box-shadow: inset 0 0 0 2px var(--color-info, #3b82f6); display: inline-block;"></span> Today</div>';
       html += '</div>';
 
       calendarContainer.innerHTML = html;
@@ -591,22 +1071,21 @@
 
     function renderBestDaysList(bestDay1, bestDay2, bestDay3, ovulationDate) {
       var days = [
-        { date: bestDay1, label: '2 days before ovulation', chance: 'High', color: '#e91e8c' },
-        { date: bestDay2, label: '1 day before ovulation', chance: 'Very High', color: '#e91e8c' },
-        { date: bestDay3, label: 'Ovulation day', chance: 'Peak', color: '#9b59b6' }
+        { date: bestDay1, label: '2 days before ovulation', chance: 'High', chanceClass: 'chance-high' },
+        { date: bestDay2, label: '1 day before ovulation', chance: 'Very High', chanceClass: 'chance-very-high' },
+        { date: bestDay3, label: '🥚 Ovulation day', chance: 'Peak', chanceClass: 'chance-peak' }
       ];
 
-      var html = '<div style="display: flex; flex-direction: column; gap: 8px;">';
+      var html = '';
       days.forEach(function(item) {
-        html += '<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--bg-surface); border-radius: 8px; border-left: 3px solid ' + item.color + ';">';
+        html += '<div class="best-day-item">';
         html += '<div>';
-        html += '<div style="font-weight: 600; color: var(--text-primary);">' + formatDate(item.date) + '</div>';
-        html += '<div style="font-size: 0.8rem; color: var(--text-muted);">' + item.label + '</div>';
+        html += '<div class="day-date">' + formatDate(item.date) + '</div>';
+        html += '<div class="day-desc">' + item.label + '</div>';
         html += '</div>';
-        html += '<span class="trimester-badge trimester-1" style="font-size: 0.7rem;">' + item.chance + '</span>';
+        html += '<span class="chance-badge ' + item.chanceClass + '">' + item.chance + '</span>';
         html += '</div>';
       });
-      html += '</div>';
 
       bestDaysList.innerHTML = html;
     }

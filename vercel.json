@@ -18,7 +18,12 @@
     { "source": "/baby-shower-ideas", "destination": "/baby-shower-ideas.html" },
     { "source": "/postpartum", "destination": "/postpartum.html" },
     { "source": "/breastfeeding-guide", "destination": "/breastfeeding-guide.html" },
-    { "source": "/baby-milestones", "destination": "/baby-milestones.html" }
+    { "source": "/baby-milestones", "destination": "/baby-milestones.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/disclaimer", "destination": "/disclaimer.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" }
   ],
   "headers": [
     {
