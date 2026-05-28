@@ -252,41 +252,53 @@
     banner.setAttribute('role', 'dialog');
     banner.setAttribute('aria-label', 'Cookie consent');
     banner.innerHTML =
-      '<div class="cookie-banner-inner">' +
-      '<p class="cookie-banner-text">' +
-      'We use cookies to improve your experience and analyze site traffic. ' +
-      'By clicking "Accept", you consent to our use of cookies.' +
-      '</p>' +
-      '<div class="cookie-banner-buttons">' +
+      '<div class="cookie-inner">' +
+      '<div class="cookie-icon">🍪</div>' +
+      '<div class="cookie-text">' +
+      '<strong>We use cookies</strong>' +
+      '<p>We use cookies to improve your experience and analyze site traffic. ' +
+      'By clicking "Accept", you consent to our use of cookies.</p>' +
+      '</div>' +
+      '<div class="cookie-buttons">' +
       '<button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button>' +
-      '<button id="cookie-decline" class="btn btn-outline btn-sm">Decline</button>' +
+      '<button id="cookie-decline" class="btn btn-ghost btn-sm">Decline</button>' +
       '</div>' +
       '</div>';
 
     document.body.appendChild(banner);
 
-    // Style inline so it works without CSS
+    // Style the banner container
     banner.style.cssText =
       'position:fixed;bottom:0;left:0;right:0;z-index:99999;' +
-      'background:#2c3e50;color:#fff;padding:16px 20px;' +
-      'box-shadow:0 -2px 10px rgba(0,0,0,0.15);display:flex;align-items:center;' +
-      'justify-content:center;';
+      'background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);' +
+      'border-top:1px solid rgba(217,127,139,0.15);' +
+      'box-shadow:0 -4px 20px rgba(217,127,139,0.1);' +
+      'padding:16px 24px;';
 
-    var inner = banner.querySelector('.cookie-banner-inner');
+    var inner = banner.querySelector('.cookie-inner');
     if (inner) {
       inner.style.cssText =
-        'display:flex;align-items:center;justify-content:space-between;' +
-        'flex-wrap:wrap;gap:12px;max-width:1200px;width:100%;';
+        'display:flex;align-items:center;gap:16px;' +
+        'max-width:1200px;width:100%;margin:0 auto;';
     }
 
-    var text = banner.querySelector('.cookie-banner-text');
-    if (text) {
-      text.style.cssText = 'margin:0;font-size:14px;line-height:1.5;flex:1;min-width:200px;';
+    var icon = banner.querySelector('.cookie-icon');
+    if (icon) {
+      icon.style.cssText = 'font-size:2rem;flex-shrink:0;';
     }
 
-    var buttons = banner.querySelector('.cookie-banner-buttons');
+    var textWrap = banner.querySelector('.cookie-text');
+    if (textWrap) {
+      textWrap.style.cssText = 'flex:1;min-width:0;';
+      var strong = textWrap.querySelector('strong');
+      if (strong) strong.style.cssText = 'color:#1E1E2E;font-size:14px;display:block;margin-bottom:2px;';
+      var p = textWrap.querySelector('p');
+      if (p) p.style.cssText = 'margin:0;font-size:13px;color:#5A5A72;line-height:1.5;';
+    }
+
+    var buttons = banner.querySelector('.cookie-buttons');
     if (buttons) {
-      buttons.style.cssText = 'display:flex;gap:8px;flex-shrink:0;';
+      buttons.style.cssText = 'display:flex;gap:8px;flex-shrink:0;align-items:center;';
     }
 
     var acceptBtn = document.getElementById('cookie-accept');
@@ -294,8 +306,9 @@
 
     if (acceptBtn) {
       acceptBtn.style.cssText =
-        'background:#27ae60;color:#fff;border:none;padding:8px 24px;' +
-        'border-radius:4px;cursor:pointer;font-size:14px;font-weight:600;';
+        'background:linear-gradient(135deg,#D97F8B,#c06a77);color:#fff;border:none;padding:10px 28px;' +
+        'border-radius:50px;cursor:pointer;font-size:14px;font-weight:600;font-family:inherit;' +
+        'box-shadow:0 4px 15px rgba(217,127,139,0.3);transition:all 0.25s ease;';
       acceptBtn.addEventListener('click', function () {
         localStorage.setItem(CONFIG.COOKIE_KEY, 'accepted');
         banner.style.display = 'none';
@@ -305,8 +318,9 @@
 
     if (declineBtn) {
       declineBtn.style.cssText =
-        'background:transparent;color:#fff;border:1px solid #fff;' +
-        'padding:8px 24px;border-radius:4px;cursor:pointer;font-size:14px;';
+        'background:transparent;color:#5A5A72;border:1px solid rgba(217,127,139,0.2);' +
+        'padding:10px 28px;border-radius:50px;cursor:pointer;font-size:14px;font-family:inherit;' +
+        'transition:all 0.25s ease;';
       declineBtn.addEventListener('click', function () {
         localStorage.setItem(CONFIG.COOKIE_KEY, 'declined');
         banner.style.display = 'none';
