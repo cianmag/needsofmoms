@@ -124,10 +124,12 @@
       </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero container">
-      <h1 class="text-gradient">Find the Perfect Baby Name</h1>
-      <p>Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search, filter, and discover the name that's just right for your little one.</p>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="text-gradient">Find the Perfect Baby Name</h1>
+        <p class="subtitle">Explore over 1,000 beautiful baby names with meanings, origins, and popularity rankings. Search, filter, and discover the name that's just right for your little one.</p>
+      </div>
     </section>
 
     <!-- Search & Filter Section -->
@@ -500,3 +502,29 @@
     filterChips.forEach(function(chip) {
       chip.addEventListener('click', function() {
         filterChips.forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        currentFilter = chip.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    // Origin filter
+    originSelect.addEventListener('change', function() {
+      currentOrigin = originSelect.value;
+      applyFilters();
+    });
+
+    // Load more
+    loadMoreBtn.addEventListener('click', function() {
+      currentPage++;
+      renderPage();
+    });
+
+    // Kick it off
+    loadNames();
+
+  })();
+</script>
+
+</body>
+</html>

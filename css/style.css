@@ -631,6 +631,7 @@ a.card:hover .card-icon {
 .page-header h1 {
   font-size: var(--font-size-4xl);
   margin-bottom: var(--space-md);
+  animation: heroFadeIn 0.6s ease both;
 }
 
 .page-header .subtitle {
@@ -638,6 +639,7 @@ a.card:hover .card-icon {
   color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
+  animation: heroFadeIn 0.6s ease 0.15s both;
 }
 
 /* --- Results Section --- */
@@ -1768,6 +1770,347 @@ body.nav-open {
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+/* --- Form Select --- */
+.form-select {
+  padding: 10px 36px 10px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--bg-card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235A5A72' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 14px center;
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(217, 127, 139, 0.12);
+}
+
+/* --- Mobile Menu Active State --- */
+.mobile-menu a.active {
+  color: var(--color-primary);
+  font-weight: 600;
+  padding-left: var(--space-sm);
+  border-left: 3px solid var(--color-primary);
+}
+
+/* --- Cookie Banner Mobile --- */
+@media (max-width: 640px) {
+  .cookie-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px !important;
+  }
+
+  .cookie-buttons {
+    width: 100%;
+    justify-content: center !important;
+  }
+}
+
+/* --- Page Load Transition --- */
+body {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+body.page-loaded {
+  opacity: 1;
+}
+
+/* --- Scroll-Triggered Animations --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children in grids */
+.card-grid .animate-on-scroll:nth-child(2),
+.feature-grid .animate-on-scroll:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.card-grid .animate-on-scroll:nth-child(3),
+.feature-grid .animate-on-scroll:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.card-grid .animate-on-scroll:nth-child(4),
+.feature-grid .animate-on-scroll:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+/* --- Enhanced Hover Effects --- */
+.card {
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
+}
+
+.btn {
+  transition: all var(--transition-base);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(217, 127, 139, 0.35);
+}
+
+.btn-secondary:hover {
+  box-shadow: 0 6px 20px rgba(255, 194, 190, 0.35);
+}
+
+/* Back-to-top hover */
+#back-to-top:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 25px rgba(217, 127, 139, 0.4) !important;
+}
+
+/* Filter chip hover */
+.filter-chip {
+  transition: all var(--transition-base);
+}
+
+.filter-chip:hover {
+  background: var(--color-secondary-light);
+  color: var(--color-primary-dark);
+}
+
+/* Search input focus glow */
+.search-input:focus {
+  box-shadow: 0 0 0 4px rgba(217, 127, 139, 0.15);
+}
+
+/* --- Baby Name Card Grid --- */
+.names-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.baby-name-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.baby-name-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
+}
+
+.baby-name-card .gender-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.baby-name-card .gender-icon.female {
+  background: rgba(217, 127, 139, 0.12);
+  color: var(--color-primary);
+}
+
+.baby-name-card .gender-icon.male {
+  background: rgba(100, 149, 237, 0.12);
+  color: #6495ED;
+}
+
+.baby-name-card .gender-icon.unisex {
+  background: rgba(173, 182, 128, 0.12);
+  color: var(--color-accent);
+}
+
+.baby-name-card .name {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: var(--space-xs);
+}
+
+.baby-name-card .meaning {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
+}
+
+.baby-name-card .origin {
+  display: inline-block;
+  padding: 3px 10px;
+  background: var(--color-lavender-bg);
+  color: var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.baby-name-card .popularity {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+/* --- Search Input Wrapper --- */
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  left: 16px;
+  font-size: 1.1rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-input-wrapper .search-input {
+  width: 100%;
+  padding: 14px 44px 14px 48px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  transition: all var(--transition-base);
+}
+
+.search-input-wrapper .search-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(217, 127, 139, 0.12);
+}
+
+.search-input-wrapper .search-clear {
+  position: absolute;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-lavender-bg);
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.search-input-wrapper .search-clear:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary-dark);
+}
+
+/* --- Filter Chips --- */
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  justify-content: center;
+}
+
+.filter-chip {
+  padding: 8px 20px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-chip.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(217, 127, 139, 0.25);
+}
+
+/* --- Loading Skeleton --- */
+.skeleton {
+  background: linear-gradient(90deg, var(--color-lavender-bg) 25%, var(--color-blush-bg) 50%, var(--color-lavender-bg) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Responsive: Baby Names Grid --- */
+@media (max-width: 768px) {
+  .names-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-chips {
+    gap: var(--space-xs);
+  }
+
+  .filter-chip {
+    padding: 6px 14px;
+    font-size: var(--font-size-xs);
+  }
+
+  .search-input-wrapper .search-input {
+    padding: 12px 40px 12px 44px;
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .names-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 }
 
 /* --- Responsive --- */

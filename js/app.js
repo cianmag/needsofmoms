@@ -708,10 +708,10 @@
     btn.innerHTML = '&#9650;';
     btn.style.cssText =
       'position:fixed;bottom:90px;right:20px;z-index:9998;' +
-      'width:44px;height:44px;border-radius:50%;border:none;' +
-      'background:#e91e8c;color:#fff;font-size:18px;cursor:pointer;' +
-      'opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s;' +
-      'box-shadow:0 2px 8px rgba(0,0,0,0.2);display:flex;align-items:center;' +
+      'width:48px;height:48px;border-radius:50%;border:none;' +
+      'background:linear-gradient(135deg,#D97F8B,#c06a77);color:#fff;font-size:18px;cursor:pointer;' +
+      'opacity:0;visibility:hidden;transition:opacity 0.3s,visibility 0.3s,transform 0.2s;' +
+      'box-shadow:0 4px 15px rgba(217,127,139,0.3);display:flex;align-items:center;' +
       'justify-content:center;';
 
     document.body.appendChild(btn);
@@ -842,6 +842,55 @@
   }
 
   // =========================================================================
+  // SCROLL-TRIGGERED ANIMATIONS
+  // =========================================================================
+
+  function initScrollAnimations() {
+    var animTargets = document.querySelectorAll(
+      '.card, .trimester-card, .week-card, .tip-card, .feature-item, ' +
+      '.accordion-item, .stat-card, .highlight-box, .name-card, ' +
+      '.section-header, .page-header, .calc-result, .result-box'
+    );
+    if (animTargets.length === 0) return;
+
+    // Add the animation-ready class
+    animTargets.forEach(function(el) {
+      el.classList.add('animate-on-scroll');
+    });
+
+    if ('IntersectionObserver' in window && typeof IntersectionObserver === 'function') {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.1
+      });
+
+      animTargets.forEach(function(el) {
+        observer.observe(el);
+      });
+    } else {
+      // Fallback: show everything immediately
+      animTargets.forEach(function(el) {
+        el.classList.add('animate-visible');
+      });
+    }
+  }
+
+  // =========================================================================
+  // PAGE LOAD TRANSITION
+  // =========================================================================
+
+  function initPageTransition() {
+    document.body.classList.add('page-loaded');
+  }
+
+  // =========================================================================
   // INITIALIZATION
   // =========================================================================
 
@@ -857,6 +906,8 @@
     initLazyLoading();
     initReadingTime();
     initCounterAnimation();
+    initScrollAnimations();
+    initPageTransition();
   }
 
   // Run when DOM is ready
