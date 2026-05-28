@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Name Generator Quiz - Find Your Perfect Baby Name | NeedsOfMoms</title>
+  <meta name="description" content="Take our free 5-question baby name quiz to get personalized name suggestions. Discover the perfect name based on gender, style, origin, and length preferences.">
+  <meta property="og:title" content="Baby Name Generator Quiz - Find Your Perfect Baby Name">
+  <meta property="og:description" content="Take our free 5-question baby name quiz to get personalized name suggestions based on your preferences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://needsofmoms.com/baby-name-generator">
+  <meta property="og:site_name" content="NeedsOfMoms">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Baby Name Generator Quiz - Find Your Perfect Baby Name">
+  <meta name="twitter:description" content="Take our free 5-question baby name quiz to get personalized name suggestions based on your preferences.">
+  <link rel="canonical" href="https://needsofmoms.com/baby-name-generator">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://needsofmoms.com/#website",
+        "url": "https://needsofmoms.com/",
+        "name": "NeedsOfMoms"
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Use the Baby Name Generator Quiz",
+        "description": "Find your perfect baby name in 5 easy steps with our personalized quiz.",
+        "totalTime": "PT3M",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Choose Gender Preference",
+            "text": "Select whether you prefer a girl name, boy name, or want to be surprised."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Pick a Name Style",
+            "text": "Choose from Classic, Modern, Unique, or Nature-inspired name styles."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Select Origin Preference",
+            "text": "Pick a cultural origin for the name or choose Any to see all options."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Set Letter Preference",
+            "text": "Optionally choose a starting letter or leave it as no preference."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 5,
+            "name": "Choose Name Length",
+            "text": "Select short, medium, long names, or any length."
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://needsofmoms.com/baby-name-generator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://needsofmoms.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Baby Name Generator",
+            "item": "https://needsofmoms.com/baby-name-generator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does the baby name generator quiz work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our quiz asks 5 questions about your preferences — gender, style, origin, starting letter, and name length. It then matches your answers against our database of over 1,000 names to suggest 5-10 personalized options."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use the generator if I don't know the gender?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! Simply select 'Surprise me' for the gender question and you'll receive a mix of both boy and girl names."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many names will the quiz suggest?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The quiz suggests between 5 and 10 names based on how well they match your preferences. If your criteria are very specific, fewer results may appear; broader preferences will show more options."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where do I learn more about a suggested name?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each suggested name links to our Baby Names explorer where you can see its meaning, origin, and popularity ranking, plus browse similar names."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .quiz-container { max-width: 700px; margin: 0 auto; }
+    .quiz-step { display: none; animation: fadeIn 0.3s ease; }
+    .quiz-step.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .quiz-question { font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--space-lg); color: var(--text-primary); }
+    .quiz-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
+    .quiz-option {
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color, rgba(255,255,255,0.1));
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+      font-size: var(--text-base);
+      color: var(--text-primary);
+    }
+    .quiz-option:hover { border-color: var(--color-primary); background: rgba(233, 30, 140, 0.05); }
+    .quiz-option.selected { border-color: var(--color-primary); background: rgba(233, 30, 140, 0.15); box-shadow: 0 0 20px rgba(233, 30, 140, 0.2); }
+    .quiz-option-icon { font-size: 1.5rem; margin-bottom: var(--space-xs); display: block; }
+    .quiz-select-wrapper { position: relative; margin-bottom: var(--space-xl); }
+    .quiz-select {
+      width: 100%;
+      padding: var(--space-md) var(--space-lg);
+      background: var(--bg-surface);
+      border: 2px solid var(--border-color, rgba(255,255,255,0.1));
+      border-radius: var(--radius-lg);
+      color: var(--text-primary);
+      font-size: var(--text-base);
+      appearance: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+    .quiz-select:focus { border-color: var(--color-primary); outline: none; }
+    .quiz-progress {
+      display: flex;
+      gap: var(--space-xs);
+      margin-bottom: var(--space-xl);
+    }
+    .quiz-progress-dot {
+      flex: 1;
+      height: 4px;
+      border-radius: 2px;
+      background: var(--bg-surface);
+      transition: background 0.3s ease;
+    }
+    .quiz-progress-dot.done { background: var(--color-primary); }
+    .quiz-progress-dot.current { background: var(--color-secondary); }
+    .quiz-nav { display: flex; justify-content: space-between; gap: var(--space-md); margin-top: var(--space-lg); }
+    .btn-quiz {
+      padding: var(--space-md) var(--space-xl);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .btn-quiz-primary { background: var(--color-primary); color: #fff; }
+    .btn-quiz-primary:hover { background: var(--color-primary-hover, #d4197a); }
+    .btn-quiz-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-quiz-secondary { background: var(--bg-surface); color: var(--text-primary); border: 2px solid var(--border-color, rgba(255,255,255,0.1)); }
+    .btn-quiz-secondary:hover { border-color: var(--color-primary); }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+    }
+    .result-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color, rgba(255,255,255,0.1));
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .result-card:hover { border-color: var(--color-primary); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(233, 30, 140, 0.15); }
+    .result-name { font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-xs); }
+    .result-meaning { color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-sm); }
+    .result-meta { display: flex; gap: var(--space-sm); align-items: center; flex-wrap: wrap; }
+    .result-origin {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: var(--text-xs);
+      background: rgba(155, 89, 182, 0.15);
+      color: var(--color-secondary);
+      border: 1px solid rgba(155, 89, 182, 0.3);
+    }
+    .result-gender-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .result-gender-icon.male { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+    .result-gender-icon.female { background: rgba(233, 30, 140, 0.15); color: #e91e8c; }
+    .no-results {
+      text-align: center;
+      padding: var(--space-3xl) var(--space-lg);
+      color: var(--text-secondary);
+    }
+    .quiz-intro { text-align: center; margin-bottom: var(--space-2xl); }
+    .quiz-intro-icon { font-size: 3rem; margin-bottom: var(--space-md); display: block; }
+    .quiz-tips { margin-top: var(--space-3xl); }
+    @media (max-width: 600px) {
+      .quiz-options { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🤰</span>
+        <span class="logo-text">Needs<span>OfMoms</span></span>
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="/tools/due-date-calculator" class="nav-link">Due Date Calculator</a></li>
+          <li><a href="/tools/ovulation-calculator" class="nav-link">Ovulation Calculator</a></li>
+          <li><a href="/baby-names" class="nav-link">Baby Names</a></li>
+          <li><a href="/week-by-week" class="nav-link">Week by Week</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Baby Name Generator</span>
+          <meta itemprop="position" content="2">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main>
+    <section style="padding: var(--space-3xl) 0 var(--space-xl);">
+      <div class="container">
+        <div class="quiz-intro">
+          <span class="quiz-intro-icon">✨</span>
+          <h1 class="text-gradient" style="font-size: clamp(1.8rem, 5vw, var(--text-4xl)); margin-bottom: var(--space-md);">
+            Baby Name Generator Quiz
+          </h1>
+          <p style="font-size: var(--text-lg); max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
+            Answer 5 quick questions and we'll suggest the perfect baby names tailored just for you.
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <!-- Progress -->
+          <div class="quiz-progress" id="quizProgress">
+            <div class="quiz-progress-dot" data-step="1"></div>
+            <div class="quiz-progress-dot" data-step="2"></div>
+            <div class="quiz-progress-dot" data-step="3"></div>
+            <div class="quiz-progress-dot" data-step="4"></div>
+            <div class="quiz-progress-dot" data-step="5"></div>
+          </div>
+
+          <!-- Step 1: Gender -->
+          <div class="quiz-step active" data-step="1">
+            <h2 class="quiz-question">What gender are you looking for?</h2>
+            <div class="quiz-options" data-answer="gender">
+              <div class="quiz-option" data-value="girl">
+                <span class="quiz-option-icon">👧</span>
+                <strong>Girl</strong>
+              </div>
+              <div class="quiz-option" data-value="boy">
+                <span class="quiz-option-icon">👦</span>
+                <strong>Boy</strong>
+              </div>
+              <div class="quiz-option" data-value="any" style="grid-column: 1 / -1;">
+                <span class="quiz-option-icon">🎉</span>
+                <strong>Surprise Me</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Style -->
+          <div class="quiz-step" data-step="2">
+            <h2 class="quiz-question">What style of name do you prefer?</h2>
+            <div class="quiz-options" data-answer="style">
+              <div class="quiz-option" data-value="classic">
+                <span class="quiz-option-icon">👑</span>
+                <strong>Classic</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Timeless & traditional</p>
+              </div>
+              <div class="quiz-option" data-value="modern">
+                <span class="quiz-option-icon">🌟</span>
+                <strong>Modern</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Trendy & fresh</p>
+              </div>
+              <div class="quiz-option" data-value="unique">
+                <span class="quiz-option-icon">💎</span>
+                <strong>Unique</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Rare & distinctive</p>
+              </div>
+              <div class="quiz-option" data-value="nature">
+                <span class="quiz-option-icon">🌿</span>
+                <strong>Nature-inspired</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Earth, flowers, sky</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Origin -->
+          <div class="quiz-step" data-step="3">
+            <h2 class="quiz-question">Any preferred origin?</h2>
+            <div class="quiz-select-wrapper">
+              <select class="quiz-select" id="originSelect">
+                <option value="any">Any origin</option>
+                <option value="English">English</option>
+                <option value="Hebrew">Hebrew</option>
+                <option value="Irish">Irish</option>
+                <option value="Greek">Greek</option>
+                <option value="Latin">Latin</option>
+                <option value="Arabic">Arabic</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="African">African</option>
+                <option value="Norse">Norse</option>
+                <option value="Scottish">Scottish</option>
+                <option value="Welsh">Welsh</option>
+                <option value="Indian">Indian</option>
+                <option value="Russian">Russian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Turkish">Turkish</option>
+                <option value="Persian">Persian</option>
+                <option value="Swedish">Swedish</option>
+                <option value="Celtic">Celtic</option>
+                <option value="Polish">Polish</option>
+              </select>
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-quiz btn-quiz-secondary" onclick="prevStep()">← Back</button>
+              <button class="btn-quiz btn-quiz-primary" onclick="nextStep()">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 4: First Letter -->
+          <div class="quiz-step" data-step="4">
+            <h2 class="quiz-question">Any starting letter preference?</h2>
+            <div class="quiz-select-wrapper">
+              <select class="quiz-select" id="letterSelect">
+                <option value="any">No preference</option>
+                <option value="A">A</option><option value="B">B</option>
+                <option value="C">C</option><option value="D">D</option>
+                <option value="E">E</option><option value="F">F</option>
+                <option value="G">G</option><option value="H">H</option>
+                <option value="I">I</option><option value="J">J</option>
+                <option value="K">K</option><option value="L">L</option>
+                <option value="M">M</option><option value="N">N</option>
+                <option value="O">O</option><option value="P">P</option>
+                <option value="Q">Q</option><option value="R">R</option>
+                <option value="S">S</option><option value="T">T</option>
+                <option value="U">U</option><option value="V">V</option>
+                <option value="W">W</option><option value="X">X</option>
+                <option value="Y">Y</option><option value="Z">Z</option>
+              </select>
+            </div>
+            <div class="quiz-nav">
+              <button class="btn-quiz btn-quiz-secondary" onclick="prevStep()">← Back</button>
+              <button class="btn-quiz btn-quiz-primary" onclick="nextStep()">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Length -->
+          <div class="quiz-step" data-step="5">
+            <h2 class="quiz-question">Preferred name length?</h2>
+            <div class="quiz-options" data-answer="length">
+              <div class="quiz-option" data-value="short">
+                <span class="quiz-option-icon">✂️</span>
+                <strong>Short</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">3-4 letters</p>
+              </div>
+              <div class="quiz-option" data-value="medium">
+                <span class="quiz-option-icon">📏</span>
+                <strong>Medium</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">5-6 letters</p>
+              </div>
+              <div class="quiz-option" data-value="long">
+                <span class="quiz-option-icon">📜</span>
+                <strong>Long</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">7+ letters</p>
+              </div>
+              <div class="quiz-option" data-value="any">
+                <span class="quiz-option-icon">🌈</span>
+                <strong>Any</strong>
+                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Show me everything</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div class="quiz-step" data-step="results">
+            <div id="resultsContainer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="quiz-tips" style="padding: var(--space-3xl) 0;">
+      <div class="container" style="max-width: 700px;">
+        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Frequently Asked Questions</h2>
+        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How does the baby name generator work?</summary>
+          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Our quiz asks 5 questions about your preferences — gender, style, origin, starting letter, and name length. It then matches your answers against our database of over 1,000 names to suggest 5-10 personalized options.</p>
+        </details>
+        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Can I use the generator if I don't know the gender?</summary>
+          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Absolutely! Simply select "Surprise me" for the gender question and you'll receive a mix of both boy and girl names.</p>
+        </details>
+        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How many names will the quiz suggest?</summary>
+          <p style="margin-top: var(--space-md); color: var(--text-secondary);">The quiz suggests between 5 and 10 names based on how well they match your preferences. If your criteria are very specific, fewer results may appear; broader preferences will show more options.</p>
+        </details>
+        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Where do I learn more about a suggested name?</summary>
+          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Each suggested name links to our Baby Names explorer where you can see its meaning, origin, and popularity ranking, plus browse similar names.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding: var(--space-2xl) 0 var(--space-3xl); text-align: center;">
+      <div class="container">
+        <div class="card" style="padding: var(--space-2xl); background: linear-gradient(135deg, rgba(233, 30, 140, 0.1), rgba(155, 89, 182, 0.1)); border-color: var(--color-primary);">
+          <h2>Explore All Baby Names</h2>
+          <p style="max-width: 500px; margin: 0 auto var(--space-lg);">Browse our full database of over 1,000 names with meanings, origins, and popularity rankings.</p>
+          <a href="/baby-names" class="btn btn-primary btn-lg">Browse Baby Names</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>NeedsOfMoms</h4>
+        <p>Your trusted companion through pregnancy. Free calculators, baby names, and week-by-week guides for expecting parents.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <div class="footer-links">
+          <a href="/tools/due-date-calculator">Due Date Calculator</a>
+          <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+          <a href="/baby-name-generator">Baby Name Generator</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <div class="footer-links">
+          <a href="/baby-names">Baby Names</a>
+          <a href="/week-by-week">Week by Week Guide</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Use</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NeedsOfMoms. All rights reserved.</p>
+      <p style="font-size: var(--text-xs);">This site is for informational purposes only and does not constitute medical advice.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var allNames = [];
+    var answers = { gender: null, style: null, origin: 'any', letter: 'any', length: null };
+    var currentStep = 1;
+
+    // Style-to-origin/meaning keyword mappings
+    var styleKeywords = {
+      classic: {
+        names: ['James','William','Elizabeth','Charlotte','Henry','Eleanor','Theodore','Benjamin','Alexander','Victoria','Joseph','Catherine','Samuel','Margaret','Edward','Sarah','Daniel','Emily','David','Grace','Thomas','Alice','John','Anna','Michael','Sophia','Andrew','Rebecca','Robert','Hannah','George','Amelia','Charles','Clara','Richard','Rose','Matthew','Jane','Luke','Mary'],
+        keywords: ['king','queen','ruler','noble','wise','warrior','strong','protector','beloved','grace','gift']
+      },
+      modern: {
+        names: ['Aiden','Luna','Mason','Aria','Ethan','Zoe','Logan','Nova','Jayden','Isla','Carter','Mia','Leo','Harper','Kai','Riley','Milo','Avery','Finn','Everly','Jaxon','Willow','Axel','Sage','River','Phoenix','Rowan','Quinn','Blake','Skye','Remi','Atlas','Orion','Luna','Zara','Kira','Jace','Nova','Iris','Cruz'],
+        keywords: ['new','star','light','dawn','bright','modern','young']
+      },
+      unique: {
+        names: ['Soren','Astrid','Calliope','Thaddeus','Isolde','Leander','Persephone','Cassian','Ondine','Alaric','Seraphina','Oberon','Evangeline','Percival','Calista','Lysander','Anastasia','Dimitri','Isolde','Zephyr','Azalea','Caspian','Delphine','Evander','Galilea','Hadrian','Ione','Juno','Koa','Leilani','Maren','Nico','Ophelia','Petra','Quillon','Rhea','Sable','Thea','Ursa','Vesper'],
+        keywords: ['unique','rare','special','dream','mystery','magic']
+      },
+      nature: {
+        names: ['Willow','River','Forest','Sage','Hazel','Ivy','Lily','Rose','Daisy','Jasmine','Violet','Olive','Autumn','Summer','Winter','Sky','Star','Rain','Brook','Meadow','Cedar','Rowan','Holly','Fern','Clover','Birch','Laurel','Maple','Aurora','Luna','Sol','Stella','Flora','Gaia','Petra','Jasper','Cliff','Glen','Reed','Heath'],
+        keywords: ['tree','flower','nature','earth','garden','forest','river','mountain','leaf','plant','bloom','spring']
+      }
+    };
+
+    // Load names data
+    fetch('/data/baby-names.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) { allNames = data; })
+      .catch(function(err) { console.error('Failed to load names:', err); });
+
+    // Click handlers for options
+    document.querySelectorAll('.quiz-options').forEach(function(group) {
+      var answerKey = group.getAttribute('data-answer');
+      group.querySelectorAll('.quiz-option').forEach(function(opt) {
+        opt.addEventListener('click', function() {
+          group.querySelectorAll('.quiz-option').forEach(function(o) { o.classList.remove('selected'); });
+          opt.classList.add('selected');
+          answers[answerKey] = opt.getAttribute('data-value');
+          if (currentStep <= 2 || currentStep === 5) {
+            setTimeout(nextStep, 300);
+          }
+        });
+      });
+    });
+
+    window.nextStep = function() {
+      if (currentStep === 3) {
+        var originEl = document.getElementById('originSelect');
+        answers.origin = originEl ? originEl.value : 'any';
+      }
+      if (currentStep === 4) {
+        var letterEl = document.getElementById('letterSelect');
+        answers.letter = letterEl ? letterEl.value : 'any';
+      }
+
+      var stepEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
+      if (stepEl) stepEl.classList.remove('active');
+
+      currentStep++;
+      updateProgress();
+
+      if (currentStep > 5) {
+        showResults();
+        return;
+      }
+
+      var nextEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
+      if (nextEl) nextEl.classList.add('active');
+    };
+
+    window.prevStep = function() {
+      var stepEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
+      if (stepEl) stepEl.classList.remove('active');
+      currentStep--;
+      updateProgress();
+      var prevEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
+      if (prevEl) prevEl.classList.add('active');
+    };
+
+    function updateProgress() {
+      document.querySelectorAll('.quiz-progress-dot').forEach(function(dot) {
+        var s = parseInt(dot.getAttribute('data-step'));
+        dot.classList.remove('done', 'current');
+        if (s < currentStep) dot.classList.add('done');
+        if (s === currentStep) dot.classList.add('current');
+      });
+    }
+
+    function showResults() {
+      document.querySelector('.quiz-progress').style.display = 'none';
+      var resultsStep = document.querySelector('.quiz-step[data-step="results"]');
+      resultsStep.classList.add('active');
+
+      var filtered = allNames.filter(function(n) {
+        // Gender filter
+        if (answers.gender && answers.gender !== 'any') {
+          if (n.gender !== answers.gender) return false;
+        }
+        // Origin filter
+        if (answers.origin && answers.origin !== 'any') {
+          if (n.origin && n.origin.toLowerCase() !== answers.origin.toLowerCase()) return false;
+        }
+        // Letter filter
+        if (answers.letter && answers.letter !== 'any') {
+          if (!n.name || n.name[0].toUpperCase() !== answers.letter.toUpperCase()) return false;
+        }
+        // Length filter
+        if (answers.length && answers.length !== 'any') {
+          var len = n.name ? n.name.length : 0;
+          if (answers.length === 'short' && len > 4) return false;
+          if (answers.length === 'medium' && (len < 5 || len > 6)) return false;
+          if (answers.length === 'long' && len < 7) return false;
+        }
+        return true;
+      });
+
+      // Score and sort by style relevance
+      if (answers.style) {
+        var styleData = styleKeywords[answers.style];
+        if (styleData) {
+          filtered.forEach(function(n) {
+            n._score = 0;
+            // Name match bonus
+            if (styleData.names.indexOf(n.name) !== -1) n._score += 10;
+            // Meaning keyword match
+            if (n.meaning) {
+              var meaningLower = n.meaning.toLowerCase();
+              styleData.keywords.forEach(function(kw) {
+                if (meaningLower.indexOf(kw) !== -1) n._score += 3;
+              });
+            }
+            // Popularity bonus (lower number = more popular)
+            if (n.popularity && n.popularity <= 50) n._score += 2;
+          });
+          filtered.sort(function(a, b) { return (b._score || 0) - (a._score || 0); });
+        }
+      }
+
+      // Take top 8
+      var results = filtered.slice(0, 8);
+
+      // If not enough results with strict filters, relax letter/length
+      if (results.length < 5) {
+        var relaxed = allNames.filter(function(n) {
+          if (answers.gender && answers.gender !== 'any' && n.gender !== answers.gender) return false;
+          if (answers.origin && answers.origin !== 'any' && n.origin && n.origin.toLowerCase() !== answers.origin.toLowerCase()) return false;
+          return true;
+        });
+        if (answers.style && styleKeywords[answers.style]) {
+          var sd = styleKeywords[answers.style];
+          relaxed.forEach(function(n) {
+            n._score = 0;
+            if (sd.names.indexOf(n.name) !== -1) n._score += 10;
+            if (n.meaning) {
+              sd.keywords.forEach(function(kw) {
+                if (n.meaning.toLowerCase().indexOf(kw) !== -1) n._score += 3;
+              });
+            }
+          });
+          relaxed.sort(function(a, b) { return (b._score || 0) - (a._score || 0); });
+        }
+        results = relaxed.slice(0, 8);
+      }
+
+      var container = document.getElementById('resultsContainer');
+      if (results.length === 0) {
+        container.innerHTML = '<div class="no-results">' +
+          '<div style="font-size: 3rem; margin-bottom: var(--space-md);">🤷</div>' +
+          '<h3>No matches found</h3>' +
+          '<p>Try broadening your preferences — pick "Any" for origin, letter, or length.</p>' +
+          '<button class="btn btn-primary" style="margin-top: var(--space-lg);" onclick="restartQuiz()">Try Again</button>' +
+          '</div>';
+        return;
+      }
+
+      var html = '<h2 class="text-center" style="margin-bottom: var(--space-sm);">🎉 Your Personalized Names</h2>' +
+        '<p class="text-center" style="color: var(--text-secondary); margin-bottom: var(--space-xl);">We found ' + results.length + ' names that match your preferences!</p>' +
+        '<div class="results-grid">';
+
+      results.forEach(function(n) {
+        var genderClass = n.gender === 'boy' ? 'male' : 'female';
+        var genderSymbol = n.gender === 'boy' ? '♂' : '♀';
+        var encodedName = encodeURIComponent(n.name);
+        html += '<a href="/baby-names?highlight=' + encodedName + '" class="result-card">' +
+          '<div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-sm);">' +
+          '<span class="result-gender-icon ' + genderClass + '">' + genderSymbol + '</span>' +
+          '<span class="result-name">' + escapeHtml(n.name) + '</span>' +
+          '</div>' +
+          '<p class="result-meaning">' + escapeHtml(n.meaning || 'A beautiful name') + '</p>' +
+          '<div class="result-meta">' +
+          '<span class="result-origin">' + escapeHtml(n.origin || 'Unknown') + '</span>' +
+          '</div>' +
+          '</a>';
+      });
+
+      html += '</div>' +
+        '<div class="text-center" style="margin-top: var(--space-xl);">' +
+        '<button class="btn btn-secondary" onclick="restartQuiz()">🔄 Retake Quiz</button> ' +
+        '<a href="/baby-names" class="btn btn-primary">Browse All Names</a>' +
+        '</div>';
+
+      container.innerHTML = html;
+    }
+
+    window.restartQuiz = function() {
+      answers = { gender: null, style: null, origin: 'any', letter: 'any', length: null };
+      currentStep = 1;
+      document.querySelector('.quiz-progress').style.display = 'flex';
+      document.querySelectorAll('.quiz-step').forEach(function(s) { s.classList.remove('active'); });
+      document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
+      document.querySelectorAll('.quiz-option').forEach(function(o) { o.classList.remove('selected'); });
+      document.getElementById('originSelect').value = 'any';
+      document.getElementById('letterSelect').value = 'any';
+      updateProgress();
+    };
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
+    // Init progress
+    updateProgress();
+  })();
+  </script>
+</body>
+</html>

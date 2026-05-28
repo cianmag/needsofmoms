@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week by Week Pregnancy Guide | NeedsOfMoms</title>
+  <meta name="description" content="Track your pregnancy week by week. See how your baby grows each week with size comparisons, development milestones, and tips for expectant moms.">
+  <meta property="og:title" content="Week by Week Pregnancy Guide | NeedsOfMoms">
+  <meta property="og:description" content="Track your pregnancy week by week. See how your baby grows each week with size comparisons, development milestones, and tips for expectant moms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://needsofmoms.com/week-by-week">
+  <meta property="og:site_name" content="NeedsOfMoms">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://needsofmoms.com/week-by-week">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://needsofmoms.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Week by Week", "item": "https://needsofmoms.com/week-by-week"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When does pregnancy start being counted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pregnancy is counted from the first day of your last menstrual period (LMP). Week 1 and 2 are before conception actually occurs. By week 4, the embryo is implanting and a pregnancy test can detect hCG."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many weeks is a full-term pregnancy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A full-term pregnancy is typically 40 weeks (280 days) from the first day of your last menstrual period. However, babies born between 37 and 42 weeks are considered full-term."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the three trimesters of pregnancy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "First trimester: weeks 1-12 (months 1-3). Second trimester: weeks 13-27 (months 4-6). Third trimester: weeks 28-42 (months 7-9). Each trimester brings unique developments for baby and changes for mom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When can I first feel my baby move?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most moms first feel their baby move (called quickening) between weeks 16 and 25. First-time moms may not feel movement until closer to week 25, while experienced moms may notice it as early as week 13."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🤰</span>
+        <span class="logo-text">Needs<span>OfMoms</span></span>
+      </a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="/tools/due-date-calculator.html" class="nav-link">Due Date Calculator</a></li>
+          <li><a href="/tools/ovulation-calculator.html" class="nav-link">Ovulation Calculator</a></li>
+          <li><a href="/baby-names.html" class="nav-link">Baby Names</a></li>
+          <li><a href="/week-by-week.html" class="nav-link active">Week by Week</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active">Week by Week</li>
+          </ol>
+        </nav>
+        <h1>Week by Week <span class="text-gradient">Pregnancy Guide</span></h1>
+        <p>Follow your baby's incredible journey from a tiny cluster of cells to a fully developed baby. Explore each week to learn about growth, development, and what to expect.</p>
+        <div class="hero-actions">
+          <a href="/trimester/first-trimester.html" class="btn btn-primary">First Trimester</a>
+          <a href="/trimester/second-trimester.html" class="btn btn-secondary">Second Trimester</a>
+          <a href="/trimester/third-trimester.html" class="btn btn-secondary">Third Trimester</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trimester Filter -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Your Pregnancy Timeline</h2>
+          <p>Select a trimester or browse all weeks below</p>
+        </div>
+        <div class="filter-chips" style="justify-content: center; margin-bottom: var(--space-2xl);">
+          <button class="filter-chip active" data-filter="all">All Weeks</button>
+          <button class="filter-chip" data-filter="1"><span class="trimester-badge t1">T1</span> First Trimester</button>
+          <button class="filter-chip" data-filter="2"><span class="trimester-badge t2">T2</span> Second Trimester</button>
+          <button class="filter-chip" data-filter="3"><span class="trimester-badge t3">T3</span> Third Trimester</button>
+        </div>
+
+        <!-- Loading State -->
+        <div id="weeks-loading" class="text-center" style="padding: var(--space-3xl) 0;">
+          <div class="spinner spinner-lg"></div>
+          <p class="text-muted mt-3">Loading pregnancy weeks...</p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div id="weeks-timeline" class="timeline" style="display: none;"></div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions about week-by-week pregnancy tracking</p>
+        </div>
+        <div class="accordion" style="max-width: 720px; margin: 0 auto;">
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0">
+              <h3>When does pregnancy start being counted?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                <p>Pregnancy is counted from the first day of your last menstrual period (LMP). Week 1 and 2 are before conception actually occurs. By week 4, the embryo is implanting and a pregnancy test can detect hCG.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0">
+              <h3>How many weeks is a full-term pregnancy?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                <p>A full-term pregnancy is typically 40 weeks (280 days) from the first day of your last menstrual period. However, babies born between 37 and 42 weeks are considered full-term.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0">
+              <h3>What are the three trimesters of pregnancy?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                <p>First trimester: weeks 1-12 (months 1-3). Second trimester: weeks 13-27 (months 4-6). Third trimester: weeks 28-42 (months 7-9). Each trimester brings unique developments for baby and changes for mom.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header" role="button" tabindex="0">
+              <h3>When can I first feel my baby move?</h3>
+              <span class="accordion-icon">+</span>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-content">
+                <p>Most moms first feel their baby move (called quickening) between weeks 16 and 25. First-time moms may not feel movement until closer to week 25, while experienced moms may notice it as early as week 13.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>NeedsOfMoms</h4>
+        <p>Trusted pregnancy and maternity resources for expectant mothers. Your journey to motherhood starts here.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Tools</h4>
+        <div class="footer-links">
+          <a href="/tools/due-date-calculator.html">Due Date Calculator</a>
+          <a href="/tools/ovulation-calculator.html">Ovulation Calculator</a>
+          <a href="/baby-names.html">Baby Names</a>
+          <a href="/week-by-week.html">Week by Week Guide</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <div class="footer-links">
+          <a href="/trimester/first-trimester.html">First Trimester</a>
+          <a href="/trimester/second-trimester.html">Second Trimester</a>
+          <a href="/trimester/third-trimester.html">Third Trimester</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <div class="footer-links">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Use</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 NeedsOfMoms. All rights reserved.</p>
+      <p style="font-size: var(--text-xs);">This site is for informational purposes only and does not constitute medical advice.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var DATA_URL = '/data/pregnancy-weeks.json';
+    var timeline = document.getElementById('weeks-timeline');
+    var loading = document.getElementById('weeks-loading');
+    var filterChips = document.querySelectorAll('.filter-chip');
+    var allWeeks = [];
+
+    // Fetch and render timeline
+    fetch(DATA_URL)
+      .then(function(r) { return r.json(); })
+      .then(function(weeks) {
+        allWeeks = weeks;
+        renderTimeline(weeks);
+        loading.style.display = 'none';
+        timeline.style.display = 'block';
+      })
+      .catch(function() {
+        loading.innerHTML = '<p class="text-muted">Failed to load pregnancy data. Please refresh the page.</p>';
+      });
+
+    function getTrimesterName(t) {
+      if (t === 1) return 'First Trimester';
+      if (t === 2) return 'Second Trimester';
+      return 'Third Trimester';
+    }
+
+    function getTrimesterClass(t) {
+      return 't' + t;
+    }
+
+    function getBriefDesc(week) {
+      // Use first 2 developments as brief description
+      if (week.babyDevelopments && week.babyDevelopments.length > 0) {
+        return week.babyDevelopments.slice(0, 2).join(', ');
+      }
+      return '';
+    }
+
+    function renderTimeline(weeks) {
+      timeline.innerHTML = '';
+      weeks.forEach(function(week) {
+        var item = document.createElement('div');
+        item.className = 'timeline-item';
+        item.setAttribute('data-trimester', week.trimester);
+
+        var markerColor = week.trimester === 1 ? 'var(--trimester-1)' :
+                          week.trimester === 2 ? 'var(--trimester-2)' : 'var(--trimester-3)';
+
+        item.innerHTML =
+          '<div class="timeline-marker" style="border-color: ' + markerColor + ';"></div>' +
+          '<div class="timeline-content">' +
+            '<a href="/week-by-week/week.html?week=' + week.week + '" style="text-decoration: none; color: inherit;">' +
+              '<div class="flex items-center gap-2" style="margin-bottom: var(--space-sm);">' +
+                '<span class="timeline-week">Week ' + week.week + '</span>' +
+                '<span class="trimester-badge ' + getTrimesterClass(week.trimester) + '">' + getTrimesterName(week.trimester) + '</span>' +
+              '</div>' +
+              '<div class="timeline-title">Baby is the size of a ' + week.fruitComparison + '</div>' +
+              '<p class="timeline-description">' + getBriefDesc(week) + '</p>' +
+              '<div class="timeline-meta">' +
+                '<span class="timeline-size">📏 ' + week.babySizeCm + ' cm</span>' +
+                '<span class="timeline-size">⚖️ ' + week.babyWeight + '</span>' +
+              '</div>' +
+            '</a>' +
+          '</div>';
+
+        timeline.appendChild(item);
+      });
+    }
+
+    // Filter chips
+    filterChips.forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        filterChips.forEach(function(c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+
+        var filter = chip.getAttribute('data-filter');
+        var items = timeline.querySelectorAll('.timeline-item');
+
+        items.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-trimester') === filter) {
+            item.style.display = '';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+# https://needsofmoms.com/robots.txt
+User-agent: *
+Allow: /
+
+# Block data directory from indexing
+Disallow: /data/
+
+# Sitemap location
+Sitemap: https://needsofmoms.com/sitemap.xml

@@ -1,0 +1,878 @@
+[
+  {
+    "week": 4,
+    "trimester": 1,
+    "babySize": "poppy seed",
+    "babySizeCm": 0.1,
+    "babyWeight": "<1g",
+    "fruitComparison": "poppy seed",
+    "babyDevelopments": [
+      "Neural tube forms",
+      "Heart begins to develop"
+    ],
+    "momSymptoms": [
+      "Missed period",
+      "Fatigue",
+      "Breast tenderness"
+    ],
+    "tips": [
+      "Start prenatal vitamins with folic acid",
+      "Avoid alcohol and smoking"
+    ],
+    "babyDescription": "Your baby is a tiny cluster of cells called a blastocyst, implanting into the uterine wall. The neural tube, which becomes the brain and spinal cord, is already forming."
+  },
+  {
+    "week": 5,
+    "trimester": 1,
+    "babySize": "sesame seed",
+    "babySizeCm": 0.2,
+    "babyWeight": "<1g",
+    "fruitComparison": "sesame seed",
+    "babyDevelopments": [
+      "Heart starts beating",
+      "Arm and leg buds appear"
+    ],
+    "momSymptoms": [
+      "Morning sickness begins",
+      "Frequent urination",
+      "Mood swings"
+    ],
+    "tips": [
+      "Schedule first prenatal appointment",
+      "Stay hydrated"
+    ],
+    "babyDescription": "Your baby's heart is beating and blood is starting to circulate. Tiny arm and leg buds are forming, and the brain is developing rapidly."
+  },
+  {
+    "week": 6,
+    "trimester": 1,
+    "babySize": "lentil",
+    "babySizeCm": 0.6,
+    "babyWeight": "<1g",
+    "fruitComparison": "lentil",
+    "babyDevelopments": [
+      "Facial features forming",
+      "Brain growing rapidly"
+    ],
+    "momSymptoms": [
+      "Nausea",
+      "Food aversions",
+      "Heightened sense of smell"
+    ],
+    "tips": [
+      "Eat small frequent meals",
+      "Ginger can help nausea"
+    ],
+    "babyDescription": "Your baby's face is taking shape with dark spots for eyes, openings for nostrils, and a tiny mouth. The jaw, cheeks, and chin are developing."
+  },
+  {
+    "week": 7,
+    "trimester": 1,
+    "babySize": "blueberry",
+    "babySizeCm": 1.3,
+    "babyWeight": "<1g",
+    "fruitComparison": "blueberry",
+    "babyDevelopments": [
+      "Arms and legs growing",
+      "Liver producing red blood cells"
+    ],
+    "momSymptoms": [
+      "Morning sickness",
+      "Fatigue",
+      "Bloating"
+    ],
+    "tips": [
+      "Get plenty of rest",
+      "Consider vitamin B6 for nausea"
+    ],
+    "babyDescription": "Your baby is growing about 1mm per day. Arms and legs are sprouting, and the liver is making red blood cells until the bone marrow forms."
+  },
+  {
+    "week": 8,
+    "trimester": 1,
+    "babySize": "raspberry",
+    "babySizeCm": 1.6,
+    "babyWeight": "1g",
+    "fruitComparison": "raspberry",
+    "babyDevelopments": [
+      "Fingers and toes forming",
+      "Brain connections forming"
+    ],
+    "momSymptoms": [
+      "Morning sickness",
+      "Breast changes",
+      "Fatigue"
+    ],
+    "tips": [
+      "Wear a supportive bra",
+      "Keep crackers by your bed"
+    ],
+    "babyDescription": "Your baby is moving constantly, though you can't feel it yet. Fingers and toes are forming, and the brain is making about 100 new cells per minute."
+  },
+  {
+    "week": 9,
+    "trimester": 1,
+    "babySize": "cherry",
+    "babySizeCm": 2.3,
+    "babyWeight": "2g",
+    "fruitComparison": "cherry",
+    "babyDevelopments": [
+      "Tail disappears",
+      "External ears form",
+      "Teeth begin to develop"
+    ],
+    "momSymptoms": [
+      "Morning sickness peaks",
+      "Increased blood volume",
+      "Mood swings"
+    ],
+    "tips": [
+      "Consider a pregnancy-safe exercise routine",
+      "Eat iron-rich foods"
+    ],
+    "babyDescription": "Your baby is no longer an embryo but a fetus. The tail has disappeared, and all major organs are forming. External ears and eyelids are developing."
+  },
+  {
+    "week": 10,
+    "trimester": 1,
+    "babySize": "strawberry",
+    "babySizeCm": 3.1,
+    "babyWeight": "4g",
+    "fruitComparison": "strawberry",
+    "babyDevelopments": [
+      "Bones begin to harden",
+      "Kidneys producing urine"
+    ],
+    "momSymptoms": [
+      "Nausea may continue",
+      "Visible veins",
+      "Mood swings"
+    ],
+    "tips": [
+      "Stay active with gentle walks",
+      "Consider telling close family"
+    ],
+    "babyDescription": "All vital organs are formed and starting to function. Bones are beginning to harden, and your baby can swallow amniotic fluid."
+  },
+  {
+    "week": 11,
+    "trimester": 1,
+    "babySize": "fig",
+    "babySizeCm": 4.1,
+    "babyWeight": "7g",
+    "fruitComparison": "fig",
+    "babyDevelopments": [
+      "Tooth buds appear",
+      "Genitals developing"
+    ],
+    "momSymptoms": [
+      "Morning sickness may ease",
+      "Increased appetite",
+      "Constipation"
+    ],
+    "tips": [
+      "Eat fiber-rich foods",
+      "Stay hydrated"
+    ],
+    "babyDescription": "Your baby can open and close fists and is practicing breathing movements. Tooth buds are appearing under the gums."
+  },
+  {
+    "week": 12,
+    "trimester": 1,
+    "babySize": "lime",
+    "babySizeCm": 5.4,
+    "babyWeight": "14g",
+    "fruitComparison": "lime",
+    "babyDevelopments": [
+      "Reflexes developing",
+      "Intestines move into abdomen"
+    ],
+    "momSymptoms": [
+      "Energy returning",
+      "Less nausea",
+      "Visible bump may start"
+    ],
+    "tips": [
+      "Schedule NT screening if desired",
+      "Start pelvic floor exercises"
+    ],
+    "babyDescription": "Your baby has developed reflexes and will squirm if you press on your abdomen. The intestines have moved from the umbilical cord into the abdomen."
+  },
+  {
+    "week": 13,
+    "trimester": 2,
+    "babySize": "peapod",
+    "babySizeCm": 7.4,
+    "babyWeight": "23g",
+    "fruitComparison": "peapod",
+    "babyDevelopments": [
+      "Fingerprints forming",
+      "Vocal cords developing"
+    ],
+    "momSymptoms": [
+      "Second trimester energy boost",
+      "Growing belly",
+      "Less nausea"
+    ],
+    "tips": [
+      "Announce pregnancy if ready",
+      "Consider maternity clothes"
+    ],
+    "babyDescription": "Welcome to the second trimester! Your baby has unique fingerprints and is developing vocal cords. The body is growing faster than the head."
+  },
+  {
+    "week": 14,
+    "trimester": 2,
+    "babySize": "lemon",
+    "babySizeCm": 8.7,
+    "babyWeight": "43g",
+    "fruitComparison": "lemon",
+    "babyDevelopments": [
+      "Facial expressions",
+      "Growing hair",
+      "Roof of mouth forming"
+    ],
+    "momSymptoms": [
+      "More energy",
+      "Appetite increase",
+      "Less frequent urination"
+    ],
+    "tips": [
+      "Start moisturizing belly skin",
+      "Enjoy the energy boost"
+    ],
+    "babyDescription": "Your baby can make facial expressions like squinting and frowning. Lanugo, a fine hair, is covering the body for warmth."
+  },
+  {
+    "week": 15,
+    "trimester": 2,
+    "babySize": "apple",
+    "babySizeCm": 10.1,
+    "babyWeight": "70g",
+    "fruitComparison": "apple",
+    "babyDevelopments": [
+      "Skeletal system developing",
+      "Skin is thin and translucent"
+    ],
+    "momSymptoms": [
+      "Nose congestion",
+      "Growing belly",
+      "Possible nosebleeds"
+    ],
+    "tips": [
+      "Use a humidifier for congestion",
+      "Stay active"
+    ],
+    "babyDescription": "Your baby's skeleton is developing from cartilage to bone. The skin is so thin that blood vessels are visible."
+  },
+  {
+    "week": 16,
+    "trimester": 2,
+    "babySize": "avocado",
+    "babySizeCm": 11.6,
+    "babyWeight": "100g",
+    "fruitComparison": "avocado",
+    "babyDevelopments": [
+      "Eyes sensitive to light",
+      "Toenails growing",
+      "Nervous system functioning"
+    ],
+    "momSymptoms": [
+      "Backache begins",
+      "Growing appetite",
+      "Possible feeling baby move"
+    ],
+    "tips": [
+      "Practice good posture",
+      "Consider a pregnancy pillow"
+    ],
+    "babyDescription": "Your baby's nervous system is functioning, and muscles are growing. The eyes are sensitive to light, and toenails are starting to grow."
+  },
+  {
+    "week": 17,
+    "trimester": 2,
+    "babySize": "turnip",
+    "babySizeCm": 13,
+    "babyWeight": "140g",
+    "fruitComparison": "turnip",
+    "babyDevelopments": [
+      "Fat stores beginning",
+      "Sweat glands developing"
+    ],
+    "momSymptoms": [
+      "Increased appetite",
+      "Itchy skin",
+      "Possible dizziness"
+    ],
+    "tips": [
+      "Eat healthy fats for brain development",
+      "Stay hydrated"
+    ],
+    "babyDescription": "Your baby is building up fat stores under the skin. Sweat glands are developing, and the skeleton is changing from cartilage to bone."
+  },
+  {
+    "week": 18,
+    "trimester": 2,
+    "babySize": "bell pepper",
+    "babySizeCm": 14.2,
+    "babyWeight": "190g",
+    "fruitComparison": "bell pepper",
+    "babyDevelopments": [
+      "Ears functioning",
+      "Yawning and hiccupping"
+    ],
+    "momSymptoms": [
+      "Feeling baby move",
+      "Hip pain",
+      "Trouble sleeping"
+    ],
+    "tips": [
+      "Talk or sing to your baby",
+      "Try sleeping on your left side"
+    ],
+    "babyDescription": "Your baby can hear sounds now, including your heartbeat and voice. They're yawning, hiccupping, and even sucking their thumb."
+  },
+  {
+    "week": 19,
+    "trimester": 2,
+    "babySize": "mango",
+    "babySizeCm": 15.3,
+    "babyWeight": "240g",
+    "fruitComparison": "mango",
+    "babyDevelopments": [
+      "Vernix caseosa coating",
+      "Sensory development accelerating"
+    ],
+    "momSymptoms": [
+      "Skin changes",
+      "Leg cramps",
+      "Growing bump"
+    ],
+    "tips": [
+      "Stretch before bed for leg cramps",
+      "Apply sunscreen for melasma"
+    ],
+    "babyDescription": "A waxy coating called vernix caseosa covers your baby's skin to protect it from amniotic fluid. All five senses are developing."
+  },
+  {
+    "week": 20,
+    "trimester": 2,
+    "babySize": "banana",
+    "babySizeCm": 25.6,
+    "babyWeight": "300g",
+    "fruitComparison": "banana",
+    "babyDevelopments": [
+      "Swallowing more",
+      "Gender visible on ultrasound"
+    ],
+    "momSymptoms": [
+      "Midpoint of pregnancy",
+      "Growing belly",
+      "Increased appetite"
+    ],
+    "tips": [
+      "Schedule anatomy scan",
+      "Start thinking about birth plan"
+    ],
+    "babyDescription": "Halfway there! Your baby is swallowing amniotic fluid and producing meconium. The anatomy scan can reveal the gender if you wish to know."
+  },
+  {
+    "week": 21,
+    "trimester": 2,
+    "babySize": "carrot",
+    "babySizeCm": 26.7,
+    "babyWeight": "360g",
+    "fruitComparison": "carrot",
+    "babyDevelopments": [
+      "Eyebrows and eyelids formed",
+      "Moving more"
+    ],
+    "momSymptoms": [
+      "Stretch marks may appear",
+      "Increased appetite",
+      "Braxton Hicks possible"
+    ],
+    "tips": [
+      "Moisturize skin",
+      "Eat nutrient-dense foods"
+    ],
+    "babyDescription": "Your baby's movements are becoming more coordinated. Eyebrows and eyelids are fully formed, and the baby looks more like a newborn."
+  },
+  {
+    "week": 22,
+    "trimester": 2,
+    "babySize": "papaya",
+    "babySizeCm": 27.8,
+    "babyWeight": "430g",
+    "fruitComparison": "papaya",
+    "babyDevelopments": [
+      "Eyes formed but iris lacks color",
+      "Lips becoming more distinct"
+    ],
+    "momSymptoms": [
+      "Swelling in feet",
+      "Back pain",
+      "Increased discharge"
+    ],
+    "tips": [
+      "Elevate feet when resting",
+      "Wear comfortable shoes"
+    ],
+    "babyDescription": "Your baby's lips and eyelids are more distinct. The eyes are formed but the iris still lacks color. Grip is getting stronger."
+  },
+  {
+    "week": 23,
+    "trimester": 2,
+    "babySize": "grapefruit",
+    "babySizeCm": 28.9,
+    "babyWeight": "500g",
+    "fruitComparison": "grapefruit",
+    "babyDevelopments": [
+      "Can hear outside voices",
+      "Skin wrinkled and translucent"
+    ],
+    "momSymptoms": [
+      "Swollen ankles",
+      "Linea nigra appears",
+      "Trouble sleeping"
+    ],
+    "tips": [
+      "Sleep on your left side",
+      "Keep feet elevated"
+    ],
+    "babyDescription": "Your baby can hear your voice and other sounds. The skin is wrinkled because it grows faster than fat. Lungs are developing surfactant."
+  },
+  {
+    "week": 24,
+    "trimester": 2,
+    "babySize": "corn",
+    "babySizeCm": 30,
+    "babyWeight": "600g",
+    "fruitComparison": "ear of corn",
+    "babyDevelopments": [
+      "Brain growing rapidly",
+      "Lungs developing branches"
+    ],
+    "momSymptoms": [
+      "Gestational diabetes test",
+      "Swollen feet",
+      "Carpal tunnel possible"
+    ],
+    "tips": [
+      "Take the glucose tolerance test",
+      "Do hand stretches"
+    ],
+    "babyDescription": "Your baby's brain is growing rapidly, and taste buds are forming. The lungs are developing branches and producing surfactant."
+  },
+  {
+    "week": 25,
+    "trimester": 2,
+    "babySize": "cauliflower",
+    "babySizeCm": 34.6,
+    "babyWeight": "660g",
+    "fruitComparison": "cauliflower",
+    "babyDevelopments": [
+      "Nostrils opening",
+      "Blood vessels in lungs developing"
+    ],
+    "momSymptoms": [
+      "Heartburn",
+      "Hemorrhoids",
+      "Braxton Hicks contractions"
+    ],
+    "tips": [
+      "Eat smaller meals for heartburn",
+      "Stay hydrated"
+    ],
+    "babyDescription": "Your baby's nostrils are opening, and the blood vessels in the lungs are developing. They're gaining more body fat and looking rounder."
+  },
+  {
+    "week": 26,
+    "trimester": 2,
+    "babySize": "scallion",
+    "babySizeCm": 35.6,
+    "babyWeight": "760g",
+    "fruitComparison": "scallion bunch",
+    "babyDevelopments": [
+      "Eyes opening",
+      "Eyelashes forming",
+      "Inhaling amniotic fluid"
+    ],
+    "momSymptoms": [
+      "Higher blood pressure",
+      "Thicker hair",
+      "Nail growth"
+    ],
+    "tips": [
+      "Monitor blood pressure",
+      "Practice relaxation techniques"
+    ],
+    "babyDescription": "Your baby's eyes are opening for the first time. They're inhaling and exhaling amniotic fluid, practicing for breathing air."
+  },
+  {
+    "week": 27,
+    "trimester": 2,
+    "babySize": "head of lettuce",
+    "babySizeCm": 36.6,
+    "babyWeight": "875g",
+    "fruitComparison": "head of lettuce",
+    "babyDevelopments": [
+      "Brain more active",
+      "Regular sleep cycles",
+      "Lungs producing surfactant"
+    ],
+    "momSymptoms": [
+      "Restless legs",
+      "Backache",
+      "Shortness of breath"
+    ],
+    "tips": [
+      "Try magnesium for restless legs",
+      "Practice prenatal yoga"
+    ],
+    "babyDescription": "Your baby is having regular sleep-wake cycles and is more active. The brain is very active, and lungs are continuing to mature."
+  },
+  {
+    "week": 28,
+    "trimester": 3,
+    "babySize": "eggplant",
+    "babySizeCm": 37.6,
+    "babyWeight": "1kg",
+    "fruitComparison": "eggplant",
+    "babyDevelopments": [
+      "Can dream during REM sleep",
+      "Eyes can blink",
+      "Pupils react to light"
+    ],
+    "momSymptoms": [
+      "Third trimester begins",
+      "More frequent urination",
+      "Heartburn"
+    ],
+    "tips": [
+      "Start kick counting",
+      "Tour birthing facilities"
+    ],
+    "babyDescription": "Welcome to the third trimester! Your baby can blink, cough, and has regular REM sleep cycles. They may even be dreaming."
+  },
+  {
+    "week": 29,
+    "trimester": 3,
+    "babySize": "butternut squash",
+    "babySizeCm": 38.6,
+    "babyWeight": "1.15kg",
+    "fruitComparison": "butternut squash",
+    "babyDevelopments": [
+      "Bones fully developed but soft",
+      "Muscles and lungs maturing"
+    ],
+    "momSymptoms": [
+      "Shortness of breath",
+      "Heartburn",
+      "Trouble sleeping"
+    ],
+    "tips": [
+      "Sleep propped up on pillows",
+      "Eat calcium-rich foods"
+    ],
+    "babyDescription": "Your baby's bones are fully developed but still soft and flexible. They're getting stronger and more muscular every day."
+  },
+  {
+    "week": 30,
+    "trimester": 3,
+    "babySize": "cabbage",
+    "babySizeCm": 39.9,
+    "babyWeight": "1.3kg",
+    "fruitComparison": "cabbage",
+    "babyDevelopments": [
+      "Brain growing bigger",
+      "Red blood cell production shifts to bone marrow"
+    ],
+    "momSymptoms": [
+      "Fatigue returns",
+      "Mood swings",
+      "Braxton Hicks"
+    ],
+    "tips": [
+      "Rest when you can",
+      "Finalize birth plan"
+    ],
+    "babyDescription": "Your baby's brain is growing so fast it's developing grooves and indentations. Red blood cell production is now in the bone marrow."
+  },
+  {
+    "week": 31,
+    "trimester": 3,
+    "babySize": "coconut",
+    "babySizeCm": 41.1,
+    "babyWeight": "1.5kg",
+    "fruitComparison": "coconut",
+    "babyDevelopments": [
+      "Processing information",
+      "Tracking light",
+      "Five senses working"
+    ],
+    "momSymptoms": [
+      "Shortness of breath",
+      "Frequent urination",
+      "Pelvic pressure"
+    ],
+    "tips": [
+      "Practice breathing exercises",
+      "Pack your hospital bag"
+    ],
+    "babyDescription": "Your baby can process information, track light, and perceive signals from all five senses. The brain connections are forming rapidly."
+  },
+  {
+    "week": 32,
+    "trimester": 3,
+    "babySize": "jicama",
+    "babySizeCm": 42.4,
+    "babyWeight": "1.7kg",
+    "fruitComparison": "jicama",
+    "babyDevelopments": [
+      "Toenails and fingernails grown",
+      "Practicing breathing",
+      "Skin becoming less wrinkled"
+    ],
+    "momSymptoms": [
+      "Heartburn",
+      "Shortness of breath",
+      "Leaking colostrum"
+    ],
+    "tips": [
+      "Wear breast pads if leaking",
+      "Stay hydrated"
+    ],
+    "babyDescription": "Your baby's toenails and fingernails have grown in. They're practicing breathing and their skin is becoming smoother as fat fills in."
+  },
+  {
+    "week": 33,
+    "trimester": 3,
+    "babySize": "pineapple",
+    "babySizeCm": 43.7,
+    "babyWeight": "1.9kg",
+    "fruitComparison": "pineapple",
+    "babyDevelopments": [
+      "Immune system developing",
+      "Bones hardening",
+      "Pupils can constrict"
+    ],
+    "momSymptoms": [
+      "Fatigue",
+      "Swelling",
+      "Difficulty finding comfortable position"
+    ],
+    "tips": [
+      "Sleep on left side",
+      "Reduce sodium intake"
+    ],
+    "babyDescription": "Your baby's immune system is developing, and bones are hardening (except the skull, which stays soft for delivery)."
+  },
+  {
+    "week": 34,
+    "trimester": 3,
+    "babySize": "cantaloupe",
+    "babySizeCm": 45,
+    "babyWeight": "2.1kg",
+    "fruitComparison": "cantaloupe",
+    "babyDevelopments": [
+      "Vernix thickening",
+      "Central nervous system maturing",
+      "Lungs nearly mature"
+    ],
+    "momSymptoms": [
+      "Pelvic pressure",
+      "Braxton Hicks",
+      "Fatigue"
+    ],
+    "tips": [
+      "Finalize maternity leave plans",
+      "Install car seat"
+    ],
+    "babyDescription": "The vernix coating is getting thicker to protect the skin. The central nervous system and lungs are maturing nicely."
+  },
+  {
+    "week": 35,
+    "trimester": 3,
+    "babySize": "honeydew melon",
+    "babySizeCm": 46.2,
+    "babyWeight": "2.4kg",
+    "fruitComparison": "honeydew melon",
+    "babyDevelopments": [
+      "Kidneys fully developed",
+      "Liver can process waste",
+      "Arms and legs getting chubby"
+    ],
+    "momSymptoms": [
+      "Frequent urination",
+      "Shortness of breath",
+      "Braxton Hicks more frequent"
+    ],
+    "tips": [
+      "Practice labor positions",
+      "Review signs of labor"
+    ],
+    "babyDescription": "Your baby's kidneys and liver are fully developed. They're getting chubby with fat deposits, filling out those adorable cheeks."
+  },
+  {
+    "week": 36,
+    "trimester": 3,
+    "babySize": "romaine lettuce",
+    "babySizeCm": 47.4,
+    "babyWeight": "2.6kg",
+    "fruitComparison": "romaine lettuce head",
+    "babyDevelopments": [
+      "Dropping into pelvis",
+      "Less room to move",
+      "Lungs nearly ready"
+    ],
+    "momSymptoms": [
+      "Lightning crotch",
+      "Easier breathing",
+      "Nesting instinct"
+    ],
+    "tips": [
+      "Rest and conserve energy",
+      "Prepare postpartum supplies"
+    ],
+    "babyDescription": "Your baby is likely settling into the head-down position and dropping into your pelvis. Movement may feel different with less room."
+  },
+  {
+    "week": 37,
+    "trimester": 3,
+    "babySize": "winter melon",
+    "babySizeCm": 48.6,
+    "babyWeight": "2.9kg",
+    "fruitComparison": "winter melon",
+    "babyDevelopments": [
+      "Considered early term",
+      "Practicing breathing",
+      "Gaining fat rapidly"
+    ],
+    "momSymptoms": [
+      "Pelvic pressure",
+      "Braxton Hicks",
+      "Nesting urge"
+    ],
+    "tips": [
+      "Prepare hospital bag",
+      "Rest as much as possible"
+    ],
+    "babyDescription": "Your baby is now considered early term. They're practicing breathing and gaining about half a pound per week."
+  },
+  {
+    "week": 38,
+    "trimester": 3,
+    "babySize": "leek",
+    "babySizeCm": 49.8,
+    "babyWeight": "3.1kg",
+    "fruitComparison": "leek",
+    "babyDevelopments": [
+      "Organs ready for life outside",
+      "Gripping firmly",
+      "Plumping up"
+    ],
+    "momSymptoms": [
+      "Mucus plug may release",
+      "Nesting instinct strong",
+      "Difficulty sleeping"
+    ],
+    "tips": [
+      "Get plenty of rest",
+      "Keep phone charged"
+    ],
+    "babyDescription": "All organs are ready for life outside the womb. Your baby has a firm grasp and is continuing to build fat layers for temperature regulation."
+  },
+  {
+    "week": 39,
+    "trimester": 3,
+    "babySize": "watermelon",
+    "babySizeCm": 50.7,
+    "babyWeight": "3.3kg",
+    "fruitComparison": "small watermelon",
+    "babyDevelopments": [
+      "Brain developing rapidly",
+      "Full term",
+      "Chest prominent"
+    ],
+    "momSymptoms": [
+      "Braxton Hicks",
+      "Pelvic discomfort",
+      "Anxiety about labor"
+    ],
+    "tips": [
+      "Practice relaxation techniques",
+      "Review labor signs with partner"
+    ],
+    "babyDescription": "Your baby is full term! The brain is still developing rapidly, with new connections forming every day. The chest is more prominent."
+  },
+  {
+    "week": 40,
+    "trimester": 3,
+    "babySize": "pumpkin",
+    "babySizeCm": 51.2,
+    "babyWeight": "3.5kg",
+    "fruitComparison": "small pumpkin",
+    "babyDevelopments": [
+      "Due date reached",
+      "Fully developed",
+      "Ready for birth"
+    ],
+    "momSymptoms": [
+      "Braxton Hicks",
+      "Pelvic pressure",
+      "Anxiety and excitement"
+    ],
+    "tips": [
+      "Stay calm and patient",
+      "Contact provider if labor signs begin"
+    ],
+    "babyDescription": "Happy due date! Your baby is fully developed and ready to meet you. Most babies arrive within two weeks of their due date."
+  },
+  {
+    "week": 41,
+    "trimester": 3,
+    "babySize": "pumpkin",
+    "babySizeCm": 51.5,
+    "babyWeight": "3.6kg",
+    "fruitComparison": "large pumpkin",
+    "babyDevelopments": [
+      "Still growing",
+      "Fully developed",
+      "Monitoring recommended"
+    ],
+    "momSymptoms": [
+      "Impatience",
+      "Discomfort",
+      "Braxton Hicks"
+    ],
+    "tips": [
+      "Talk to provider about induction timeline",
+      "Stay active with walking"
+    ],
+    "babyDescription": "Your baby is past due but still growing. Your provider may recommend monitoring and discuss induction if labor doesn't start soon."
+  },
+  {
+    "week": 42,
+    "trimester": 3,
+    "babySize": "pumpkin",
+    "babySizeCm": 52,
+    "babyWeight": "3.8kg",
+    "fruitComparison": "large pumpkin",
+    "babyDevelopments": [
+      "Post-term",
+      "Extra monitoring",
+      "Fully mature"
+    ],
+    "momSymptoms": [
+      "Heaviness",
+      "Fatigue",
+      "Eager for delivery"
+    ],
+    "tips": [
+      "Discuss induction with provider",
+      "Stay positive and rested"
+    ],
+    "babyDescription": "At 42 weeks, your baby is post-term. Your provider will closely monitor you and likely recommend induction. Your baby is fully mature and ready."
+  }
+]

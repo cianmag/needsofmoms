@@ -1,0 +1,53 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/tools/due-date-calculator", "destination": "/tools/due-date-calculator.html" },
+    { "source": "/tools/ovulation-calculator", "destination": "/tools/ovulation-calculator.html" },
+    { "source": "/baby-names", "destination": "/baby-names/index.html" },
+    { "source": "/baby-names/girls", "destination": "/baby-names/girls/index.html" },
+    { "source": "/baby-names/boys", "destination": "/baby-names/boys/index.html" },
+    { "source": "/baby-name-generator", "destination": "/baby-name-generator/index.html" },
+    { "source": "/week-by-week", "destination": "/week-by-week/index.html" },
+    { "source": "/week-by-week/week", "destination": "/week-by-week/week.html" },
+    { "source": "/trimester/first-trimester", "destination": "/trimester/first-trimester.html" },
+    { "source": "/trimester/second-trimester", "destination": "/trimester/second-trimester.html" },
+    { "source": "/trimester/third-trimester", "destination": "/trimester/third-trimester.html" },
+    { "source": "/pregnancy-symptoms", "destination": "/pregnancy-symptoms.html" },
+    { "source": "/what-to-expect", "destination": "/what-to-expect.html" },
+    { "source": "/baby-shower-ideas", "destination": "/baby-shower-ideas.html" },
+    { "source": "/postpartum", "destination": "/postpartum.html" },
+    { "source": "/breastfeeding-guide", "destination": "/breastfeeding-guide.html" },
+    { "source": "/baby-milestones", "destination": "/baby-milestones.html" }
+  ],
+  "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "outputDirectory": "."
+}
