@@ -1,268 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NeedsOfMoms — Your Pregnancy Companion</title>
-    <meta name="description" content="Free pregnancy tools, baby name ideas, week-by-week guides, and expert advice for expecting mothers. Everything you need for your pregnancy journey.">
-    <meta name="keywords" content="pregnancy, due date calculator, baby names, ovulation calculator, week by week pregnancy, expecting mom">
-    <meta property="og:title" content="NeedsOfMoms — Your Pregnancy Companion">
-    <meta property="og:description" content="Free pregnancy tools, baby names, and week-by-week guides for expecting mothers.">
-    <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://needsofmoms.com/">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://needsofmoms.com/">
-    <link rel="stylesheet" href="/css/style.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "NeedsOfMoms",
-        "url": "https://needsofmoms.com",
-        "description": "Free pregnancy tools and resources for expecting mothers.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://needsofmoms.com/baby-names?q={search_term_string}",
-            "query-input": "required name=search_term_string"
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NeedsOfMoms - Your Pregnancy Journey</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#5a1a27",
+                        "surface-container-highest": "#e3e0f6",
+                        "surface-container": "#eeecff",
+                        "on-primary-fixed-variant": "#762f3b",
+                        "surface-container-low": "#f5f2ff",
+                        "on-error": "#ffffff",
+                        "outline": "#867274",
+                        "surface": "#fcf8ff",
+                        "on-surface-variant": "#534344",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ffb2bb",
+                        "secondary-fixed": "#ffd9dd",
+                        "tertiary": "#625f50",
+                        "surface-container-high": "#e8e6fb",
+                        "inverse-primary": "#ffb2bb",
+                        "blush-cream": "#FEF0FF",
+                        "surface-dim": "#dad8ed",
+                        "surface-variant": "#e3e0f6",
+                        "warm-white": "#FFFAF5",
+                        "on-background": "#1a1a29",
+                        "on-secondary-container": "#79313e",
+                        "surface-tint": "#934652",
+                        "primary": "#934652",
+                        "secondary-fixed-dim": "#ffb2bb",
+                        "secondary": "#934653",
+                        "surface-bright": "#fcf8ff",
+                        "error": "#ba1a1a",
+                        "rose-border": "rgba(217, 127, 139, 0.1)",
+                        "tertiary-container": "#9d9989",
+                        "background": "#fcf8ff",
+                        "on-secondary-fixed": "#3e0313",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#762f3c",
+                        "on-surface": "#1a1a29",
+                        "on-tertiary-fixed": "#1e1c11",
+                        "inverse-on-surface": "#f2efff",
+                        "tertiary-fixed": "#e8e2d0",
+                        "soft-pink-highlight": "#FFF5F7",
+                        "primary-fixed": "#ffd9dc",
+                        "on-tertiary": "#ffffff",
+                        "mauve-mist": "#8A8A9E",
+                        "outline-variant": "#d9c1c2",
+                        "on-primary-fixed": "#3d0412",
+                        "inverse-surface": "#2f2f3f",
+                        "on-tertiary-fixed-variant": "#4a4739",
+                        "on-tertiary-container": "#333125",
+                        "primary-container": "#d97f8b",
+                        "tertiary-fixed-dim": "#ccc6b5",
+                        "secondary-container": "#fe9dab",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-sm": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "section-gap-lg": "120px",
+                        "margin-desktop": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "title-sm": ["Be Vietnam Pro"],
+                        "headline-md-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "button-text": ["Work Sans"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "label-caps": ["Work Sans"],
+                        "display-lg-mobile": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.7", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "title-sm": ["20px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "headline-md-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.8", "fontWeight": "400" }],
+                        "button-text": ["18px", { "lineHeight": "1", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "label-caps": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                },
+            },
         }
-    }
     </script>
+<style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .soft-transition {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <span class="logo-icon">🌸</span>
-                <span>NeedsOfMoms</span>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-rose-border">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-7xl mx-auto">
+<a class="flex items-center gap-2" href="/">
+<span class="material-symbols-outlined text-primary text-2xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="text-title-sm font-headline-md font-bold text-primary dark:text-primary-fixed-dim">NeedsOfMoms</span>
+</a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 text-label-caps font-label-caps uppercase" href="/">Home</a>
+<a class="text-on-surface-variant dark:text-mauve-mist font-medium hover:text-primary-container transition-colors duration-300 text-label-caps font-label-caps uppercase" href="/tools/due-date-calculator">Due Date</a>
+<a class="text-on-surface-variant dark:text-mauve-mist font-medium hover:text-primary-container transition-colors duration-300 text-label-caps font-label-caps uppercase" href="/week-by-week">Week by Week</a>
+<a class="text-on-surface-variant dark:text-mauve-mist font-medium hover:text-primary-container transition-colors duration-300 text-label-caps font-label-caps uppercase" href="/baby-name-generator">Baby Names</a>
+</nav>
+<button aria-label="Open menu" class="md:hidden text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-colors duration-300 active:opacity-80 active:scale-95 flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low" id="menu-btn">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile) -->
+<div class="fixed inset-0 bg-on-surface/20 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0" id="nav-drawer-overlay"></div>
+<nav class="bg-surface fixed inset-y-0 left-0 w-80 z-[60] shadow-xl shadow-primary/10 flex flex-col h-full py-6 transform -translate-x-full transition-transform duration-300 cubic-bezier(0.4, 0, 0.2, 1)" id="nav-drawer">
+<div class="px-6 mb-8 flex justify-between items-center">
+<h2 class="text-headline-md font-headline-md text-primary">Explore</h2>
+<button class="text-on-surface-variant hover:bg-surface-container-high p-2 rounded-full transition-all duration-300" id="close-drawer-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<ul class="flex-1 overflow-y-auto font-body-md text-body-md">
+<li>
+<a class="bg-primary-container text-on-primary-container rounded-xl mx-4 my-1 px-4 py-3 flex items-center gap-4 transition-all duration-300" href="/">
+<span class="material-symbols-outlined">home</span>
+                Home
             </a>
-            <ul class="nav-links">
-                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
-                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
-                <li><a href="/baby-names">👶 Baby Names</a></li>
-                <li><a href="/week-by-week">📋 Week by Week</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
-        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
-        <a href="/baby-names">👶 Baby Names</a>
-        <a href="/week-by-week">📋 Week by Week</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-badge">✨ Your pregnancy journey starts here</div>
-                    <h1>Everything You Need for Your Pregnancy Journey</h1>
-                    <p class="hero-description">
-                        Free tools, beautiful baby names, week-by-week guides, and expert advice — all designed with love for expecting mothers.
-                    </p>
-                    <div class="hero-cta">
-                        <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg pulse">
-                            📅 Calculate Your Due Date
-                        </a>
-                        <a href="/baby-names" class="btn btn-secondary btn-lg">
-                            👶 Explore Baby Names
-                        </a>
-                    </div>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all mx-4 my-1 px-4 py-3 rounded-xl flex items-center gap-4" href="/tools/due-date-calculator">
+<span class="material-symbols-outlined">calendar_today</span>
+                Due Date Calculator
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all mx-4 my-1 px-4 py-3 rounded-xl flex items-center gap-4" href="/tools/ovulation-calculator">
+<span class="material-symbols-outlined">event_available</span>
+                Ovulation Calculator
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all mx-4 my-1 px-4 py-3 rounded-xl flex items-center gap-4" href="/week-by-week">
+<span class="material-symbols-outlined">pregnant_woman</span>
+                Week-by-Week Guide
+            </a>
+</li>
+<li>
+<a class="text-on-surface-variant hover:bg-surface-container-low transition-all mx-4 my-1 px-4 py-3 rounded-xl flex items-center gap-4" href="/baby-name-generator">
+<span class="material-symbols-outlined">child_care</span>
+                Baby Name Generator
+            </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative pt-8 pb-16 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto overflow-hidden">
+<!-- Decorative Background Blob -->
+<div class="absolute top-0 right-0 -z-10 w-full h-full opacity-30 pointer-events-none" style="background: radial-gradient(circle at 70% 30%, var(--tw-colors-blush-cream) 0%, transparent 50%), radial-gradient(circle at 30% 70%, var(--tw-colors-surface-container) 0%, transparent 50%);"></div>
+<div class="flex flex-col md:flex-row items-center gap-12 fade-in-up">
+<!-- Image Column -->
+<div class="w-full md:w-1/2 flex justify-center">
+<img alt="A beautiful, soft watercolor and line-art illustration of a pregnant woman gently cradling her belly. The belly features a warm, painted pink heart. The background has subtle, pastel watercolor washes in pale purples and soft pinks. The style is modern, minimalist, compassionate, and bright, fitting a supportive maternal health application." class="w-full max-w-md h-auto rounded-3xl object-contain drop-shadow-xl shadow-primary/10" src="https://lh3.googleusercontent.com/aida/ADBb0uillnQvF9V9N2jPXx5vOqLTzckW2fc3sNCS69X9fXlNlTqw3mh6ZzffKBwNP1sqOdTbE0DVBiGKfo91FfmfUoxUcmFDb939vY3RipSU3c1NM1XVrznVCWajzf2Kj9NGggi_gCa44eJQpEVlX0V20jKyb6jPz60A1TZAZTeXk9l4wewD0JI6QtdV9Op9i7Ucd6kclA7oJeCxjEXJniz93EJxjxnS29-t7YrSab3GtieiJ2itJUmUr5Dr1A"/>
+</div>
+<!-- Text Column -->
+<div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blush-cream text-primary mb-6 text-label-caps font-label-caps shadow-sm">
+<span>✨</span> Your pregnancy journey starts here
                 </div>
-                <div class="hero-image">
-                    <img src="/images/hero-mom.png" alt="Beautiful line art illustration of a pregnant mother" width="400" height="500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tools Section -->
-    <section class="section section-pink">
-        <div class="container">
-            <div class="section-header">
-                <h2>Free Pregnancy Tools</h2>
-                <p>Simple, beautiful calculators to help you track every precious moment of your pregnancy.</p>
-            </div>
-            <div class="card-grid">
-                <a href="/tools/due-date-calculator" class="card shine">
-                    <div class="card-icon">📅</div>
-                    <div class="card-title">Due Date Calculator</div>
-                    <p class="card-desc">Find out when your little one is expected to arrive based on your last period or conception date.</p>
-                    <span class="card-link">Calculate now →</span>
-                </a>
-                <a href="/tools/ovulation-calculator" class="card shine">
-                    <div class="card-icon">🌿</div>
-                    <div class="card-title">Ovulation Calculator</div>
-                    <p class="card-desc">Discover your most fertile days and maximize your chances of conceiving naturally.</p>
-                    <span class="card-link">Find fertile days →</span>
-                </a>
-                <a href="/baby-names" class="card shine">
-                    <div class="card-icon">👶</div>
-                    <div class="card-title">Baby Name Explorer</div>
-                    <p class="card-desc">Browse thousands of beautiful baby names by gender, origin, meaning, and popularity.</p>
-                    <span class="card-link">Explore names →</span>
-                </a>
-                <a href="/baby-name-generator" class="card shine">
-                    <div class="card-icon">✨</div>
-                    <div class="card-title">Baby Name Generator</div>
-                    <p class="card-desc">Get personalized baby name suggestions based on your preferences and style.</p>
-                    <span class="card-link">Generate names →</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Week by Week Section -->
-    <section class="section section-white">
-        <div class="container">
-            <div class="section-header">
-                <h2>Your Week-by-Week Guide</h2>
-                <p>Track your baby's development from a tiny poppy seed to a full-grown baby. 🌱</p>
-            </div>
-            <div class="card-grid">
-                <a href="/trimester/first-trimester" class="trimester-card">
-                    <div class="card-icon">🌱</div>
-                    <div class="card-title">First Trimester</div>
-                    <p class="card-desc">Weeks 1–12: The beginning of everything. From tiny cells to a recognizable baby shape.</p>
-                    <span class="card-link">Explore weeks 1–12 →</span>
-                </a>
-                <a href="/trimester/second-trimester" class="trimester-card">
-                    <div class="card-icon">🌿</div>
-                    <div class="card-title">Second Trimester</div>
-                    <p class="card-desc">Weeks 13–26: The "golden period" — feel your baby's first kicks and watch them grow.</p>
-                    <span class="card-link">Explore weeks 13–26 →</span>
-                </a>
-                <a href="/trimester/third-trimester" class="trimester-card">
-                    <div class="card-icon">🌸</div>
-                    <div class="card-title">Third Trimester</div>
-                    <p class="card-desc">Weeks 27–40: The home stretch! Your baby is preparing for the big day.</p>
-                    <span class="card-link">Explore weeks 27–40 →</span>
-                </a>
-            </div>
-            <div class="text-center" style="margin-top: var(--space-2xl);">
-                <a href="/week-by-week" class="btn btn-secondary">📋 View All 40 Weeks</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Section -->
-    <section class="section section-cream">
-        <div class="container">
-            <div class="section-header">
-                <h2>Helpful Resources</h2>
-                <p>Expert guides and advice to support you through every stage of motherhood.</p>
-            </div>
-            <div class="feature-grid">
-                <a href="/pregnancy-symptoms" class="card">
-                    <div class="feature-icon">🤰</div>
-                    <div class="feature-title">Pregnancy Symptoms</div>
-                    <p class="feature-desc">Know what to expect each trimester and when to call your doctor.</p>
-                </a>
-                <a href="/what-to-expect" class="card">
-                    <div class="feature-icon">📋</div>
-                    <div class="feature-title">What to Expect</div>
-                    <p class="feature-desc">Your complete guide to appointments, tests, and preparations.</p>
-                </a>
-                <a href="/baby-shower-ideas" class="card">
-                    <div class="feature-icon">🎉</div>
-                    <div class="feature-title">Baby Shower Ideas</div>
-                    <p class="feature-desc">Creative themes, games, and planning tips for the perfect celebration.</p>
-                </a>
-                <a href="/breastfeeding-guide" class="card">
-                    <div class="feature-icon">🤱</div>
-                    <div class="feature-title">Breastfeeding Guide</div>
-                    <p class="feature-desc">Tips, positions, and support for your breastfeeding journey.</p>
-                </a>
-                <a href="/postpartum" class="card">
-                    <div class="feature-icon">💪</div>
-                    <div class="feature-title">Postpartum Care</div>
-                    <p class="feature-desc">Recovery tips, mental health support, and self-care for new moms.</p>
-                </a>
-                <a href="/baby-milestones" class="card">
-                    <div class="feature-icon">⭐</div>
-                    <div class="feature-title">Baby Milestones</div>
-                    <p class="feature-desc">Track your baby's first year — smiles, steps, words, and more.</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta-gradient">
-        <div class="container">
-            <div class="glass-card">
-                <div class="cta-icon">💕</div>
-                <h2 style="margin-bottom: var(--space-md);">Start Your Journey Today</h2>
-                <p style="margin-bottom: var(--space-2xl);">
-                    Join thousands of expecting parents who trust NeedsOfMoms for free, beautiful pregnancy tools and guides.
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight">
+                    Everything You Need for Your <span class="text-primary-container">Pregnancy Journey</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    Free tools, beautiful baby names, week-by-week guides, and expert advice — all designed with love for expecting mothers.
                 </p>
-                <div class="cta-buttons">
-                    <a href="/tools/due-date-calculator" class="btn btn-primary btn-lg">📅 Get Started</a>
-                    <a href="/week-by-week" class="btn btn-secondary btn-lg">📋 Week by Week</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Disclaimer -->
-    <section class="section" style="padding-top: 0;">
-        <div class="container">
-            <div class="disclaimer">
-                <strong>⚠️ Medical Disclaimer</strong>
-                NeedsOfMoms provides general pregnancy information for educational purposes only. Our content is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider with any questions about your pregnancy.
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
-                        <span class="logo-icon">🌸</span>
-                        <span>NeedsOfMoms</span>
+<div class="w-full flex flex-col sm:flex-row gap-4">
+<a class="w-full sm:w-auto px-8 py-5 bg-[#D97F8B] text-white rounded-xl shadow-lg shadow-primary-container/30 hover:shadow-xl hover:-translate-y-1 soft-transition flex items-center justify-center gap-2 font-button-text text-button-text" href="/tools/due-date-calculator">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+                        Calculate Your Due Date
                     </a>
-                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
-                </div>
-                <div class="footer-column">
-                    <h4>Tools</h4>
-                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
-                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-                    <a href="/baby-names">Baby Names</a>
-                    <a href="/baby-name-generator">Name Generator</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <a href="/week-by-week">Week by Week</a>
-                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
-                    <a href="/what-to-expect">What to Expect</a>
-                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="/about">About Us</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Use</a>
-                    <a href="/disclaimer">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
-                <p>Made with 💕 for expecting parents everywhere</p>
-            </div>
-        </div>
-    </footer>
+<a class="w-full sm:w-auto px-8 py-5 bg-transparent border-2 border-[#D97F8B] text-[#D97F8B] rounded-xl hover:bg-blush-cream soft-transition flex items-center justify-center gap-2 font-button-text text-button-text" href="/baby-name-generator">
+<span class="material-symbols-outlined text-xl">child_care</span>
+                        Explore Baby Names
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Tools Section (Bento Grid Style) -->
+<section class="py-section-gap-sm px-margin-mobile md:px-margin-desktop bg-surface-container-lowest max-w-7xl mx-auto rounded-[40px] shadow-sm shadow-primary/5 my-12 fade-in-up" style="animation-delay: 0.2s;">
+<div class="text-center mb-12">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Free Pregnancy Tools</h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl mx-auto">Simple, beautiful calculators to help you track every precious moment of your pregnancy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Tool Card 1 -->
+<a class="group bg-white border border-rose-border rounded-[20px] p-8 shadow-sm hover:shadow-md hover:shadow-primary-container/20 soft-transition hover:-translate-y-1 flex flex-col items-start h-full" href="/tools/due-date-calculator">
+<div class="w-12 h-12 rounded-full bg-blush-cream flex items-center justify-center mb-6 text-primary group-hover:bg-primary-container group-hover:text-white soft-transition">
+<span class="material-symbols-outlined">event</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-3">Due Date Calculator</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">Find out when your little one is expected to arrive based on your last period or conception date.</p>
+<span class="text-primary-container font-button-text text-[16px] group-hover:text-primary soft-transition flex items-center gap-1 mt-auto">
+                    Calculate now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</a>
+<!-- Tool Card 2 -->
+<a class="group bg-white border border-rose-border rounded-[20px] p-8 shadow-sm hover:shadow-md hover:shadow-primary-container/20 soft-transition hover:-translate-y-1 flex flex-col items-start h-full" href="/week-by-week">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-6 text-primary group-hover:bg-primary-container group-hover:text-white soft-transition">
+<span class="material-symbols-outlined">pregnant_woman</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-3">Week by Week</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">Follow your baby's growth and your body's changes through every stage of pregnancy.</p>
+<span class="text-primary-container font-button-text text-[16px] group-hover:text-primary soft-transition flex items-center gap-1 mt-auto">
+                    View guide <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</a>
+<!-- Tool Card 3 -->
+<a class="group bg-white border border-rose-border rounded-[20px] p-8 shadow-sm hover:shadow-md hover:shadow-primary-container/20 soft-transition hover:-translate-y-1 flex flex-col items-start h-full" href="/baby-name-generator">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center mb-6 text-primary group-hover:bg-primary-container group-hover:text-white soft-transition">
+<span class="material-symbols-outlined">face_3</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-3">Baby Name Explorer</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">Browse thousands of beautiful baby names by gender, origin, meaning, and popularity.</p>
+<span class="text-primary-container font-button-text text-[16px] group-hover:text-primary soft-transition flex items-center gap-1 mt-auto">
+                    Explore names <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</a>
+<!-- Tool Card 4 -->
+<a class="group bg-white border border-rose-border rounded-[20px] p-8 shadow-sm hover:shadow-md hover:shadow-primary-container/20 soft-transition hover:-translate-y-1 flex flex-col items-start h-full" href="/baby-name-generator">
+<div class="w-12 h-12 rounded-full bg-blush-cream flex items-center justify-center mb-6 text-primary group-hover:bg-primary-container group-hover:text-white soft-transition">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-3">Baby Name Generator</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 flex-grow">Get personalized baby name suggestions based on your preferences and style.</p>
+<span class="text-primary-container font-button-text text-[16px] group-hover:text-primary soft-transition flex items-center gap-1 mt-auto">
+                    Generate names <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</a>
+</div>
+</section>
+<!-- Medical Disclaimer Banner -->
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mb-12">
+<div class="bg-warm-white border border-tertiary-container rounded-xl p-6 flex items-start gap-4 shadow-sm">
+<span class="material-symbols-outlined text-tertiary mt-1">warning</span>
+<div>
+<h4 class="font-title-sm text-title-sm text-tertiary mb-2">Medical Disclaimer</h4>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">NeedsOfMoms provides general pregnancy information for educational purposes only. Our content is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider with any questions about your pregnancy.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-rose-border w-full pt-section-gap-sm pb-gutter mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-4">
+<a class="flex items-center gap-2 text-title-sm font-headline-md text-primary dark:text-primary-fixed-dim" href="/">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span>NeedsOfMoms</span>
+</a>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm mt-2">Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+</div>
+<!-- Tools Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-3">
+<h4 class="text-label-caps font-label-caps text-on-surface uppercase tracking-wider mb-2">Tools</h4>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/tools/due-date-calculator">Due Date Calculator</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/week-by-week">Week by Week</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/baby-name-generator">Baby Name Explorer</a>
+</div>
+<!-- Links Column -->
+<div class="col-span-1 md:col-span-1 flex flex-col gap-3">
+<h4 class="text-label-caps font-label-caps text-on-surface uppercase tracking-wider mb-2">Resources</h4>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/about">About Us</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/contact">Contact</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/privacy">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/disclaimer">Medical Disclaimer</a>
+</div>
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-rose-border text-center">
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">© 2024 NeedsOfMoms. Designed with love for every mother.</p>
+</div>
+</div>
+</footer>
+<!-- Cookie Banner (Fixed Bottom) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-highest border-t border-outline-variant shadow-lg z-50 transform translate-y-0 transition-transform duration-500 p-4" id="cookie-banner">
+<div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="text-2xl">🍪</span>
+<p class="text-body-md font-body-md text-on-surface text-sm text-center sm:text-left">
+<strong>We use cookies.</strong> We use cookies to improve your experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies.
+            </p>
+</div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-6 py-2 bg-transparent border-2 border-outline-variant text-on-surface rounded-full hover:bg-surface-variant soft-transition font-button-text text-sm" onclick="document.getElementById('cookie-banner').style.transform = 'translateY(100%)'">Decline</button>
+<button class="flex-1 sm:flex-none px-6 py-2 bg-[#D97F8B] text-white rounded-full shadow-md hover:bg-primary soft-transition font-button-text text-sm" onclick="document.getElementById('cookie-banner').style.transform = 'translateY(100%)'">Accept</button>
+</div>
+</div>
+</div>
+<script>
+// Mobile Drawer Logic
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-drawer-btn');
+const drawer = document.getElementById('nav-drawer');
+const overlay = document.getElementById('nav-drawer-overlay');
 
-    <script src="/js/app.js"></script>
-</body>
-</html>
+function openDrawer() {
+    drawer.classList.remove('-translate-x-full');
+    overlay.classList.remove('hidden');
+    setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+    drawer.classList.add('-translate-x-full');
+    overlay.classList.add('opacity-0');
+    setTimeout(() => overlay.classList.add('hidden'), 300);
+    document.body.style.overflow = '';
+}
+
+if (menuBtn) menuBtn.addEventListener('click', openDrawer);
+if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+if (overlay) overlay.addEventListener('click', closeDrawer);
+</script>
+</body></html>

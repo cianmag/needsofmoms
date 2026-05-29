@@ -1,764 +1,520 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baby Name Generator Quiz - Find Your Perfect Baby Name | NeedsOfMoms</title>
-  <meta name="description" content="Take our free 5-question baby name quiz to get personalized name suggestions. Discover the perfect name based on gender, style, origin, and length preferences.">
-  <meta property="og:title" content="Baby Name Generator Quiz - Find Your Perfect Baby Name">
-  <meta property="og:description" content="Take our free 5-question baby name quiz to get personalized name suggestions based on your preferences.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://needsofmoms.com/baby-name-generator">
-  <meta property="og:site_name" content="NeedsOfMoms">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Baby Name Generator Quiz - Find Your Perfect Baby Name">
-  <meta name="twitter:description" content="Take our free 5-question baby name quiz to get personalized name suggestions based on your preferences.">
-  <link rel="canonical" href="https://needsofmoms.com/baby-name-generator">
-  <link rel="stylesheet" href="/css/style.css">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://needsofmoms.com/#website",
-        "url": "https://needsofmoms.com/",
-        "name": "NeedsOfMoms"
-      },
-      {
-        "@type": "HowTo",
-        "name": "How to Use the Baby Name Generator Quiz",
-        "description": "Find your perfect baby name in 5 easy steps with our personalized quiz.",
-        "totalTime": "PT3M",
-        "step": [
-          {
-            "@type": "HowToStep",
-            "position": 1,
-            "name": "Choose Gender Preference",
-            "text": "Select whether you prefer a girl name, boy name, or want to be surprised."
-          },
-          {
-            "@type": "HowToStep",
-            "position": 2,
-            "name": "Pick a Name Style",
-            "text": "Choose from Classic, Modern, Unique, or Nature-inspired name styles."
-          },
-          {
-            "@type": "HowToStep",
-            "position": 3,
-            "name": "Select Origin Preference",
-            "text": "Pick a cultural origin for the name or choose Any to see all options."
-          },
-          {
-            "@type": "HowToStep",
-            "position": 4,
-            "name": "Set Letter Preference",
-            "text": "Optionally choose a starting letter or leave it as no preference."
-          },
-          {
-            "@type": "HowToStep",
-            "position": 5,
-            "name": "Choose Name Length",
-            "text": "Select short, medium, long names, or any length."
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Baby Name Generator: Find the Perfect Unique Baby Names | NeedsOfMoms</title>
+<meta content="Discover the perfect baby name with our Baby Name Generator. Explore unique baby names, suggestions based on origin, gender, and style. Read about naming trends 2024 and meanings." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#762f3b",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f5f2ff",
+                    "secondary-fixed-dim": "#ffb2bb",
+                    "on-background": "#1a1a29",
+                    "tertiary-fixed": "#e8e2d0",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f2efff",
+                    "background": "#fcf8ff",
+                    "on-tertiary-container": "#333125",
+                    "rose-border": "rgba(217, 127, 139, 0.1)",
+                    "primary-container": "#d97f8b",
+                    "outline-variant": "#d9c1c2",
+                    "on-primary-container": "#5a1a27",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dad8ed",
+                    "secondary-container": "#fe9dab",
+                    "on-tertiary-fixed": "#1e1c11",
+                    "outline": "#867274",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#3d0412",
+                    "warm-white": "#FFFAF5",
+                    "on-surface": "#1a1a29",
+                    "surface": "#fcf8ff",
+                    "blush-cream": "#FEF0FF",
+                    "tertiary-container": "#9d9989",
+                    "surface-bright": "#fcf8ff",
+                    "secondary": "#934653",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "surface-container": "#eeecff",
+                    "primary": "#934652",
+                    "secondary-fixed": "#ffd9dd",
+                    "on-secondary-container": "#79313e",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#625f50",
+                    "mauve-mist": "#8A8A9E",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#934652",
+                    "surface-container-high": "#e8e6fb",
+                    "primary-fixed": "#ffd9dc",
+                    "surface-container-highest": "#e3e0f6",
+                    "tertiary-fixed-dim": "#ccc6b5",
+                    "on-secondary-fixed": "#3e0313",
+                    "on-secondary-fixed-variant": "#762f3c",
+                    "on-tertiary-fixed-variant": "#4a4739",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#534344",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ffb2bb",
+                    "inverse-surface": "#2f2f3f",
+                    "surface-variant": "#e3e0f6",
+                    "soft-pink-highlight": "#FFF5F7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "section-gap-sm": "64px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "section-gap-lg": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-md-mobile": ["Be Vietnam Pro"],
+                    "button-text": ["Work Sans"],
+                    "label-caps": ["Work Sans"],
+                    "display-lg": ["Be Vietnam Pro"],
+                    "title-sm": ["Be Vietnam Pro"],
+                    "display-lg-mobile": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "button-text": ["18px", {"lineHeight": "1", "fontWeight": "600"}],
+                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["56px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}]
+            }
           }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://needsofmoms.com/baby-name-generator#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://needsofmoms.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Baby Name Generator",
-            "item": "https://needsofmoms.com/baby-name-generator"
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How does the baby name generator quiz work?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Our quiz asks 5 questions about your preferences — gender, style, origin, starting letter, and name length. It then matches your answers against our database of over 1,000 names to suggest 5-10 personalized options."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I use the generator if I don't know the gender?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely! Simply select 'Surprise me' for the gender question and you'll receive a mix of both boy and girl names."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How many names will the quiz suggest?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The quiz suggests between 5 and 10 names based on how well they match your preferences. If your criteria are very specific, fewer results may appear; broader preferences will show more options."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where do I learn more about a suggested name?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Each suggested name links to our Baby Names explorer where you can see its meaning, origin, and popularity ranking, plus browse similar names."
-            }
-          }
-        ]
+        }
       }
-    ]
-  }
-  </script>
-
-  <style>
-    .quiz-container { max-width: 700px; margin: 0 auto; }
-    .quiz-step { display: none; animation: fadeIn 0.3s ease; }
-    .quiz-step.active { display: block; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .quiz-question { font-size: var(--text-xl); font-weight: 600; margin-bottom: var(--space-lg); color: var(--text-primary); }
-    .quiz-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); margin-bottom: var(--space-xl); }
-    .quiz-option {
-      background: var(--bg-surface);
-      border: 2px solid var(--border-color, rgba(255,255,255,0.1));
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      cursor: pointer;
-      transition: all 0.2s ease;
-      text-align: center;
-      font-size: var(--text-base);
-      color: var(--text-primary);
-    }
-    .quiz-option:hover { border-color: var(--color-primary); background: rgba(233, 30, 140, 0.05); }
-    .quiz-option.selected { border-color: var(--color-primary); background: rgba(217, 127, 139, 0.15); box-shadow: 0 0 20px rgba(217, 127, 139, 0.2); }
-    .quiz-option-icon { font-size: 1.5rem; margin-bottom: var(--space-xs); display: block; }
-    .quiz-select-wrapper { position: relative; margin-bottom: var(--space-xl); }
-    .quiz-select {
-      width: 100%;
-      padding: var(--space-md) var(--space-lg);
-      background: var(--bg-surface);
-      border: 2px solid var(--border-color, rgba(255,255,255,0.1));
-      border-radius: var(--radius-lg);
-      color: var(--text-primary);
-      font-size: var(--text-base);
-      appearance: none;
-      cursor: pointer;
-      -webkit-appearance: none;
-    }
-    .quiz-select:focus { border-color: var(--color-primary); outline: none; }
-    .quiz-progress {
-      display: flex;
-      gap: var(--space-xs);
-      margin-bottom: var(--space-xl);
-    }
-    .quiz-progress-dot {
-      flex: 1;
-      height: 4px;
-      border-radius: 2px;
-      background: var(--bg-surface);
-      transition: background 0.3s ease;
-    }
-    .quiz-progress-dot.done { background: var(--color-primary); }
-    .quiz-progress-dot.current { background: var(--color-secondary); }
-    .quiz-nav { display: flex; justify-content: space-between; gap: var(--space-md); margin-top: var(--space-lg); }
-    .btn-quiz {
-      padding: var(--space-md) var(--space-xl);
-      border: none;
-      border-radius: var(--radius-lg);
-      font-size: var(--text-base);
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .btn-quiz-primary { background: var(--color-primary); color: #fff; }
-    .btn-quiz-primary:hover { background: var(--color-primary-hover, #d4197a); }
-    .btn-quiz-primary:disabled { opacity: 0.4; cursor: not-allowed; }
-    .btn-quiz-secondary { background: var(--bg-surface); color: var(--text-primary); border: 2px solid var(--border-color, rgba(255,255,255,0.1)); }
-    .btn-quiz-secondary:hover { border-color: var(--color-primary); }
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--space-lg);
-      margin-top: var(--space-xl);
-    }
-    .result-card {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-color, rgba(255,255,255,0.1));
-      border-radius: var(--radius-lg);
-      padding: var(--space-lg);
-      transition: all 0.2s ease;
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
-    .result-card:hover { border-color: var(--color-primary); transform: translateY(-3px); box-shadow: 0 8px 30px rgba(217, 127, 139, 0.15); }
-    .result-name { font-size: var(--text-2xl); font-weight: 700; color: var(--text-primary); margin-bottom: var(--space-xs); }
-    .result-meaning { color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: var(--space-sm); }
-    .result-meta { display: flex; gap: var(--space-sm); align-items: center; flex-wrap: wrap; }
-    .result-origin {
-      display: inline-block;
-      padding: 2px 10px;
-      border-radius: 999px;
-      font-size: var(--text-xs);
-      background: rgba(155, 89, 182, 0.15);
-      color: var(--color-secondary);
-      border: 1px solid rgba(155, 89, 182, 0.3);
-    }
-    .result-gender-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 700;
-    }
-    .result-gender-icon.male { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
-    .result-gender-icon.female { background: rgba(217, 127, 139, 0.15); color: #D97F8B; }
-    .no-results {
-      text-align: center;
-      padding: var(--space-3xl) var(--space-lg);
-      color: var(--text-secondary);
-    }
-    .quiz-intro { text-align: center; margin-bottom: var(--space-2xl); }
-    .quiz-intro-icon { font-size: 3rem; margin-bottom: var(--space-md); display: block; }
-    .quiz-tips { margin-top: var(--space-3xl); }
-    @media (max-width: 600px) {
-      .quiz-options { grid-template-columns: 1fr; }
-      .results-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+    </script>
+<style>
+        .fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(217, 127, 139, 0.08);
+        }
+        .elevated-shadow {
+            box-shadow: 0 8px 32px rgba(217, 127, 139, 0.15);
+        }
+        .drawer-open { overflow: hidden; }
+    </style>
 </head>
-<body>
-      <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <span class="logo-icon">🌸</span>
-                <span>NeedsOfMoms</span>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 w-full z-50 border-b border-rose-border">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-7xl mx-auto">
+<a class="flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all" href="/week-by-week">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-headline-md text-title-sm font-bold tracking-tight">NeedsOfMoms</span>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="/week-by-week">Week-by-Week</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="/tools/due-date-calculator">Due Date</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-caps text-label-caps" href="/tools/ovulation-calculator">Ovulation</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-label-caps" href="/baby-name-generator">Baby Names</a>
+</nav>
+<button aria-label="Menu" class="md:hidden flex items-center text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all active:scale-95" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Navigation Drawer -->
+<div class="fixed inset-0 bg-on-surface/20 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 opacity-0" id="nav-overlay"></div>
+<aside class="fixed inset-y-0 left-0 w-80 z-[60] bg-surface dark:bg-surface-dim shadow-xl transform -translate-x-full transition-transform duration-300 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col h-full py-6" id="nav-drawer">
+<div class="px-6 mb-8 flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-primary">Explore Tools</h2>
+<button aria-label="Close Menu" class="text-on-surface-variant hover:text-primary transition-colors" id="menu-close">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav class="flex-1 overflow-y-auto">
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-all mx-4 my-1 px-4 py-3 rounded-xl" href="/week-by-week">
+<span class="material-symbols-outlined">calendar_view_week</span>
+                Week-by-Week Guide
             </a>
-            <ul class="nav-links">
-                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
-                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
-                <li><a href="/baby-names">👶 Baby Names</a></li>
-                <li><a href="/week-by-week">📋 Week by Week</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
-        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
-        <a href="/baby-names">👶 Baby Names</a>
-        <a href="/week-by-week">📋 Week by Week</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div>
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="container">
-      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1">
-        </li>
-        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <span itemprop="name">Baby Name Generator</span>
-          <meta itemprop="position" content="2">
-        </li>
-      </ol>
-    </div>
-  </nav>
-
-  <main>
-    <section style="padding: var(--space-3xl) 0 var(--space-xl);">
-      <div class="container">
-        <div class="quiz-intro">
-          <span class="quiz-intro-icon">✨</span>
-          <h1 class="text-gradient" style="font-size: clamp(1.8rem, 5vw, var(--text-4xl)); margin-bottom: var(--space-md);">
-            Baby Name Generator Quiz
-          </h1>
-          <p style="font-size: var(--text-lg); max-width: 600px; margin: 0 auto; color: var(--text-secondary);">
-            Answer 5 quick questions and we'll suggest the perfect baby names tailored just for you.
-          </p>
-        </div>
-
-        <div class="quiz-container">
-          <!-- Progress -->
-          <div class="quiz-progress" id="quizProgress">
-            <div class="quiz-progress-dot" data-step="1"></div>
-            <div class="quiz-progress-dot" data-step="2"></div>
-            <div class="quiz-progress-dot" data-step="3"></div>
-            <div class="quiz-progress-dot" data-step="4"></div>
-            <div class="quiz-progress-dot" data-step="5"></div>
-          </div>
-
-          <!-- Step 1: Gender -->
-          <div class="quiz-step active" data-step="1">
-            <h2 class="quiz-question">What gender are you looking for?</h2>
-            <div class="quiz-options" data-answer="gender">
-              <div class="quiz-option" data-value="girl">
-                <span class="quiz-option-icon">👧</span>
-                <strong>Girl</strong>
-              </div>
-              <div class="quiz-option" data-value="boy">
-                <span class="quiz-option-icon">👦</span>
-                <strong>Boy</strong>
-              </div>
-              <div class="quiz-option" data-value="any" style="grid-column: 1 / -1;">
-                <span class="quiz-option-icon">🎉</span>
-                <strong>Surprise Me</strong>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2: Style -->
-          <div class="quiz-step" data-step="2">
-            <h2 class="quiz-question">What style of name do you prefer?</h2>
-            <div class="quiz-options" data-answer="style">
-              <div class="quiz-option" data-value="classic">
-                <span class="quiz-option-icon">👑</span>
-                <strong>Classic</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Timeless & traditional</p>
-              </div>
-              <div class="quiz-option" data-value="modern">
-                <span class="quiz-option-icon">🌟</span>
-                <strong>Modern</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Trendy & fresh</p>
-              </div>
-              <div class="quiz-option" data-value="unique">
-                <span class="quiz-option-icon">💎</span>
-                <strong>Unique</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Rare & distinctive</p>
-              </div>
-              <div class="quiz-option" data-value="nature">
-                <span class="quiz-option-icon">🌿</span>
-                <strong>Nature-inspired</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Earth, flowers, sky</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3: Origin -->
-          <div class="quiz-step" data-step="3">
-            <h2 class="quiz-question">Any preferred origin?</h2>
-            <div class="quiz-select-wrapper">
-              <select class="quiz-select" id="originSelect">
-                <option value="any">Any origin</option>
-                <option value="English">English</option>
-                <option value="Hebrew">Hebrew</option>
-                <option value="Irish">Irish</option>
-                <option value="Greek">Greek</option>
-                <option value="Latin">Latin</option>
-                <option value="Arabic">Arabic</option>
-                <option value="French">French</option>
-                <option value="German">German</option>
-                <option value="Spanish">Spanish</option>
-                <option value="Italian">Italian</option>
-                <option value="Japanese">Japanese</option>
-                <option value="African">African</option>
-                <option value="Norse">Norse</option>
-                <option value="Scottish">Scottish</option>
-                <option value="Welsh">Welsh</option>
-                <option value="Indian">Indian</option>
-                <option value="Russian">Russian</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Turkish">Turkish</option>
-                <option value="Persian">Persian</option>
-                <option value="Swedish">Swedish</option>
-                <option value="Celtic">Celtic</option>
-                <option value="Polish">Polish</option>
-              </select>
-            </div>
-            <div class="quiz-nav">
-              <button class="btn-quiz btn-quiz-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn-quiz btn-quiz-primary" onclick="nextStep()">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 4: First Letter -->
-          <div class="quiz-step" data-step="4">
-            <h2 class="quiz-question">Any starting letter preference?</h2>
-            <div class="quiz-select-wrapper">
-              <select class="quiz-select" id="letterSelect">
-                <option value="any">No preference</option>
-                <option value="A">A</option><option value="B">B</option>
-                <option value="C">C</option><option value="D">D</option>
-                <option value="E">E</option><option value="F">F</option>
-                <option value="G">G</option><option value="H">H</option>
-                <option value="I">I</option><option value="J">J</option>
-                <option value="K">K</option><option value="L">L</option>
-                <option value="M">M</option><option value="N">N</option>
-                <option value="O">O</option><option value="P">P</option>
-                <option value="Q">Q</option><option value="R">R</option>
-                <option value="S">S</option><option value="T">T</option>
-                <option value="U">U</option><option value="V">V</option>
-                <option value="W">W</option><option value="X">X</option>
-                <option value="Y">Y</option><option value="Z">Z</option>
-              </select>
-            </div>
-            <div class="quiz-nav">
-              <button class="btn-quiz btn-quiz-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn-quiz btn-quiz-primary" onclick="nextStep()">Continue →</button>
-            </div>
-          </div>
-
-          <!-- Step 5: Length -->
-          <div class="quiz-step" data-step="5">
-            <h2 class="quiz-question">Preferred name length?</h2>
-            <div class="quiz-options" data-answer="length">
-              <div class="quiz-option" data-value="short">
-                <span class="quiz-option-icon">✂️</span>
-                <strong>Short</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">3-4 letters</p>
-              </div>
-              <div class="quiz-option" data-value="medium">
-                <span class="quiz-option-icon">📏</span>
-                <strong>Medium</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">5-6 letters</p>
-              </div>
-              <div class="quiz-option" data-value="long">
-                <span class="quiz-option-icon">📜</span>
-                <strong>Long</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">7+ letters</p>
-              </div>
-              <div class="quiz-option" data-value="any">
-                <span class="quiz-option-icon">🌈</span>
-                <strong>Any</strong>
-                <p style="font-size: var(--text-sm); color: var(--text-muted); margin-top: 4px;">Show me everything</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Results -->
-          <div class="quiz-step" data-step="results">
-            <div id="resultsContainer"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="quiz-tips" style="padding: var(--space-3xl) 0;">
-      <div class="container" style="max-width: 700px;">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Frequently Asked Questions</h2>
-        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
-          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How does the baby name generator work?</summary>
-          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Our quiz asks 5 questions about your preferences — gender, style, origin, starting letter, and name length. It then matches your answers against our database of over 1,000 names to suggest 5-10 personalized options.</p>
-        </details>
-        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
-          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Can I use the generator if I don't know the gender?</summary>
-          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Absolutely! Simply select "Surprise me" for the gender question and you'll receive a mix of both boy and girl names.</p>
-        </details>
-        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
-          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">How many names will the quiz suggest?</summary>
-          <p style="margin-top: var(--space-md); color: var(--text-secondary);">The quiz suggests between 5 and 10 names based on how well they match your preferences. If your criteria are very specific, fewer results may appear; broader preferences will show more options.</p>
-        </details>
-        <details style="background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md);">
-          <summary style="cursor: pointer; font-weight: 600; color: var(--text-primary);">Where do I learn more about a suggested name?</summary>
-          <p style="margin-top: var(--space-md); color: var(--text-secondary);">Each suggested name links to our Baby Names explorer where you can see its meaning, origin, and popularity ranking, plus browse similar names.</p>
-        </details>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section style="padding: var(--space-2xl) 0 var(--space-3xl); text-align: center;">
-      <div class="container">
-        <div class="card" style="padding: var(--space-2xl); background: linear-gradient(135deg, rgba(217, 127, 139, 0.1), rgba(155, 89, 182, 0.1)); border-color: var(--color-primary);">
-          <h2>Explore All Baby Names</h2>
-          <p style="max-width: 500px; margin: 0 auto var(--space-lg);">Browse our full database of over 1,000 names with meanings, origins, and popularity rankings.</p>
-          <a href="/baby-names" class="btn btn-primary btn-lg">Browse Baby Names</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-      <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
-                        <span class="logo-icon">🌸</span>
-                        <span>NeedsOfMoms</span>
-                    </a>
-                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-all mx-4 my-1 px-4 py-3 rounded-xl" href="/tools/due-date-calculator">
+<span class="material-symbols-outlined">calendar_today</span>
+                Due Date Calculator
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-all mx-4 my-1 px-4 py-3 rounded-xl" href="/tools/ovulation-calculator">
+<span class="material-symbols-outlined">favorite</span>
+                Ovulation Calculator
+            </a>
+<a class="flex items-center gap-4 bg-primary text-on-primary shadow-sm mx-4 my-1 px-4 py-3 rounded-xl" href="/baby-name-generator">
+<span class="material-symbols-outlined">child_care</span>
+                Baby Name Generator
+            </a>
+</nav>
+</aside>
+<main class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop pt-section-gap-sm pb-section-gap-lg">
+<!-- Hero Section -->
+<section class="text-center mb-section-gap-lg fade-in-up">
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg-mobile md:font-display-lg text-primary mb-6">
+                Baby Name Generator: <br class="hidden md:block"/>Find Perfect Unique Baby Names
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
+                Discover meaningful and unique baby names with our intelligent baby name generator. Explore thousands of ideas tailored to your style, origin preferences, and naming trends 2024. Whether you want rare or classic, we help you find the best.
+            </p>
+</section>
+<!-- Generator Interface -->
+<section class="bg-surface-container-lowest border border-rose-border rounded-[20px] p-6 md:p-12 elevated-shadow mb-section-gap-sm fade-in-up delay-100">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+<!-- Filter: Gender -->
+<div class="flex flex-col gap-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant" for="gender-select">Gender</label>
+<select class="bg-warm-white border-rose-border rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all" id="gender-select">
+<option value="any">Surprise Me</option>
+<option value="girl">Girl</option>
+<option value="boy">Boy</option>
+<option value="neutral">Gender Neutral</option>
+</select>
+</div>
+<!-- Filter: Origin -->
+<div class="flex flex-col gap-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant" for="origin-select">Origin</label>
+<select class="bg-warm-white border-rose-border rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all" id="origin-select">
+<option value="any">Any Origin</option>
+<option value="celtic">Celtic</option>
+<option value="latin">Latin</option>
+<option value="arabic">Arabic</option>
+<option value="greek">Greek</option>
+<option value="hebrew">Hebrew</option>
+</select>
+</div>
+<!-- Filter: Style -->
+<div class="flex flex-col gap-2">
+<label class="text-label-caps font-label-caps text-on-surface-variant" for="style-select">Style</label>
+<select class="bg-warm-white border-rose-border rounded-lg px-4 py-3 text-body-md font-body-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary transition-all" id="style-select">
+<option value="any">Any Style</option>
+<option value="modern">Modern</option>
+<option value="classic">Classic</option>
+<option value="unique">Unique &amp; Rare</option>
+<option value="nature">Nature-Inspired</option>
+</select>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-primary text-on-primary font-button-text text-button-text py-5 px-10 rounded-full elevated-shadow hover:bg-on-primary-container transition-colors duration-300" id="generate-btn">
+                    Generate Names
+                </button>
+</div>
+</section>
+<!-- Generated Results (hidden by default) -->
+<section class="mb-section-gap-lg hidden" id="results-section">
+<h2 class="text-headline-md-mobile md:text-headline-md font-headline-md-mobile md:font-headline-md text-primary mb-6 text-center" id="results-heading">Your Name Suggestions</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="results-grid">
+</div>
+<div class="text-center mt-8">
+<button class="bg-transparent border-2 border-primary-container text-primary font-button-text text-button-text py-4 px-8 rounded-full hover:bg-surface-container-low transition-all duration-300" id="generate-more-btn">
+                    Generate More Names
+                </button>
+</div>
+</section>
+<!-- Social Proof / Trending -->
+<section class="mb-section-gap-lg fade-in-up delay-200">
+<h2 class="text-headline-md-mobile md:text-headline-md font-headline-md-mobile md:font-headline-md text-primary mb-6 text-center">Naming Trends 2024: Currently Popular</h2>
+<p class="text-body-md text-on-surface-variant text-center mb-8 max-w-3xl mx-auto">Explore some of the most sought-after unique baby names this year, driven by vintage revivals and celestial themes.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="bg-blush-cream p-4 rounded-xl border border-rose-border flex flex-col items-center text-center">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-2">Aria</span>
+<span class="text-body-md text-on-surface-variant text-sm">Meaning "air" or "melody" in Italian. A top choice for modern parents seeking musical unique baby names.</span>
+</div>
+<div class="bg-blush-cream p-4 rounded-xl border border-rose-border flex flex-col items-center text-center">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-2">Leo</span>
+<span class="text-body-md text-on-surface-variant text-sm">Latin for "lion". Strong, classic, and consistently popular in naming trends 2024.</span>
+</div>
+<div class="bg-blush-cream p-4 rounded-xl border border-rose-border flex flex-col items-center text-center">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-2">Maeve</span>
+<span class="text-body-md text-on-surface-variant text-sm">Irish for "she who intoxicates". A vintage revival name gaining immense popularity for girls.</span>
+</div>
+<div class="bg-blush-cream p-4 rounded-xl border border-rose-border flex flex-col items-center text-center">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-2">Ezra</span>
+<span class="text-body-md text-on-surface-variant text-sm">Hebrew meaning "help". A biblical name that feels fresh and perfectly aligns with modern naming styles.</span>
+</div>
+<div class="bg-blush-cream p-4 rounded-xl border border-rose-border flex flex-col items-center text-center">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-2">Luna</span>
+<span class="text-body-md text-on-surface-variant text-sm">Latin for "moon". Leading the charge in celestial naming trends 2024 for unique baby names.</span>
+</div>
+</div>
+</section>
+<section class="mb-section-gap-lg fade-in-up delay-300">
+<div class="text-center mb-8">
+<h2 class="text-headline-md-mobile md:text-headline-md font-headline-md-mobile md:font-headline-md text-primary mb-2">Trending Now: Mom's Choice</h2>
+<p class="text-body-md text-on-surface-variant max-w-2xl mx-auto">The most-saved names by our community this week. See what other parents are loving right now.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+<div class="bg-blush-cream p-5 rounded-xl border border-rose-border flex flex-col items-center text-center shadow-sm">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-1">Aria</span>
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-caps">1.2k saves</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Saved this week</span>
+</div>
+<div class="bg-blush-cream p-5 rounded-xl border border-rose-border flex flex-col items-center text-center shadow-sm">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-1">Oliver</span>
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-caps">980 saves</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Saved this week</span>
+</div>
+<div class="bg-blush-cream p-5 rounded-xl border border-rose-border flex flex-col items-center text-center shadow-sm">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-1">Elara</span>
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-caps">850 saves</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Saved this week</span>
+</div>
+<div class="bg-blush-cream p-5 rounded-xl border border-rose-border flex flex-col items-center text-center shadow-sm">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-1">Silas</span>
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-caps">740 saves</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Saved this week</span>
+</div>
+<div class="bg-blush-cream p-5 rounded-xl border border-rose-border flex flex-col items-center text-center shadow-sm">
+<span class="text-title-sm font-title-sm text-on-secondary-container mb-1">Mila</span>
+<div class="flex items-center gap-1 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-label-caps">1.1k saves</span>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">Saved this week</span>
+</div>
+</div>
+</section>
+<!-- Expert Tips Section -->
+<section class="mb-section-gap-lg fade-in-up delay-200">
+<div class="bg-warm-white border border-rose-border rounded-[20px] p-8 md:p-12 soft-shadow">
+<h2 class="text-headline-md-mobile md:text-headline-md font-headline-md-mobile md:font-headline-md text-primary mb-6">Expert Tips on Choosing a Name</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-3 flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary">record_voice_over</span> Say It Out Loud
+                        </h3>
+<p class="text-body-md text-on-surface-variant">Always test your favorite unique baby names by saying them out loud alongside your last name. Check for rhythmic flow and avoid unintended rhymes or difficult consonant clashes.</p>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-3 flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary">history_edu</span> Check Initials and Meanings
+                        </h3>
+<p class="text-body-md text-on-surface-variant">Our baby name generator helps you explore meanings. Ensure the initials don't spell anything embarrassing and that the cultural significance aligns with your family values.</p>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-3 flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary">trending_up</span> Consider Future Trends
+                        </h3>
+<p class="text-body-md text-on-surface-variant">While naming trends 2024 offer great inspiration, remember your child will carry this name for life. Balance modern appeal with long-term timelessness.</p>
+</div>
+<div>
+<h3 class="text-title-sm font-title-sm text-on-surface mb-3 flex items-center gap-2">
+<span aria-hidden="true" class="material-symbols-outlined text-primary">family_restroom</span> Compromise is Key
+                        </h3>
+<p class="text-body-md text-on-surface-variant">If you and your partner have different tastes, use our baby name generator filters to find a middle ground, such as classic names with unique nicknames.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Content Grid (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap-sm fade-in-up delay-300">
+<!-- Large Feature Article -->
+<a class="md:col-span-8 group block relative overflow-hidden rounded-[20px] bg-surface-container-lowest border border-rose-border soft-shadow hover:elevated-shadow transition-all duration-300 min-h-[400px]" href="/baby-names">
+<div aria-label="A softly lit, warm and inviting nursery room featuring a modern wooden crib, cozy neutral textiles, and gentle sunlight streaming through sheer curtains." class="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 group-hover:scale-105" role="img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCx8JIX9e0TM9Uxmlzljxd19J5rvSdqYhhADASb0ID9g_ng2lOrbYaWDk0EtHIBzNiRylR6gEnzGs-f9zNOcO2fC3H0etBmzZl5R_i22752aa2gTbr8_5ci-4sBZ2QF__lYjak9oDqz6D4RQJsFd3i8qZAWbFl_cBxI-JN-s1EDrq8suXU-UYYH_XP-hBuAF6ePK0h-4cY4y9x6CxPG01AW2W7TY4HDI5DRxlAJH2domV7onyaG2LGUJAyXUj79-6ukVagHpYgPxIo')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/40 to-transparent z-10"></div>
+<div class="absolute bottom-0 left-0 p-8 z-20">
+<span class="inline-block bg-primary text-on-primary px-3 py-1 rounded-full text-label-caps font-label-caps mb-4">Guide</span>
+<h3 class="text-headline-md-mobile md:text-headline-md font-headline-md-mobile md:font-headline-md text-on-primary mb-2">How to Choose a Meaningful Name</h3>
+<p class="text-body-md font-body-md text-surface-container-high max-w-md">Navigate the emotional journey of selecting a name that resonates with your family's values and heritage.</p>
+</div>
+</a>
+<!-- Smaller Promo Card -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<a class="flex-1 block p-6 rounded-[20px] bg-blush-cream border border-rose-border soft-shadow hover:bg-surface-container transition-colors duration-300 flex flex-col justify-center items-center text-center" href="/baby-names">
+<span aria-hidden="true" class="material-symbols-outlined text-display-lg text-primary mb-4" style="font-variation-settings: 'FILL' 1;">explore</span>
+<h4 class="text-title-sm font-title-sm text-on-surface mb-2">Baby Name Explorer</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Browse our comprehensive A-Z directory for broader inspiration and unique baby names.</p>
+</a>
+<a class="flex-1 block p-6 rounded-[20px] bg-surface-container-lowest border border-rose-border soft-shadow hover:elevated-shadow transition-all duration-300" href="/baby-names">
+<h4 class="text-title-sm font-title-sm text-primary mb-2">Naming Trends 2024</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Discover why vintage revivals and nature-inspired monikers are topping the charts this year in naming trends 2024.</p>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface w-full pt-section-gap-sm pb-gutter border-t border-rose-border">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto mb-12">
+<div class="md:col-span-1">
+<div class="text-title-sm font-headline-md text-primary dark:text-primary-fixed-dim mb-4">
+                    NeedsOfMoms
                 </div>
-                <div class="footer-column">
-                    <h4>Tools</h4>
-                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
-                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-                    <a href="/baby-names">Baby Names</a>
-                    <a href="/baby-name-generator">Name Generator</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <a href="/week-by-week">Week by Week</a>
-                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
-                    <a href="/what-to-expect">What to Expect</a>
-                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="/about">About Us</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Use</a>
-                    <a href="/disclaimer">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
-                <p>Made with 💕 for expecting parents everywhere</p>
-            </div>
-        </div>
-    </footer>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-mauve-mist max-w-xs">
+                    Designed with love to support mothers at every stage of their journey, from tracking fertility to welcoming your newborn.
+                </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Calculators &amp; Tools</span>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/week-by-week">Week-by-Week Guide</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/tools/due-date-calculator">Due Date Calculator</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/tools/ovulation-calculator">Ovulation Calculator</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/baby-name-generator">Baby Name Generator</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Company</span>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/about">About Us</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/contact">Contact Us</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/privacy">Privacy Policy</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/terms">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Support</span>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/disclaimer">Medical Board</a>
+<a class="text-body-md text-on-surface-variant hover:text-primary transition-all" href="/disclaimer">Medical Disclaimer</a>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto border-t border-rose-border pt-8 text-center md:text-left">
+<p class="text-body-md text-sm text-on-surface-variant/70">
+                © 2024 NeedsOfMoms. Designed with love for every mother. 
+                <span class="block md:inline mt-2 md:mt-0 italic md:ml-4">Medical Disclaimer: Information provided is for educational purposes and not a substitute for professional medical advice.</span>
+</p>
+</div>
+</footer>
+<script>
+        // Drawer Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const navDrawer = document.getElementById('nav-drawer');
+        const navOverlay = document.getElementById('nav-overlay');
 
-  <script src="/js/app.js"></script>
-  <script>
-  (function() {
-    'use strict';
-
-    var allNames = [];
-    var answers = { gender: null, style: null, origin: 'any', letter: 'any', length: null };
-    var currentStep = 1;
-
-    // Style-to-origin/meaning keyword mappings
-    var styleKeywords = {
-      classic: {
-        names: ['James','William','Elizabeth','Charlotte','Henry','Eleanor','Theodore','Benjamin','Alexander','Victoria','Joseph','Catherine','Samuel','Margaret','Edward','Sarah','Daniel','Emily','David','Grace','Thomas','Alice','John','Anna','Michael','Sophia','Andrew','Rebecca','Robert','Hannah','George','Amelia','Charles','Clara','Richard','Rose','Matthew','Jane','Luke','Mary'],
-        keywords: ['king','queen','ruler','noble','wise','warrior','strong','protector','beloved','grace','gift']
-      },
-      modern: {
-        names: ['Aiden','Luna','Mason','Aria','Ethan','Zoe','Logan','Nova','Jayden','Isla','Carter','Mia','Leo','Harper','Kai','Riley','Milo','Avery','Finn','Everly','Jaxon','Willow','Axel','Sage','River','Phoenix','Rowan','Quinn','Blake','Skye','Remi','Atlas','Orion','Luna','Zara','Kira','Jace','Nova','Iris','Cruz'],
-        keywords: ['new','star','light','dawn','bright','modern','young']
-      },
-      unique: {
-        names: ['Soren','Astrid','Calliope','Thaddeus','Isolde','Leander','Persephone','Cassian','Ondine','Alaric','Seraphina','Oberon','Evangeline','Percival','Calista','Lysander','Anastasia','Dimitri','Isolde','Zephyr','Azalea','Caspian','Delphine','Evander','Galilea','Hadrian','Ione','Juno','Koa','Leilani','Maren','Nico','Ophelia','Petra','Quillon','Rhea','Sable','Thea','Ursa','Vesper'],
-        keywords: ['unique','rare','special','dream','mystery','magic']
-      },
-      nature: {
-        names: ['Willow','River','Forest','Sage','Hazel','Ivy','Lily','Rose','Daisy','Jasmine','Violet','Olive','Autumn','Summer','Winter','Sky','Star','Rain','Brook','Meadow','Cedar','Rowan','Holly','Fern','Clover','Birch','Laurel','Maple','Aurora','Luna','Sol','Stella','Flora','Gaia','Petra','Jasper','Cliff','Glen','Reed','Heath'],
-        keywords: ['tree','flower','nature','earth','garden','forest','river','mountain','leaf','plant','bloom','spring']
-      }
-    };
-
-    // Load names data
-    fetch('/data/baby-names.json')
-      .then(function(r) { return r.json(); })
-      .then(function(data) { allNames = data; })
-      .catch(function(err) { console.error('Failed to load names:', err); });
-
-    // Click handlers for options
-    document.querySelectorAll('.quiz-options').forEach(function(group) {
-      var answerKey = group.getAttribute('data-answer');
-      group.querySelectorAll('.quiz-option').forEach(function(opt) {
-        opt.addEventListener('click', function() {
-          group.querySelectorAll('.quiz-option').forEach(function(o) { o.classList.remove('selected'); });
-          opt.classList.add('selected');
-          answers[answerKey] = opt.getAttribute('data-value');
-          if (currentStep <= 2 || currentStep === 5) {
-            setTimeout(nextStep, 300);
-          }
-        });
-      });
-    });
-
-    window.nextStep = function() {
-      if (currentStep === 3) {
-        var originEl = document.getElementById('originSelect');
-        answers.origin = originEl ? originEl.value : 'any';
-      }
-      if (currentStep === 4) {
-        var letterEl = document.getElementById('letterSelect');
-        answers.letter = letterEl ? letterEl.value : 'any';
-      }
-
-      var stepEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
-      if (stepEl) stepEl.classList.remove('active');
-
-      currentStep++;
-      updateProgress();
-
-      if (currentStep > 5) {
-        showResults();
-        return;
-      }
-
-      var nextEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
-      if (nextEl) nextEl.classList.add('active');
-    };
-
-    window.prevStep = function() {
-      var stepEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
-      if (stepEl) stepEl.classList.remove('active');
-      currentStep--;
-      updateProgress();
-      var prevEl = document.querySelector('.quiz-step[data-step="' + currentStep + '"]');
-      if (prevEl) prevEl.classList.add('active');
-    };
-
-    function updateProgress() {
-      document.querySelectorAll('.quiz-progress-dot').forEach(function(dot) {
-        var s = parseInt(dot.getAttribute('data-step'));
-        dot.classList.remove('done', 'current');
-        if (s < currentStep) dot.classList.add('done');
-        if (s === currentStep) dot.classList.add('current');
-      });
-    }
-
-    function showResults() {
-      document.querySelector('.quiz-progress').style.display = 'none';
-      var resultsStep = document.querySelector('.quiz-step[data-step="results"]');
-      resultsStep.classList.add('active');
-
-      var filtered = allNames.filter(function(n) {
-        // Gender filter
-        if (answers.gender && answers.gender !== 'any') {
-          if (n.gender !== answers.gender) return false;
-        }
-        // Origin filter
-        if (answers.origin && answers.origin !== 'any') {
-          if (n.origin && n.origin.toLowerCase() !== answers.origin.toLowerCase()) return false;
-        }
-        // Letter filter
-        if (answers.letter && answers.letter !== 'any') {
-          if (!n.name || n.name[0].toUpperCase() !== answers.letter.toUpperCase()) return false;
-        }
-        // Length filter
-        if (answers.length && answers.length !== 'any') {
-          var len = n.name ? n.name.length : 0;
-          if (answers.length === 'short' && len > 4) return false;
-          if (answers.length === 'medium' && (len < 5 || len > 6)) return false;
-          if (answers.length === 'long' && len < 7) return false;
-        }
-        return true;
-      });
-
-      // Score and sort by style relevance
-      if (answers.style) {
-        var styleData = styleKeywords[answers.style];
-        if (styleData) {
-          filtered.forEach(function(n) {
-            n._score = 0;
-            // Name match bonus
-            if (styleData.names.indexOf(n.name) !== -1) n._score += 10;
-            // Meaning keyword match
-            if (n.meaning) {
-              var meaningLower = n.meaning.toLowerCase();
-              styleData.keywords.forEach(function(kw) {
-                if (meaningLower.indexOf(kw) !== -1) n._score += 3;
-              });
+        function toggleDrawer() {
+            const isClosed = navDrawer.classList.contains('-translate-x-full');
+            if (isClosed) {
+                navDrawer.classList.remove('-translate-x-full');
+                navOverlay.classList.remove('hidden');
+                setTimeout(() => navOverlay.classList.remove('opacity-0'), 10);
+                document.body.classList.add('drawer-open');
+            } else {
+                navDrawer.classList.add('-translate-x-full');
+                navOverlay.classList.add('opacity-0');
+                setTimeout(() => navOverlay.classList.add('hidden'), 300);
+                document.body.classList.remove('drawer-open');
             }
-            // Popularity bonus (lower number = more popular)
-            if (n.popularity && n.popularity <= 50) n._score += 2;
-          });
-          filtered.sort(function(a, b) { return (b._score || 0) - (a._score || 0); });
         }
-      }
 
-      // Take top 8
-      var results = filtered.slice(0, 8);
+        menuToggle?.addEventListener('click', toggleDrawer);
+        menuClose?.addEventListener('click', toggleDrawer);
+        navOverlay?.addEventListener('click', toggleDrawer);
 
-      // If not enough results with strict filters, relax letter/length
-      if (results.length < 5) {
-        var relaxed = allNames.filter(function(n) {
-          if (answers.gender && answers.gender !== 'any' && n.gender !== answers.gender) return false;
-          if (answers.origin && answers.origin !== 'any' && n.origin && n.origin.toLowerCase() !== answers.origin.toLowerCase()) return false;
-          return true;
-        });
-        if (answers.style && styleKeywords[answers.style]) {
-          var sd = styleKeywords[answers.style];
-          relaxed.forEach(function(n) {
-            n._score = 0;
-            if (sd.names.indexOf(n.name) !== -1) n._score += 10;
-            if (n.meaning) {
-              sd.keywords.forEach(function(kw) {
-                if (n.meaning.toLowerCase().indexOf(kw) !== -1) n._score += 3;
-              });
+        // Baby Name Generator Logic
+        let allNames = [];
+        const generateBtn = document.getElementById('generate-btn');
+        const generateMoreBtn = document.getElementById('generate-more-btn');
+        const resultsSection = document.getElementById('results-section');
+        const resultsGrid = document.getElementById('results-grid');
+        const resultsHeading = document.getElementById('results-heading');
+        const genderSelect = document.getElementById('gender-select');
+        const originSelect = document.getElementById('origin-select');
+        const styleSelect = document.getElementById('style-select');
+
+        // Load names data
+        fetch('/data/baby-names.json')
+            .then(r => r.json())
+            .then(data => { allNames = data; })
+            .catch(err => console.error('Failed to load names:', err));
+
+        function filterNames() {
+            const gender = genderSelect.value;
+            const origin = originSelect.value;
+            let filtered = [...allNames];
+
+            if (gender !== 'any') {
+                if (gender === 'neutral') {
+                    filtered = filtered.filter(n => n.gender === 'unisex');
+                } else {
+                    filtered = filtered.filter(n => n.gender === gender);
+                }
             }
-          });
-          relaxed.sort(function(a, b) { return (b._score || 0) - (a._score || 0); });
+
+            if (origin !== 'any') {
+                filtered = filtered.filter(n => n.origin.toLowerCase() === origin.toLowerCase());
+            }
+
+            // Shuffle and pick 9
+            for (let i = filtered.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
+            }
+
+            return filtered.slice(0, 9);
         }
-        results = relaxed.slice(0, 8);
-      }
 
-      var container = document.getElementById('resultsContainer');
-      if (results.length === 0) {
-        container.innerHTML = '<div class="no-results">' +
-          '<div style="font-size: 3rem; margin-bottom: var(--space-md);">🤷</div>' +
-          '<h3>No matches found</h3>' +
-          '<p>Try broadening your preferences — pick "Any" for origin, letter, or length.</p>' +
-          '<button class="btn btn-primary" style="margin-top: var(--space-lg);" onclick="restartQuiz()">Try Again</button>' +
-          '</div>';
-        return;
-      }
+        function renderNames(names) {
+            if (names.length === 0) {
+                resultsGrid.innerHTML = '<p class="col-span-full text-center text-on-surface-variant font-body-md text-body-lg py-8">No names found matching your criteria. Try different filters!</p>';
+            } else {
+                resultsGrid.innerHTML = names.map(n => `
+                    <div class="bg-white border border-rose-border rounded-[20px] p-6 shadow-sm hover:shadow-md hover:shadow-primary-container/20 transition-all duration-300 flex flex-col">
+                        <span class="text-headline-md-mobile font-headline-md-mobile text-primary mb-2">${n.name}</span>
+                        <span class="text-label-caps font-label-caps text-on-surface-variant mb-1">${n.origin} · ${n.gender === 'unisex' ? 'Gender Neutral' : n.gender.charAt(0).toUpperCase() + n.gender.slice(1)}</span>
+                        <p class="text-body-md font-body-md text-on-surface-variant mt-2 flex-grow">${n.meaning}</p>
+                    </div>
+                `).join('');
+            }
+            resultsSection.classList.remove('hidden');
+            resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
-      var html = '<h2 class="text-center" style="margin-bottom: var(--space-sm);">🎉 Your Personalized Names</h2>' +
-        '<p class="text-center" style="color: var(--text-secondary); margin-bottom: var(--space-xl);">We found ' + results.length + ' names that match your preferences!</p>' +
-        '<div class="results-grid">';
+        function generate() {
+            if (allNames.length === 0) {
+                resultsGrid.innerHTML = '<p class="col-span-full text-center text-on-surface-variant font-body-md text-body-lg py-8">Loading names... Please try again.</p>';
+                resultsSection.classList.remove('hidden');
+                return;
+            }
+            const names = filterNames();
+            const genderText = genderSelect.options[genderSelect.selectedIndex].text;
+            const originText = originSelect.options[originSelect.selectedIndex].text;
+            resultsHeading.textContent = genderText === 'Surprise Me' && originText === 'Any Origin'
+                ? 'Your Name Suggestions'
+                : `${genderText} Names${originText !== 'Any Origin' ? ' · ' + originText : ''}`;
+            renderNames(names);
+        }
 
-      results.forEach(function(n) {
-        var genderClass = n.gender === 'boy' ? 'male' : 'female';
-        var genderSymbol = n.gender === 'boy' ? '♂' : '♀';
-        var encodedName = encodeURIComponent(n.name);
-        html += '<a href="/baby-names?highlight=' + encodedName + '" class="result-card">' +
-          '<div style="display: flex; align-items: center; gap: var(--space-md); margin-bottom: var(--space-sm);">' +
-          '<span class="result-gender-icon ' + genderClass + '">' + genderSymbol + '</span>' +
-          '<span class="result-name">' + escapeHtml(n.name) + '</span>' +
-          '</div>' +
-          '<p class="result-meaning">' + escapeHtml(n.meaning || 'A beautiful name') + '</p>' +
-          '<div class="result-meta">' +
-          '<span class="result-origin">' + escapeHtml(n.origin || 'Unknown') + '</span>' +
-          '</div>' +
-          '</a>';
-      });
-
-      html += '</div>' +
-        '<div class="text-center" style="margin-top: var(--space-xl);">' +
-        '<button class="btn btn-secondary" onclick="restartQuiz()">🔄 Retake Quiz</button> ' +
-        '<a href="/baby-names" class="btn btn-primary">Browse All Names</a>' +
-        '</div>';
-
-      container.innerHTML = html;
-    }
-
-    window.restartQuiz = function() {
-      answers = { gender: null, style: null, origin: 'any', letter: 'any', length: null };
-      currentStep = 1;
-      document.querySelector('.quiz-progress').style.display = 'flex';
-      document.querySelectorAll('.quiz-step').forEach(function(s) { s.classList.remove('active'); });
-      document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
-      document.querySelectorAll('.quiz-option').forEach(function(o) { o.classList.remove('selected'); });
-      document.getElementById('originSelect').value = 'any';
-      document.getElementById('letterSelect').value = 'any';
-      updateProgress();
-    };
-
-    function escapeHtml(str) {
-      if (!str) return '';
-      var div = document.createElement('div');
-      div.appendChild(document.createTextNode(str));
-      return div.innerHTML;
-    }
-
-    // Init progress
-    updateProgress();
-  })();
-  </script>
-</body>
-</html>
+        generateBtn?.addEventListener('click', generate);
+        generateMoreBtn?.addEventListener('click', generate);
+    </script>
+</body></html>

@@ -1,332 +1,513 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week by Week Pregnancy Guide | NeedsOfMoms</title>
-  <meta name="description" content="Track your pregnancy week by week. See how your baby grows each week with size comparisons, development milestones, and tips for expectant moms.">
-  <meta property="og:title" content="Week by Week Pregnancy Guide | NeedsOfMoms">
-  <meta property="og:description" content="Track your pregnancy week by week. See how your baby grows each week with size comparisons, development milestones, and tips for expectant moms.">
-    <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://needsofmoms.com/week-by-week">
-  <meta property="og:site_name" content="NeedsOfMoms">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://needsofmoms.com/week-by-week">
-  <link rel="stylesheet" href="/css/style.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://needsofmoms.com/"},
-      {"@type": "ListItem", "position": 2, "name": "Week by Week", "item": "https://needsofmoms.com/week-by-week"}
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "When does pregnancy start being counted?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pregnancy is counted from the first day of your last menstrual period (LMP). Week 1 and 2 are before conception actually occurs. By week 4, the embryo is implanting and a pregnancy test can detect hCG."
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Week-by-Week Pregnancy Guide | NeedsOfMoms</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;family=Work+Sans:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#79313e",
+                      "inverse-on-surface": "#f2efff",
+                      "on-surface": "#1a1a29",
+                      "on-error": "#ffffff",
+                      "surface-container": "#eeecff",
+                      "secondary": "#934653",
+                      "surface-dim": "#dad8ed",
+                      "inverse-surface": "#2f2f3f",
+                      "on-secondary-fixed-variant": "#762f3c",
+                      "on-background": "#1a1a29",
+                      "blush-cream": "#FEF0FF",
+                      "on-secondary-fixed": "#3e0313",
+                      "surface-bright": "#fcf8ff",
+                      "on-tertiary-fixed-variant": "#4a4739",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#867274",
+                      "surface": "#fcf8ff",
+                      "on-primary-fixed-variant": "#762f3b",
+                      "surface-variant": "#e3e0f6",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed": "#ffd9dc",
+                      "outline-variant": "#d9c1c2",
+                      "on-tertiary-container": "#333125",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed": "#1e1c11",
+                      "on-primary-fixed": "#3d0412",
+                      "surface-container-low": "#f5f2ff",
+                      "surface-container-highest": "#e3e0f6",
+                      "mauve-mist": "#8A8A9E",
+                      "warm-white": "#FFFAF5",
+                      "primary-fixed-dim": "#ffb2bb",
+                      "secondary-fixed-dim": "#ffb2bb",
+                      "secondary-container": "#fe9dab",
+                      "on-surface-variant": "#534344",
+                      "soft-pink-highlight": "#FFF5F7",
+                      "tertiary": "#625f50",
+                      "secondary-fixed": "#ffd9dd",
+                      "tertiary-container": "#9d9989",
+                      "primary-container": "#d97f8b",
+                      "surface-container-high": "#e8e6fb",
+                      "primary": "#934652",
+                      "inverse-primary": "#ffb2bb",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#5a1a27",
+                      "surface-tint": "#934652",
+                      "tertiary-fixed-dim": "#ccc6b5",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#e8e2d0",
+                      "on-error-container": "#93000a",
+                      "background": "#fcf8ff",
+                      "rose-border": "rgba(217, 127, 139, 0.1)"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap-sm": "64px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "section-gap-lg": "120px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "button-text": ["Work Sans"],
+                      "title-sm": ["Be Vietnam Pro"],
+                      "display-lg": ["Be Vietnam Pro"],
+                      "body-md": ["Be Vietnam Pro"],
+                      "label-caps": ["Work Sans"],
+                      "display-lg-mobile": ["Be Vietnam Pro"],
+                      "headline-md-mobile": ["Be Vietnam Pro"],
+                      "headline-md": ["Be Vietnam Pro"],
+                      "body-lg": ["Be Vietnam Pro"]
+              },
+              "fontSize": {
+                      "button-text": ["18px", {"lineHeight": "1", "fontWeight": "600"}],
+                      "title-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                      "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.8", "fontWeight": "400"}]
+              }
+            },
+          },
         }
-      },
-      {
-        "@type": "Question",
-        "name": "How many weeks is a full-term pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A full-term pregnancy is typically 40 weeks (280 days) from the first day of your last menstrual period. However, babies born between 37 and 42 weeks are considered full-term."
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .rose-shadow { box-shadow: 0 10px 40px -10px rgba(147, 70, 82, 0.15); }
+        .fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the three trimesters of pregnancy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "First trimester: weeks 1-12 (months 1-3). Second trimester: weeks 13-27 (months 4-6). Third trimester: weeks 28-42 (months 7-9). Each trimester brings unique developments for baby and changes for mom."
+        .trimester-pill.active { background-color: #934652; color: white; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* Science Component Animation */
+        .hotspot-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-      },
-      {
-        "@type": "Question",
-        "name": "When can I first feel my baby move?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most moms first feel their baby move (called quickening) between weeks 16 and 25. First-time moms may not feel movement until closer to week 25, while experienced moms may notice it as early as week 13."
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+            100% { transform: scale(0.8); opacity: 0.5; }
         }
-      }
-    ]
-  }
-  </script>
+        .science-milestone.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .science-milestone {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s ease-out;
+        }
+    </style>
 </head>
-<body>
-      <!-- Navigation -->
-    <nav class="nav" id="navbar">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <span class="logo-icon">🌸</span>
-                <span>NeedsOfMoms</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
-                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
-                <li><a href="/baby-names">👶 Baby Names</a></li>
-                <li><a href="/week-by-week">📋 Week by Week</a></li>
-                <li><a href="/about">About</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
-        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
-        <a href="/baby-names">👶 Baby Names</a>
-        <a href="/week-by-week">📋 Week by Week</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-    </div>
-  <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active">Week by Week</li>
-          </ol>
-        </nav>
-        <h1>Week by Week <span class="text-gradient">Pregnancy Guide</span></h1>
-        <p>Follow your baby's incredible journey from a tiny cluster of cells to a fully developed baby. Explore each week to learn about growth, development, and what to expect.</p>
-        <div class="hero-actions">
-          <a href="/trimester/first-trimester" class="btn btn-primary">First Trimester</a>
-          <a href="/trimester/second-trimester" class="btn btn-secondary">Second Trimester</a>
-          <a href="/trimester/third-trimester" class="btn btn-secondary">Third Trimester</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trimester Filter -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Your Pregnancy Timeline</h2>
-          <p>Select a trimester or browse all weeks below</p>
-        </div>
-        <div class="filter-chips" style="justify-content: center; margin-bottom: var(--space-2xl);">
-          <button class="filter-chip active" data-filter="all">All Weeks</button>
-          <button class="filter-chip" data-filter="1"><span class="trimester-badge t1">T1</span> First Trimester</button>
-          <button class="filter-chip" data-filter="2"><span class="trimester-badge t2">T2</span> Second Trimester</button>
-          <button class="filter-chip" data-filter="3"><span class="trimester-badge t3">T3</span> Third Trimester</button>
-        </div>
-
-        <!-- Loading State -->
-        <div id="weeks-loading" class="text-center" style="padding: var(--space-3xl) 0;">
-          <div class="spinner spinner-lg"></div>
-          <p class="text-muted mt-3">Loading pregnancy weeks...</p>
-        </div>
-
-        <!-- Timeline Container -->
-        <div id="weeks-timeline" class="timeline" style="display: none;"></div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section" style="background: var(--bg-surface);">
-      <div class="container">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-          <p>Common questions about week-by-week pregnancy tracking</p>
-        </div>
-        <div class="accordion" style="max-width: 720px; margin: 0 auto;">
-          <div class="accordion-item">
-            <div class="accordion-header" role="button" tabindex="0">
-              <h3>When does pregnancy start being counted?</h3>
-              <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-body">
-              <div class="accordion-content">
-                <p>Pregnancy is counted from the first day of your last menstrual period (LMP). Week 1 and 2 are before conception actually occurs. By week 4, the embryo is implanting and a pregnancy test can detect hCG.</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" role="button" tabindex="0">
-              <h3>How many weeks is a full-term pregnancy?</h3>
-              <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-body">
-              <div class="accordion-content">
-                <p>A full-term pregnancy is typically 40 weeks (280 days) from the first day of your last menstrual period. However, babies born between 37 and 42 weeks are considered full-term.</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" role="button" tabindex="0">
-              <h3>What are the three trimesters of pregnancy?</h3>
-              <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-body">
-              <div class="accordion-content">
-                <p>First trimester: weeks 1-12 (months 1-3). Second trimester: weeks 13-27 (months 4-6). Third trimester: weeks 28-42 (months 7-9). Each trimester brings unique developments for baby and changes for mom.</p>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <div class="accordion-header" role="button" tabindex="0">
-              <h3>When can I first feel my baby move?</h3>
-              <span class="accordion-icon">+</span>
-            </div>
-            <div class="accordion-body">
-              <div class="accordion-content">
-                <p>Most moms first feel their baby move (called quickening) between weeks 16 and 25. First-time moms may not feel movement until closer to week 25, while experienced moms may notice it as early as week 13.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-      <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
-                        <span class="logo-icon">🌸</span>
-                        <span>NeedsOfMoms</span>
-                    </a>
-                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 backdrop-blur-lg border-b border-rose-border docked full-width top-0 sticky z-50 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-2 text-primary cursor-pointer" onclick="window.location.href='/week-by-week'">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-headline-md text-title-sm font-bold tracking-tight">NeedsOfMoms</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="/week-by-week">Week-by-Week</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="/tools/due-date-calculator">Due Date Calculator</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="/tools/ovulation-calculator">Ovulation Calculator</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="/baby-name-generator">Baby Names</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-primary text-on-primary font-button-text text-label-caps px-6 py-2 rounded-full hover:opacity-90 transition-all active:scale-95">Join Community</button>
+<span class="material-symbols-outlined text-primary cursor-pointer text-2xl" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32 bg-blush-cream">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 items-center">
+<div class="fade-in-up">
+<div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full mb-6">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caps text-label-caps">MEDICALLY VETTED GUIDE</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6">
+                Your Pregnancy Journey, <span class="text-primary">Week-by-Week</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                Navigate every milestone with confidence. Track your baby's remarkable development and understand the beautiful changes happening in your body.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary font-button-text text-button-text px-10 py-5 rounded-full rose-shadow hover:opacity-95 transition-all active:scale-95">Jump to My Week</button>
+<button class="border-2 border-primary text-primary font-button-text text-button-text px-10 py-5 rounded-full hover:bg-primary/5 transition-all">Growth Calendar</button>
+</div>
+</div>
+<div class="relative fade-in-up" style="animation-delay: 0.2s">
+<div class="aspect-[0.75] rounded-[40px] overflow-hidden rose-shadow bg-surface">
+<img alt="Happy expectant mother" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uillnQvF9V9N2jPXx5vOqLTzckW2fc3sNCS69X9fXlNlTqw3mh6ZzffKBwNP1sqOdTbE0DVBiGKfo91FfmfUoxUcmFDb939vY3RipSU3c1NM1XVrznVCWajzf2Kj9NGggi_gCa44eJQpEVlX0V20jKyb6jPz60A1TZAZTeXk9l4wewD0JI6QtdV9Op9i7Ucd6kclA7oJeCxjEXJniz93EJxjxnS29-t7YrSab3GtieiJ2itJUmUr5Dr1A"/>
+</div>
+<!-- Float Card -->
+<div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-[20px] shadow-xl border border-rose-border max-w-[240px] hidden lg:block">
+<div class="flex items-center gap-4 mb-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">child_care</span>
+</div>
+<div>
+<p class="font-label-caps text-xs text-on-surface-variant">CURRENT SIZE</p>
+<p class="font-title-sm text-primary">Sweet Pea</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant">Week 6: Your baby's heart has started beating!</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Trimester Sticky Nav -->
+<div class="sticky top-[64px] z-40 bg-surface/95 backdrop-blur-md border-y border-rose-border py-4">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex justify-center gap-2 md:gap-8 overflow-x-auto no-scrollbar">
+<button class="trimester-pill active font-button-text text-sm md:text-button-text px-6 py-3 rounded-full transition-all whitespace-nowrap">1st Trimester (Week 1-12)</button>
+<button class="trimester-pill bg-soft-pink-highlight text-primary font-button-text text-sm md:text-button-text px-6 py-3 rounded-full hover:bg-primary/10 transition-all whitespace-nowrap">2nd Trimester (Week 13-26)</button>
+<button class="trimester-pill bg-soft-pink-highlight text-primary font-button-text text-sm md:text-button-text px-6 py-3 rounded-full hover:bg-primary/10 transition-all whitespace-nowrap">3rd Trimester (Week 27-40+)</button>
+</div>
+</div>
+<main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap-sm">
+<!-- Weekly Content Cards -->
+<section class="mb-section-gap-lg">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">The First Trimester</h2>
+<p class="font-body-md text-on-surface-variant">The foundation of life begins here.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="w-12 h-12 rounded-full border border-rose-border flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-rose-border flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Week 4 -->
+<div class="bg-white border border-rose-border rounded-[20px] p-8 rose-shadow group hover:-translate-y-2 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<span class="font-display-lg text-primary/10 leading-none">04</span>
+<div class="bg-soft-pink-highlight text-primary p-3 rounded-xl">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+</div>
+<h3 class="font-title-sm text-on-surface mb-3">Implantation and Early Signs</h3>
+<div class="mb-6">
+<p class="font-label-caps text-xs text-primary mb-2">BABY'S GROWTH</p>
+<p class="font-body-md text-on-surface-variant">Your baby is a tiny ball of cells called a blastocyst, making their home in your uterine lining.</p>
+</div>
+<div class="mb-8 p-4 bg-blush-cream rounded-xl">
+<p class="font-label-caps text-xs text-secondary mb-2">MOM'S BODY</p>
+<p class="font-body-md text-on-secondary-container">You might start feeling early symptoms like mild cramping, spotting, or breast tenderness.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-button-text group-hover:gap-4 transition-all" href="/week-by-week/week?n=4">
+                    Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Week 5 -->
+<div class="bg-white border border-rose-border rounded-[20px] p-8 rose-shadow group hover:-translate-y-2 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<span class="font-display-lg text-primary/10 leading-none">05</span>
+<div class="bg-soft-pink-highlight text-primary p-3 rounded-xl">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+</div>
+<h3 class="font-title-sm text-on-surface mb-3">The Heart Begins to Beat</h3>
+<div class="mb-6">
+<p class="font-label-caps text-xs text-primary mb-2">BABY'S GROWTH</p>
+<p class="font-body-md text-on-surface-variant">Major organs like the heart and circulatory system are forming. The neural tube is closing.</p>
+</div>
+<div class="mb-8 p-4 bg-blush-cream rounded-xl">
+<p class="font-label-caps text-xs text-secondary mb-2">MOM'S BODY</p>
+<p class="font-body-md text-on-secondary-container">Morning sickness may kick in. Fatigue is common as your body works overtime to support life.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-button-text group-hover:gap-4 transition-all" href="/week-by-week/week?n=5">
+                    Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Week 6 -->
+<div class="bg-white border border-rose-border rounded-[20px] p-8 rose-shadow group hover:-translate-y-2 transition-transform duration-300">
+<div class="flex justify-between items-start mb-6">
+<span class="font-display-lg text-primary/10 leading-none">06</span>
+<div class="bg-soft-pink-highlight text-primary p-3 rounded-xl">
+<span class="material-symbols-outlined">visibility</span>
+</div>
+</div>
+<h3 class="font-title-sm text-on-surface mb-3">Facial Features Form</h3>
+<div class="mb-6">
+<p class="font-label-caps text-xs text-primary mb-2">BABY'S GROWTH</p>
+<p class="font-body-md text-on-surface-variant">Tiny buds that will become arms and legs appear. The jaw, cheeks, and chin are taking shape.</p>
+</div>
+<div class="mb-8 p-4 bg-blush-cream rounded-xl">
+<p class="font-label-caps text-xs text-secondary mb-2">MOM'S BODY</p>
+<p class="font-body-md text-on-secondary-container">A heightened sense of smell and frequent trips to the bathroom are hallmark signs of this week.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-button-text group-hover:gap-4 transition-all" href="/week-by-week/week?n=6">
+                    Read More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Authority Content / Interactive Science Section -->
+<section class="bg-surface-container-low rounded-[40px] p-8 md:p-20 mb-section-gap-lg overflow-hidden">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Science of Growth</h2>
+<div class="w-24 h-1 bg-primary/20 mx-auto rounded-full"></div>
+<p class="font-body-md text-on-surface-variant mt-6">Explore the critical milestones of early development. Drag the slider or click on the hotspots to see the miracle unfold.</p>
+</div>
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<!-- Milestone Text Side -->
+<div class="lg:col-span-5 order-2 lg:order-1 space-y-6">
+<div class="min-h-[320px] bg-white p-8 rounded-[32px] rose-shadow flex flex-col justify-center" id="milestone-content">
+<div id="content-display">
+<div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full font-label-caps text-xs mb-4">WEEK 4 - 8</div>
+<h3 class="font-title-sm text-primary mb-4">The Miracle of Organogenesis</h3>
+<p class="font-body-md text-on-surface-variant">
+                            During the first eight weeks, your baby undergoes a process called organogenesis. All major internal and external structures are formed as a single fertilized egg transforms into a complex organism.
+                        </p>
+</div>
+</div>
+<!-- Interactive Slider -->
+<div class="px-4">
+<input class="w-full h-2 bg-primary/10 rounded-lg appearance-none cursor-pointer accent-primary" id="growth-slider" max="3" min="1" step="1" type="range" value="1"/>
+<div class="flex justify-between mt-4 font-label-caps text-[10px] text-on-surface-variant/60 tracking-widest">
+<span>ORGANOGENESIS</span>
+<span>NEURAL TUBE</span>
+<span>LIMB GROWTH</span>
+</div>
+</div>
+</div>
+<!-- Visual Interactive Side -->
+<div class="lg:col-span-7 order-1 lg:order-2 relative group flex justify-center">
+<div class="relative max-w-md w-full aspect-square bg-white rounded-[40px] shadow-2xl p-4 border border-rose-border overflow-hidden">
+<img alt="Medical Illustration of fetal development" class="w-full h-full object-contain transition-all duration-700" id="science-main-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEKubekxU2NCOA36leZoRZcAYG9_pIs-EQex9C95_oS-QmcY53fVxXbmLCga6I9UV8QMM-sNLNWijRQfuw7Zy6oJnMCfsiV2W8b9oSn3YYrMIqbDFIKPkXYPKiCPBVljCKDz1-WGDNG4MrPbwyzGgggOTWDPGM7pkFHj7Msm8x285FNZRQB2iNV-Oai55W9-DXBINbDuPQWtX1JWDITujtUmvjp041g-tCprDTTZeSkOxLx04ywJ_rzZEXgg17K0Z_KiBik87j930"/>
+<!-- Hotspots -->
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center group/btn z-10" onclick="updateMilestone(1)">
+<span class="absolute inset-0 rounded-full bg-primary/40 hotspot-pulse"></span>
+<span class="relative w-3 h-3 rounded-full bg-primary shadow-lg border border-white"></span>
+</button>
+<button class="absolute top-[30%] left-[45%] w-8 h-8 rounded-full bg-secondary/20 backdrop-blur-sm flex items-center justify-center group/btn z-10" onclick="updateMilestone(2)">
+<span class="absolute inset-0 rounded-full bg-secondary/40 hotspot-pulse" style="animation-delay: 0.5s"></span>
+<span class="relative w-3 h-3 rounded-full bg-secondary shadow-lg border border-white"></span>
+</button>
+<button class="absolute bottom-[35%] right-[30%] w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center group/btn z-10" onclick="updateMilestone(3)">
+<span class="absolute inset-0 rounded-full bg-primary/40 hotspot-pulse" style="animation-delay: 1s"></span>
+<span class="relative w-3 h-3 rounded-full bg-primary shadow-lg border border-white"></span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto mb-section-gap-lg">
+<h2 class="font-headline-md text-headline-md text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group bg-white border border-rose-border rounded-2xl overflow-hidden" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-sm text-on-surface">When does the first trimester officially end?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-rose-border pt-4">
+                    The first trimester typically concludes at the end of Week 13. This period covers the first three months of pregnancy and is characterized by the most rapid phase of development for your baby.
                 </div>
-                <div class="footer-column">
-                    <h4>Tools</h4>
-                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
-                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
-                    <a href="/baby-names">Baby Names</a>
-                    <a href="/baby-name-generator">Name Generator</a>
+</details>
+<details class="group bg-white border border-rose-border rounded-2xl overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-sm text-on-surface">How is gestational age calculated?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-rose-border pt-4">
+                    Gestational age is measured from the first day of your last menstrual period (LMP). Since most people don't know the exact date of conception, this standardized method adds about two weeks to the baby's actual age from conception.
                 </div>
-                <div class="footer-column">
-                    <h4>Resources</h4>
-                    <a href="/week-by-week">Week by Week</a>
-                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
-                    <a href="/what-to-expect">What to Expect</a>
-                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+</details>
+<details class="group bg-white border border-rose-border rounded-2xl overflow-hidden">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
+<span class="font-title-sm text-on-surface">Is it normal to not feel pregnant yet in Week 4?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-on-surface-variant font-body-md border-t border-rose-border pt-4">
+                    Absolutely. Many women don't experience noticeable symptoms until Week 6 or later. Every body is different, and the absence of symptoms is not necessarily an indication of an unhealthy pregnancy.
                 </div>
-                <div class="footer-column">
-                    <h4>Company</h4>
-                    <a href="/about">About Us</a>
-                    <a href="/contact">Contact</a>
-                    <a href="/privacy">Privacy Policy</a>
-                    <a href="/terms">Terms of Use</a>
-                    <a href="/disclaimer">Disclaimer</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
-                <p>Made with 💕 for expecting parents everywhere</p>
-            </div>
-        </div>
-    </footer>
+</details>
+</div>
+</section>
+<!-- Medical Review Badge -->
+<section class="flex flex-col items-center text-center max-w-2xl mx-auto py-12 border-t border-rose-border">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">medical_information</span>
+</div>
+<h3 class="font-title-sm text-on-surface mb-2">Medically Reviewed Content</h3>
+<p class="font-body-md text-on-surface-variant mb-6">
+            Every week of this guide is reviewed by our Medical Editorial Board to ensure accuracy, safety, and adherence to current ACOG guidelines.
+        </p>
+<div class="flex items-center gap-3">
+<img alt="Dr. Sarah Miller" class="w-10 h-10 rounded-full bg-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16fKNZN3tjDrTrsPIIKigXBU8_h45Abd3DQpGhnLoqsamY-8q1NyK06UV_hCQrHXG_jSbpMYZFTqygUeCH5nDT0TgBeXoRKCA0oI4Vv5mn6yIZxqNfmRTfb4-XnuanlBjcSVXpt3HEGQ7-zIVwV8lsdttm4giyrGm2yCHFiZ3vDg0d0712wBQ9XmwYk2KoE5zc7dESDPaWPbdxlfsFRX1QPo2JPIDOqgQMYwFyoT-lONlTcuLje5qYZVVYBrlp85b1n-Jp4vydK4"/>
+<div class="text-left">
+<p class="font-label-caps text-xs text-on-surface font-bold">DR. SARAH MILLER, OB-GYN</p>
+<p class="text-xs text-on-surface-variant">Medical Review Lead</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface w-full pt-section-gap-sm pb-gutter border-t border-rose-border">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-title-sm font-headline-md text-primary dark:text-primary-fixed-dim mb-4">NeedsOfMoms</div>
+<p class="text-body-md font-body-md text-on-surface-variant dark:text-mauve-mist">
+                © 2024 NeedsOfMoms. Designed with love to support mothers at every stage of their journey.
+            </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Tools</span>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/week-by-week">Week-by-Week</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/tools/due-date-calculator">Due Date Calculator</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/tools/ovulation-calculator">Ovulation Calculator</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/baby-name-generator">Baby Name Generator</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Company</span>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/about">About Us</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/privacy">Privacy Policy</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/terms">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-label-caps font-label-caps text-primary mb-2">Support</span>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/contact">Contact</a>
+<a class="text-body-md font-body-md text-on-surface-variant hover:text-primary hover:underline decoration-primary transition-all" href="/disclaimer">Medical Disclaimer</a>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto mt-12 pt-8 border-t border-rose-border flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-mauve-mist text-center md:text-left">© 2024 NeedsOfMoms. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">video_library</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+</div>
+</div>
+</footer>
+<script>
+    // Science Component Logic
+    const milestoneData = [
+        {
+            tag: "WEEK 4 - 8",
+            title: "The Miracle of Organogenesis",
+            body: "During the first eight weeks, your baby undergoes a process called organogenesis. All major internal and external structures are formed as a single fertilized egg transforms into a complex organism.",
+            scale: "scale-100",
+            rotate: "rotate-0"
+        },
+        {
+            tag: "WEEK 5 - 6",
+            title: "Neural Tube Closure",
+            body: "The neural tube, which will become the baby's brain and spinal cord, begins to close during week 5. This is a critical milestone where the foundation of the central nervous system is laid.",
+            scale: "scale-110",
+            rotate: "rotate-3"
+        },
+        {
+            tag: "WEEK 7 - 9",
+            title: "Limb Development",
+            body: "Tiny buds that will become arms and legs begin to lengthen. By week 9, elbows are visible and toes begin to form, marking the transition from an embryo to a fetus.",
+            scale: "scale-125",
+            rotate: "-2"
+        }
+    ];
 
-  <script src="/js/app.js"></script>
-  <script>
-  (function() {
-    'use strict';
+    const slider = document.getElementById('growth-slider');
+    const contentDisplay = document.getElementById('content-display');
+    const mainImg = document.getElementById('science-main-img');
 
-    var DATA_URL = '/data/pregnancy-weeks.json';
-    var timeline = document.getElementById('weeks-timeline');
-    var loading = document.getElementById('weeks-loading');
-    var filterChips = document.querySelectorAll('.filter-chip');
-    var allWeeks = [];
-
-    // Fetch and render timeline
-    fetch(DATA_URL)
-      .then(function(r) { return r.json(); })
-      .then(function(weeks) {
-        allWeeks = weeks;
-        renderTimeline(weeks);
-        loading.style.display = 'none';
-        timeline.style.display = 'block';
-      })
-      .catch(function() {
-        loading.innerHTML = '<p class="text-muted">Failed to load pregnancy data. Please refresh the page.</p>';
-      });
-
-    function getTrimesterName(t) {
-      if (t === 1) return 'First Trimester';
-      if (t === 2) return 'Second Trimester';
-      return 'Third Trimester';
+    function updateMilestone(index) {
+        const data = milestoneData[index - 1];
+        slider.value = index;
+        
+        // Animate content change
+        contentDisplay.style.opacity = '0';
+        contentDisplay.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            contentDisplay.innerHTML = `
+                <div class="inline-block px-4 py-1 bg-primary/10 text-primary rounded-full font-label-caps text-xs mb-4">${data.tag}</div>
+                <h3 class="font-title-sm text-primary mb-4">${data.title}</h3>
+                <p class="font-body-md text-on-surface-variant">${data.body}</p>
+            `;
+            contentDisplay.style.opacity = '1';
+            contentDisplay.style.transform = 'translateY(0)';
+            
+            // Visual feedback on image
+            mainImg.className = `w-full h-full object-contain transition-all duration-700 ${data.scale} ${data.rotate}`;
+        }, 200);
     }
 
-    function getTrimesterClass(t) {
-      return 't' + t;
-    }
-
-    function getBriefDesc(week) {
-      // Use first 2 developments as brief description
-      if (week.babyDevelopments && week.babyDevelopments.length > 0) {
-        return week.babyDevelopments.slice(0, 2).join(', ');
-      }
-      return '';
-    }
-
-    function renderTimeline(weeks) {
-      timeline.innerHTML = '';
-      weeks.forEach(function(week) {
-        var item = document.createElement('div');
-        item.className = 'timeline-item';
-        item.setAttribute('data-trimester', week.trimester);
-
-        var markerColor = week.trimester === 1 ? 'var(--trimester-1)' :
-                          week.trimester === 2 ? 'var(--trimester-2)' : 'var(--trimester-3)';
-
-        item.innerHTML =
-          '<div class="timeline-marker" style="border-color: ' + markerColor + ';"></div>' +
-          '<div class="timeline-content">' +
-            '<a href="/week-by-week/week.html?week=' + week.week + '" style="text-decoration: none; color: inherit;">' +
-              '<div class="flex items-center gap-2" style="margin-bottom: var(--space-sm);">' +
-                '<span class="timeline-week">Week ' + week.week + '</span>' +
-                '<span class="trimester-badge ' + getTrimesterClass(week.trimester) + '">' + getTrimesterName(week.trimester) + '</span>' +
-              '</div>' +
-              '<div class="timeline-title">Baby is the size of a ' + week.fruitComparison + '</div>' +
-              '<p class="timeline-description">' + getBriefDesc(week) + '</p>' +
-              '<div class="timeline-meta">' +
-                '<span class="timeline-size">📏 ' + week.babySizeCm + ' cm</span>' +
-                '<span class="timeline-size">⚖️ ' + week.babyWeight + '</span>' +
-              '</div>' +
-            '</a>' +
-          '</div>';
-
-        timeline.appendChild(item);
-      });
-    }
-
-    // Filter chips
-    filterChips.forEach(function(chip) {
-      chip.addEventListener('click', function() {
-        filterChips.forEach(function(c) { c.classList.remove('active'); });
-        chip.classList.add('active');
-
-        var filter = chip.getAttribute('data-filter');
-        var items = timeline.querySelectorAll('.timeline-item');
-
-        items.forEach(function(item) {
-          if (filter === 'all' || item.getAttribute('data-trimester') === filter) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
+    slider.addEventListener('input', (e) => {
+        updateMilestone(parseInt(e.target.value));
     });
-  })();
-  </script>
-</body>
-</html>
+
+    // Existing interaction logic
+    const tabs = document.querySelectorAll('.trimester-pill');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => {
+                t.classList.remove('active', 'bg-primary', 'text-white');
+                t.classList.add('bg-soft-pink-highlight', 'text-primary');
+            });
+            tab.classList.add('active', 'bg-primary', 'text-white');
+            tab.classList.remove('bg-soft-pink-highlight', 'text-primary');
+        });
+    });
+
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                entry.target.style.opacity = '1';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section, .group').forEach(el => {
+        el.style.opacity = '0';
+        observer.observe(el);
+    });
+</script>
+</body></html>
