@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovulation Calculator | Find Your Fertile Window | NeedsOfMoms</title>
+  <meta name="description" content="Calculate your ovulation date and fertile window. Enter your last period date and cycle length to find the best days to conceive.">
+  <meta property="og:title" content="Ovulation Calculator - Find Your Fertile Window | NeedsOfMoms">
+  <meta property="og:description" content="Calculate your ovulation date and fertile window. Find the best days to conceive with our easy calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://needsofmoms.com/tools/ovulation-calculator">
+  <meta property="og:site_name" content="NeedsOfMoms">
+  <meta property="og:image" content="https://needsofmoms.com/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ovulation Calculator - Find Your Fertile Window | NeedsOfMoms">
+  <meta name="twitter:description" content="Calculate your ovulation date and fertile window. Find the best days to conceive.">
+  <link rel="canonical" href="https://needsofmoms.com/tools/ovulation-calculator">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://needsofmoms.com/#website",
+        "url": "https://needsofmoms.com/",
+        "name": "NeedsOfMoms"
+      },
+      {
+        "@type": "Article",
+        "headline": "Ovulation Calculator - Find Your Fertile Window",
+        "description": "Calculate your ovulation date and fertile window to find the best days to conceive.",
+        "url": "https://needsofmoms.com/tools/ovulation-calculator",
+        "author": {
+          "@type": "Organization",
+          "name": "NeedsOfMoms",
+          "url": "https://needsofmoms.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "NeedsOfMoms",
+          "url": "https://needsofmoms.com/"
+        },
+        "datePublished": "2026-01-15",
+        "dateModified": "2026-05-28"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://needsofmoms.com/tools/ovulation-calculator#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://needsofmoms.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://needsofmoms.com/tools/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Ovulation Calculator",
+            "item": "https://needsofmoms.com/tools/ovulation-calculator"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is the ovulation date calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ovulation typically occurs 14 days before the start of your next period. For a 28-day cycle, ovulation usually happens around day 14. For other cycle lengths, subtract 14 from your total cycle length to estimate ovulation day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the fertile window?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The fertile window is the 6-day period ending on the day of ovulation. Sperm can survive up to 5 days inside the female reproductive tract, and the egg survives 12-24 hours after ovulation. The best days to conceive are the 2-3 days before ovulation and the day of ovulation itself."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my cycles are irregular?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If your cycles are irregular, this calculator provides an estimate based on your average cycle length. For more accurate results, consider tracking your basal body temperature (BBT), using ovulation predictor kits (OPKs), or monitoring cervical mucus changes. Consult your healthcare provider if you have consistently irregular cycles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I increase my chances of conceiving?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To increase your chances: have intercourse every 1-2 days during your fertile window, maintain a healthy lifestyle, take prenatal vitamins with folic acid, track your ovulation signs, manage stress, and avoid smoking and excessive alcohol. The highest chances of conception are from intercourse in the 2-3 days leading up to ovulation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are signs of ovulation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common signs of ovulation include: changes in cervical mucus (becomes clear, slippery, and stretchy like egg whites), a slight rise in basal body temperature, mild pelvic pain (mittelschmerz), increased libido, breast tenderness, and light spotting. Ovulation predictor kits (OPKs) can also detect the LH surge that precedes ovulation."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+      <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">🌸</span>
+                <span>NeedsOfMoms</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+                <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+                <li><a href="/baby-names">👶 Baby Names</a></li>
+                <li><a href="/week-by-week">📋 Week by Week</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+        <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+        <a href="/baby-names">👶 Baby Names</a>
+        <a href="/week-by-week">📋 Week by Week</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="/tools/"><span itemprop="name">Tools</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <span itemprop="name">Ovulation Calculator</span>
+          <meta itemprop="position" content="3">
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: var(--space-xl); padding-bottom: var(--space-3xl);">
+    <!-- Page Header -->
+    <div style="text-align: center; margin-bottom: var(--space-2xl);">
+      <h1 class="text-gradient">Ovulation Calculator</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: var(--text-lg);">
+        Discover your fertile window and find the best days to conceive. Calculate your ovulation date based on your cycle.
+      </p>
+    </div>
+
+    <!-- Calculator -->
+    <div class="calculator" style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <div class="calculator-header">
+        <h3>Find Your Fertile Window</h3>
+        <p>Enter your last period date and average cycle length</p>
+      </div>
+
+      <div class="calculator-body">
+        <div class="calc-input-group">
+          <label for="last-period-date">First Day of Last Period</label>
+          <div class="input-wrapper">
+            <input type="date" id="last-period-date" placeholder="Select date" max="">
+          </div>
+        </div>
+
+        <div class="calc-input-group">
+          <label for="cycle-length">Average Cycle Length</label>
+          <div class="input-wrapper">
+            <select id="cycle-length" style="flex: 1; background: transparent; border: none; color: var(--text-primary); padding: 0.625rem 0.875rem; font-size: var(--text-base); outline: none; appearance: none; cursor: pointer;">
+              <option value="21">21 days</option>
+              <option value="22">22 days</option>
+              <option value="23">23 days</option>
+              <option value="24">24 days</option>
+              <option value="25">25 days</option>
+              <option value="26">26 days</option>
+              <option value="27">27 days</option>
+              <option value="28" selected>28 days (average)</option>
+              <option value="29">29 days</option>
+              <option value="30">30 days</option>
+              <option value="31">31 days</option>
+              <option value="32">32 days</option>
+              <option value="33">33 days</option>
+              <option value="34">34 days</option>
+              <option value="35">35 days</option>
+            </select>
+          </div>
+          <span class="form-hint">Most women have a 28-day cycle, but 21-35 days is normal.</span>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-block btn-lg" id="calc-ovulation-btn">
+          Calculate Fertile Window
+        </button>
+      </div>
+
+      <!-- Results Section -->
+      <div id="ovulation-results" style="display: none; margin-top: var(--space-xl);">
+        <hr>
+
+        <!-- Main Results -->
+        <div class="calc-result" style="margin-bottom: var(--space-lg);">
+          <div class="calc-result-label">Estimated Ovulation Date</div>
+          <div class="calc-result-value" id="ovulation-date-result">—</div>
+          <div class="calc-result-detail" id="cycle-day-result">—</div>
+        </div>
+
+        <!-- Result Boxes -->
+        <div class="result-boxes" style="margin-bottom: var(--space-lg);">
+          <div class="result-box">
+            <div class="result-box-value" id="fertile-start">—</div>
+            <div class="result-box-label">Fertile Window Start</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="fertile-end">—</div>
+            <div class="result-box-label">Fertile Window End</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="best-days">—</div>
+            <div class="result-box-label">Best Days to Conceive</div>
+          </div>
+          <div class="result-box">
+            <div class="result-box-value" id="next-period">—</div>
+            <div class="result-box-label">Next Period Expected</div>
+          </div>
+        </div>
+
+        <!-- Calendar Visualization -->
+        <div class="card" style="margin-bottom: var(--space-lg);">
+          <div class="card-body">
+            <h4 style="margin-bottom: var(--space-md); text-align: center;">Your Fertile Window Calendar</h4>
+            <div id="fertility-calendar"></div>
+          </div>
+        </div>
+
+        <!-- Best Days Info -->
+        <div class="card" style="margin-bottom: var(--space-lg);">
+          <div class="card-body">
+            <h4 style="margin-bottom: var(--space-md);">Best Days to Conceive</h4>
+            <p>Based on your cycle, here are the days with the highest probability of conception:</p>
+            <div id="best-days-list" style="margin-top: var(--space-md);"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips Section -->
+    <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <h2 class="text-center" style="margin-bottom: var(--space-lg);">Tips for Conception</h2>
+      <div class="grid grid-2" style="gap: var(--space-md);">
+        <div class="card">
+          <div class="card-body">
+            <h4 style="font-size: var(--text-base);">🕐 Time It Right</h4>
+            <p style="font-size: var(--text-sm);">Have intercourse every 1-2 days during your fertile window. The 2-3 days before ovulation have the highest conception rates.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 style="font-size: var(--text-base);">💊 Take Prenatal Vitamins</h4>
+            <p style="font-size: var(--text-sm);">Start taking folic acid (400-800mcg daily) at least 3 months before trying to conceive to reduce neural tube defects.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 style="font-size: var(--text-base);">🥗 Eat Healthy</h4>
+            <p style="font-size: var(--text-sm);">Maintain a balanced diet rich in iron, calcium, and omega-3 fatty acids. Limit caffeine and avoid alcohol and smoking.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h4 style="font-size: var(--text-base);">📊 Track Your Signs</h4>
+            <p style="font-size: var(--text-sm);">Monitor cervical mucus, basal body temperature, and use ovulation predictor kits for more accurate ovulation detection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="max-width: 700px; margin: 0 auto var(--space-2xl);">
+      <h2 class="text-center" style="margin-bottom: var(--space-lg);">Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>How is the ovulation date calculated?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Ovulation typically occurs 14 days before the start of your next period. For a 28-day cycle, ovulation usually happens around day 14. For other cycle lengths, subtract 14 from your total cycle length to estimate ovulation day. For example, with a 30-day cycle, ovulation would be around day 16.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What is the fertile window?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>The fertile window is the 6-day period ending on the day of ovulation. Sperm can survive up to 5 days inside the female reproductive tract, and the egg survives 12-24 hours after ovulation. The best days to conceive are the 2-3 days before ovulation and the day of ovulation itself.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What if my cycles are irregular?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>If your cycles are irregular, this calculator provides an estimate based on your average cycle length. For more accurate results, consider tracking your basal body temperature (BBT), using ovulation predictor kits (OPKs), or monitoring cervical mucus changes. Consult your healthcare provider if you have consistently irregular cycles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>How can I increase my chances of conceiving?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>To increase your chances: have intercourse every 1-2 days during your fertile window, maintain a healthy lifestyle, take prenatal vitamins with folic acid, track your ovulation signs, manage stress, and avoid smoking and excessive alcohol. The highest chances of conception are from intercourse in the 2-3 days leading up to ovulation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item faq-item">
+          <button class="accordion-header faq-question" type="button">
+            <span>What are signs of ovulation?</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body faq-answer">
+            <div class="accordion-content">
+              <p>Common signs of ovulation include: changes in cervical mucus (becomes clear, slippery, and stretchy like egg whites), a slight rise in basal body temperature, mild pelvic pain (mittelschmerz), increased libido, breast tenderness, and light spotting. Ovulation predictor kits (OPKs) can also detect the LH surge that precedes ovulation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <div class="alert alert-warning" style="max-width: 700px; margin: 0 auto;">
+      <div class="alert-content">
+        <p style="margin: 0;"><strong>Disclaimer:</strong> This calculator provides estimates based on average cycle patterns. Actual ovulation timing can vary. For precise ovulation tracking, consider using ovulation predictor kits (OPKs) or consulting your healthcare provider.</p>
+      </div>
+    </div>
+  </main>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+                        <span class="logo-icon">🌸</span>
+                        <span>NeedsOfMoms</span>
+                    </a>
+                    <p>Free pregnancy tools and resources for expecting parents. Your trusted companion from positive test to first steps.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Tools</h4>
+                    <a href="/tools/due-date-calculator">Due Date Calculator</a>
+                    <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+                    <a href="/baby-names">Baby Names</a>
+                    <a href="/baby-name-generator">Name Generator</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="/week-by-week">Week by Week</a>
+                    <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
+                    <a href="/what-to-expect">What to Expect</a>
+                    <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="/about">About Us</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Use</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+                <p>Made with 💕 for expecting parents everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+  <script src="/js/app.js"></script>
+  <script>
+  (function() {
+    'use strict';
+
+    var NOM = window.NeedsOfMoms || {};
+
+    // DOM Elements
+    var lastPeriodInput = document.getElementById('last-period-date');
+    var cycleLengthSelect = document.getElementById('cycle-length');
+    var calcBtn = document.getElementById('calc-ovulation-btn');
+    var resultsDiv = document.getElementById('ovulation-results');
+    var ovulationDateResult = document.getElementById('ovulation-date-result');
+    var cycleDayResult = document.getElementById('cycle-day-result');
+    var fertileStart = document.getElementById('fertile-start');
+    var fertileEnd = document.getElementById('fertile-end');
+    var bestDaysEl = document.getElementById('best-days');
+    var nextPeriod = document.getElementById('next-period');
+    var calendarContainer = document.getElementById('fertility-calendar');
+    var bestDaysList = document.getElementById('best-days-list');
+
+    // Set max date to today
+    var today = new Date();
+    var todayStr = today.toISOString().split('T')[0];
+    if (lastPeriodInput) lastPeriodInput.setAttribute('max', todayStr);
+
+    function formatDate(date) {
+      var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      return months[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
+    }
+
+    function formatShortDate(date) {
+      var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return months[date.getMonth()] + ' ' + date.getDate();
+    }
+
+    function addDays(date, days) {
+      var d = new Date(date);
+      d.setDate(d.getDate() + days);
+      return d;
+    }
+
+    function isSameDay(d1, d2) {
+      return d1.getFullYear() === d2.getFullYear() &&
+             d1.getMonth() === d2.getMonth() &&
+             d1.getDate() === d2.getDate();
+    }
+
+    function isInRange(date, start, end) {
+      var d = date.getTime();
+      return d >= start.getTime() && d <= end.getTime();
+    }
+
+    function calculateOvulation() {
+      var dateVal = lastPeriodInput.value;
+      if (!dateVal) {
+        alert('Please enter the first day of your last period.');
+        return;
+      }
+
+      var cycleLength = parseInt(cycleLengthSelect.value, 10);
+      var lastPeriod = new Date(dateVal + 'T00:00:00');
+
+      // Ovulation occurs ~14 days before next period
+      var ovulationDay = cycleLength - 14;
+      var ovulationDate = addDays(lastPeriod, ovulationDay);
+
+      // Fertile window: 5 days before ovulation + ovulation day
+      var fertileWindowStart = addDays(ovulationDate, -5);
+      var fertileWindowEnd = ovulationDate;
+
+      // Best days: 2-3 days before ovulation
+      var bestDay1 = addDays(ovulationDate, -2);
+      var bestDay2 = addDays(ovulationDate, -1);
+      var bestDay3 = ovulationDate;
+
+      // Next period
+      var nextPeriodDate = addDays(lastPeriod, cycleLength);
+
+      // Current cycle day
+      var daysSincePeriod = Math.floor((today - lastPeriod) / (1000 * 60 * 60 * 24));
+      var currentCycleDay = daysSincePeriod + 1;
+
+      // Display results
+      resultsDiv.style.display = 'block';
+      ovulationDateResult.textContent = NOM.formatDate ? NOM.formatDate(ovulationDate) : formatDate(ovulationDate);
+      cycleDayResult.textContent = 'Day ' + ovulationDay + ' of your ' + cycleLength + '-day cycle';
+      fertileStart.textContent = formatShortDate(fertileWindowStart);
+      fertileEnd.textContent = formatShortDate(fertileWindowEnd);
+      bestDaysEl.textContent = formatShortDate(bestDay1) + ' - ' + formatShortDate(bestDay3);
+      nextPeriod.textContent = NOM.formatDate ? NOM.formatDate(nextPeriodDate) : formatDate(nextPeriodDate);
+
+      // Render calendar
+      renderCalendar(lastPeriod, cycleLength, ovulationDate, fertileWindowStart, fertileWindowEnd, bestDay1, bestDay2, bestDay3);
+
+      // Render best days list
+      renderBestDaysList(bestDay1, bestDay2, bestDay3, ovulationDate);
+
+      // Scroll to results
+      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function renderCalendar(lastPeriod, cycleLength, ovulationDate, fertileStart, fertileEnd, bestDay1, bestDay2, bestDay3) {
+      var html = '';
+      var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+      // Show calendar for the month containing the fertile window
+      var calMonth = fertileStart.getMonth();
+      var calYear = fertileStart.getFullYear();
+
+      // If fertile window spans two months, show the month with ovulation
+      if (fertileStart.getMonth() !== fertileEnd.getMonth()) {
+        calMonth = ovulationDate.getMonth();
+        calYear = ovulationDate.getFullYear();
+      }
+
+      // Build calendar header
+      html += '<div style="text-align: center; margin-bottom: var(--space-md);">';
+      html += '<h4 style="margin: 0; color: var(--text-primary);">' + monthNames[calMonth] + ' ' + calYear + '</h4>';
+      html += '</div>';
+
+      // Calendar grid
+      html += '<div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center;">';
+
+      // Day name headers
+      for (var d = 0; d < 7; d++) {
+        html += '<div style="padding: 8px 4px; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">' + dayNames[d] + '</div>';
+      }
+
+      // First day of month
+      var firstDay = new Date(calYear, calMonth, 1);
+      var startDayOfWeek = firstDay.getDay();
+
+      // Empty cells before first day
+      for (var i = 0; i < startDayOfWeek; i++) {
+        html += '<div style="padding: 8px 4px;"></div>';
+      }
+
+      // Days of the month
+      var daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+      for (var day = 1; day <= daysInMonth; day++) {
+        var currentDate = new Date(calYear, calMonth, day);
+        var cellStyle = 'padding: 10px 4px; border-radius: 8px; font-size: 0.875rem; cursor: default;';
+        var dayLabel = '';
+        var bgColor = 'transparent';
+        var textColor = 'var(--text-secondary)';
+        var fontWeight = '400';
+
+        if (isSameDay(currentDate, ovulationDate)) {
+          bgColor = 'linear-gradient(135deg, #D97F8B, #b87ce8)';
+          textColor = '#fff';
+          fontWeight = '700';
+          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; opacity: 0.8;">Ovulation</div>';
+        } else if (isSameDay(currentDate, bestDay1) || isSameDay(currentDate, bestDay2)) {
+          bgColor = 'rgba(217, 127, 139, 0.3)';
+          textColor = '#fff';
+          fontWeight = '600';
+          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; color: #D97F8B;">Best</div>';
+        } else if (isInRange(currentDate, fertileStart, fertileEnd)) {
+          bgColor = 'rgba(184, 124, 232, 0.2)';
+          textColor = 'var(--text-primary)';
+          dayLabel = '<div style="font-size: 0.5rem; margin-top: 2px; color: var(--color-secondary);">Fertile</div>';
+        } else if (isSameDay(currentDate, lastPeriod) || (currentDate > lastPeriod && currentDate < addDays(lastPeriod, 5))) {
+          bgColor = 'rgba(217, 127, 139, 0.1)';
+          textColor = 'var(--text-secondary)';
+        }
+
+        // Check if this is today
+        if (isSameDay(currentDate, today)) {
+          cellStyle += ' border: 2px solid var(--color-info);';
+        }
+
+        html += '<div style="' + cellStyle + ' background: ' + bgColor + '; color: ' + textColor + '; font-weight: ' + fontWeight + ';">';
+        html += day;
+        html += dayLabel;
+        html += '</div>';
+      }
+
+      html += '</div>';
+
+      // Legend
+      html += '<div style="display: flex; flex-wrap: wrap; gap: var(--space-md); justify-content: center; margin-top: var(--space-lg); font-size: 0.75rem;">';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: linear-gradient(135deg, #D97F8B, #b87ce8);"></span> Ovulation Day</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: rgba(217, 127, 139, 0.3);"></span> Best Days</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; background: rgba(184, 124, 232, 0.2);"></span> Fertile Window</div>';
+      html += '<div style="display: flex; align-items: center; gap: 6px;"><span style="width: 12px; height: 12px; border-radius: 3px; border: 2px solid var(--color-info);"></span> Today</div>';
+      html += '</div>';
+
+      calendarContainer.innerHTML = html;
+    }
+
+    function renderBestDaysList(bestDay1, bestDay2, bestDay3, ovulationDate) {
+      var days = [
+        { date: bestDay1, label: '2 days before ovulation', chance: 'High', color: '#D97F8B' },
+        { date: bestDay2, label: '1 day before ovulation', chance: 'Very High', color: '#D97F8B' },
+        { date: bestDay3, label: 'Ovulation day', chance: 'Peak', color: '#b87ce8' }
+      ];
+
+      var html = '<div style="display: flex; flex-direction: column; gap: 8px;">';
+      days.forEach(function(item) {
+        html += '<div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--bg-surface); border-radius: 8px; border-left: 3px solid ' + item.color + ';">';
+        html += '<div>';
+        html += '<div style="font-weight: 600; color: var(--text-primary);">' + formatDate(item.date) + '</div>';
+        html += '<div style="font-size: 0.8rem; color: var(--text-muted);">' + item.label + '</div>';
+        html += '</div>';
+        html += '<span class="trimester-badge trimester-1" style="font-size: 0.7rem;">' + item.chance + '</span>';
+        html += '</div>';
+      });
+      html += '</div>';
+
+      bestDaysList.innerHTML = html;
+    }
+
+    calcBtn.addEventListener('click', calculateOvulation);
+
+    // Allow Enter key to trigger calculation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.target === lastPeriodInput) {
+        calculateOvulation();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

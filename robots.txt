@@ -1,4 +1,4 @@
-# https://needsofmoms.com/robots.txt
+# https://needsofmoms.vercel.app/robots.txt
 User-agent: *
 Allow: /
 
@@ -6,4 +6,4 @@ Allow: /
 Disallow: /data/
 
 # Sitemap location
-Sitemap: https://needsofmoms.com/sitemap.xml
+Sitemap: https://needsofmoms.vercel.app/sitemap.xml

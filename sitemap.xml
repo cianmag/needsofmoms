@@ -2,154 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://needsofmoms.com/</loc>
+    <loc>https://needsofmoms.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Interactive Tools -->
   <url>
-    <loc>https://needsofmoms.com/tools/due-date-calculator</loc>
+    <loc>https://needsofmoms.vercel.app/tools/due-date-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/tools/ovulation-calculator</loc>
+    <loc>https://needsofmoms.vercel.app/tools/ovulation-calculator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-name-generator</loc>
+    <loc>https://needsofmoms.vercel.app/baby-name-generator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Baby Names -->
   <url>
-    <loc>https://needsofmoms.com/baby-names</loc>
+    <loc>https://needsofmoms.vercel.app/baby-names</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-names/girls</loc>
+    <loc>https://needsofmoms.vercel.app/baby-names/girls</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-names/boys</loc>
+    <loc>https://needsofmoms.vercel.app/baby-names/boys</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Week by Week -->
   <url>
-    <loc>https://needsofmoms.com/week-by-week</loc>
+    <loc>https://needsofmoms.vercel.app/week-by-week</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/week-by-week/week</loc>
+    <loc>https://needsofmoms.vercel.app/week-by-week/week</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Trimester Guides -->
   <url>
-    <loc>https://needsofmoms.com/trimester/first-trimester</loc>
+    <loc>https://needsofmoms.vercel.app/trimester/first-trimester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/trimester/second-trimester</loc>
+    <loc>https://needsofmoms.vercel.app/trimester/second-trimester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/trimester/third-trimester</loc>
+    <loc>https://needsofmoms.vercel.app/trimester/third-trimester</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Content Pages -->
   <url>
-    <loc>https://needsofmoms.com/pregnancy-symptoms</loc>
+    <loc>https://needsofmoms.vercel.app/pregnancy-symptoms</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/what-to-expect</loc>
+    <loc>https://needsofmoms.vercel.app/what-to-expect</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-shower-ideas</loc>
+    <loc>https://needsofmoms.vercel.app/baby-shower-ideas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/postpartum</loc>
+    <loc>https://needsofmoms.vercel.app/postpartum</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/breastfeeding-guide</loc>
+    <loc>https://needsofmoms.vercel.app/breastfeeding-guide</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-milestones</loc>
+    <loc>https://needsofmoms.vercel.app/baby-milestones</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- SEO Landing Pages -->
   <url>
-    <loc>https://needsofmoms.com/am-i-pregnant</loc>
+    <loc>https://needsofmoms.vercel.app/am-i-pregnant</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/morning-sickness</loc>
+    <loc>https://needsofmoms.vercel.app/morning-sickness</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/pregnancy-diet</loc>
+    <loc>https://needsofmoms.vercel.app/pregnancy-diet</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/exercises-during-pregnancy</loc>
+    <loc>https://needsofmoms.vercel.app/exercises-during-pregnancy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/hospital-bag-checklist</loc>
+    <loc>https://needsofmoms.vercel.app/hospital-bag-checklist</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/birth-plan</loc>
+    <loc>https://needsofmoms.vercel.app/birth-plan</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/signs-of-labor</loc>
+    <loc>https://needsofmoms.vercel.app/signs-of-labor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/baby-registry-checklist</loc>
+    <loc>https://needsofmoms.vercel.app/baby-registry-checklist</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/gender-reveal-ideas</loc>
+    <loc>https://needsofmoms.vercel.app/gender-reveal-ideas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://needsofmoms.com/gestational-diabetes</loc>
+    <loc>https://needsofmoms.vercel.app/gestational-diabetes</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
