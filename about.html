@@ -6,54 +6,53 @@
     <title>About Us | NeedsOfMoms</title>
     <meta name="description" content="Learn about NeedsOfMoms - your trusted resource for pregnancy information, tools, and guidance for expecting parents.">
     <meta name="keywords" content="about needsofmoms, pregnancy resources, expecting parents, baby tools">
-    <link rel="canonical" href="https://needsofmoms.vercel.app/about.html">
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="About Us | NeedsOfMoms">
     <meta property="og:description" content="Learn about NeedsOfMoms - your trusted resource for pregnancy information, tools, and guidance for expecting parents.">
+    <meta property="og:image" content="https://needsofmoms.vercel.app/images/og-image.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://needsofmoms.vercel.app/about.html">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "About NeedsOfMoms",
-        "description": "Learn about NeedsOfMoms - your trusted resource for pregnancy information, tools, and guidance for expecting parents.",
-        "url": "https://needsofmoms.vercel.app/about.html",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "NeedsOfMoms",
-            "url": "https://needsofmoms.vercel.app",
-            "description": "Free pregnancy tools and resources for expecting parents"
-        }
-    }
-    </script>
+    <meta property="og:url" content="https://needsofmoms.vercel.app/about">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://needsofmoms.vercel.app/about">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://needsofmoms.vercel.app/#website","url":"https://needsofmoms.vercel.app/","name":"NeedsOfMoms"},{"@type":"AboutPage","name":"About NeedsOfMoms","description":"Learn about NeedsOfMoms - your trusted resource for pregnancy information, tools, and guidance for expecting parents.","url":"https://needsofmoms.vercel.app/about","mainEntity":{"@type":"Organization","name":"NeedsOfMoms","url":"https://needsofmoms.vercel.app","description":"Free pregnancy tools and resources for expecting parents"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://needsofmoms.vercel.app/"},{"@type":"ListItem","position":2,"name":"About Us","item":"https://needsofmoms.vercel.app/about"}]}]}</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">NeedsOfMoms</a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/tools/due-date-calculator">Due Date Calculator</a></li>
-                <li><a href="/baby-names">Baby Names</a></li>
-                <li><a href="/week-by-week">Week by Week</a></li>
-                <li><a href="/about" class="active">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav class="nav" id="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🌸</span>
+            <span>NeedsOfMoms</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+            <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+            <li><a href="/baby-names">👶 Baby Names</a></li>
+            <li><a href="/week-by-week">📋 Week by Week</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+</nav>
 
-    <main>
-        <section class="hero">
-            <h1>About NeedsOfMoms</h1>
-            <p>Your trusted companion through the beautiful journey of pregnancy</p>
-        </section>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+    <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+    <a href="/baby-names">👶 Baby Names</a>
+    <a href="/week-by-week">📋 Week by Week</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</div>
 
-        <section class="content">
+<section class="page-header">
+    <div class="container">
+        <h1>About NeedsOfMoms</h1>
+        <p class="subtitle">Your trusted companion through the beautiful journey of pregnancy</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="content-section">
             <h2>Our Mission</h2>
             <p>
                 At NeedsOfMoms, we believe that every expecting parent deserves access to reliable, 
@@ -86,6 +85,10 @@
                 about prenatal care, nutrition, and preparing for parenthood.</li>
             </ul>
 
+            <div class="highlight-box">
+                <p><strong>💡 Did you know?</strong> Our tools are used by thousands of expecting parents every month. We're committed to keeping everything 100% free and accessible.</p>
+            </div>
+
             <h2>Our Commitment to You</h2>
             <p>
                 We are committed to providing accurate, up-to-date information that you can trust. 
@@ -100,19 +103,16 @@
                 resources and add new features that make your experience even better.
             </p>
 
-            <h2>Important Disclaimer</h2>
+            <h2>Medical Sources We Trust</h2>
             <p>
-                While we strive to provide helpful and accurate information, NeedsOfMoms is not a 
-                substitute for professional medical advice, diagnosis, or treatment. The content on 
-                this website is designed for informational and educational purposes only.
+                Our content is informed by trusted medical authorities to ensure accuracy and safety:
             </p>
-            <p>
-                Always seek the advice of your physician or other qualified health provider with any 
-                questions you may have regarding a medical condition or pregnancy. Never disregard 
-                professional medical advice or delay in seeking it because of something you have read 
-                on this website. If you think you may have a medical emergency, call your doctor or 
-                emergency services immediately.
-            </p>
+            <ul>
+                <li><a href="https://www.acog.org/womens-health" target="_blank" rel="noopener">American College of Obstetricians and Gynecologists (ACOG)</a></li>
+                <li><a href="https://www.mayoclinic.org/healthy-lifestyle/pregnancy-week-by-week" target="_blank" rel="noopener">Mayo Clinic — Pregnancy Week by Week</a></li>
+                <li><a href="https://www.nhs.uk/pregnancy/" target="_blank" rel="noopener">NHS UK — Pregnancy Guide</a></li>
+                <li><a href="https://www.cdc.gov/reproductivehealth/maternalinfanthealth/" target="_blank" rel="noopener">CDC — Maternal and Infant Health</a></li>
+            </ul>
 
             <h2>Join Our Community</h2>
             <p>
@@ -123,19 +123,61 @@
             </p>
             <p>
                 Thank you for choosing NeedsOfMoms as your pregnancy companion. We wish you a healthy, 
-                happy pregnancy and a wonderful journey into parenthood!
+                happy pregnancy and a wonderful journey into parenthood! 💕
             </p>
-        </section>
-    </main>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 NeedsOfMoms. All rights reserved.</p>
-        <p>Disclaimer: This website is for informational purposes only and is not a substitute for medical advice.</p>
-        <nav>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </footer>
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="disclaimer">
+            <strong>⚠️ Medical Disclaimer</strong>
+            NeedsOfMoms provides general pregnancy information for educational purposes only. Our content is not a substitute for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider with any questions about your pregnancy.
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+                    <span class="logo-icon">🌸</span>
+                    <span>NeedsOfMoms</span>
+                </a>
+                <p>Free pregnancy tools and resources for expecting parents.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <a href="/tools/due-date-calculator">Due Date Calculator</a>
+                <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+                <a href="/baby-names">Baby Names</a>
+                <a href="/baby-name-generator">Name Generator</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="/week-by-week">Week by Week</a>
+                <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
+                <a href="/what-to-expect">What to Expect</a>
+                <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+                <a href="/disclaimer">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+            <p>Made with 💕 for expecting parents everywhere</p>
+        </div>
+    </div>
+</footer>
+
     <script src="/js/app.js"></script>
 </body>
 </html>

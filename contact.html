@@ -6,59 +6,53 @@
     <title>Contact Us | NeedsOfMoms</title>
     <meta name="description" content="Get in touch with NeedsOfMoms. We'd love to hear from you! Share your feedback, suggestions, or questions.">
     <meta name="keywords" content="contact needsofmoms, feedback, questions, support">
-    <link rel="canonical" href="https://needsofmoms.vercel.app/contact.html">
-    <link rel="stylesheet" href="/css/style.css">
-    
-    <!-- Open Graph -->
     <meta property="og:title" content="Contact Us | NeedsOfMoms">
     <meta property="og:description" content="Get in touch with NeedsOfMoms. We'd love to hear from you!">
+    <meta property="og:image" content="https://needsofmoms.vercel.app/images/og-image.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://needsofmoms.vercel.app/contact.html">
-    
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Contact NeedsOfMoms",
-        "description": "Get in touch with NeedsOfMoms for feedback, suggestions, or questions.",
-        "url": "https://needsofmoms.vercel.app/contact.html",
-        "mainEntity": {
-            "@type": "Organization",
-            "name": "NeedsOfMoms",
-            "url": "https://needsofmoms.vercel.app",
-            "email": "hello@needsofmoms.com",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "customer service",
-                "email": "hello@needsofmoms.com"
-            }
-        }
-    }
-    </script>
+    <meta property="og:url" content="https://needsofmoms.vercel.app/contact">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://needsofmoms.vercel.app/contact">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://needsofmoms.vercel.app/#website","url":"https://needsofmoms.vercel.app/","name":"NeedsOfMoms"},{"@type":"ContactPage","name":"Contact NeedsOfMoms","description":"Get in touch with NeedsOfMoms for feedback, suggestions, or questions.","url":"https://needsofmoms.vercel.app/contact","mainEntity":{"@type":"Organization","name":"NeedsOfMoms","url":"https://needsofmoms.vercel.app","email":"hello@needsofmoms.com","contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"hello@needsofmoms.com"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://needsofmoms.vercel.app/"},{"@type":"ListItem","position":2,"name":"Contact Us","item":"https://needsofmoms.vercel.app/contact"}]}]}</script>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">NeedsOfMoms</a>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/tools/due-date-calculator">Due Date Calculator</a></li>
-                <li><a href="/baby-names">Baby Names</a></li>
-                <li><a href="/week-by-week">Week by Week</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav class="nav" id="navbar">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">🌸</span>
+            <span>NeedsOfMoms</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/tools/due-date-calculator">📅 Due Date Calculator</a></li>
+            <li><a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a></li>
+            <li><a href="/baby-names">👶 Baby Names</a></li>
+            <li><a href="/week-by-week">📋 Week by Week</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+    </div>
+</nav>
 
-    <main>
-        <section class="hero">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you!</p>
-        </section>
+<div class="mobile-menu" id="mobileMenu">
+    <a href="/tools/due-date-calculator">📅 Due Date Calculator</a>
+    <a href="/tools/ovulation-calculator">🌿 Ovulation Calculator</a>
+    <a href="/baby-names">👶 Baby Names</a>
+    <a href="/week-by-week">📋 Week by Week</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+</div>
 
-        <section class="content">
+<section class="page-header">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p class="subtitle">We'd love to hear from you! Share your feedback, suggestions, or questions.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="content-section">
             <h2>Get in Touch</h2>
             <p>
                 Have a question, suggestion, or just want to say hello? We're here to help! 
@@ -66,14 +60,10 @@
                 our resources for expecting parents.
             </p>
 
-            <h2>Email Us</h2>
-            <p>
-                The best way to reach us is by email. We do our best to respond to all messages 
-                within 24-48 hours.
-            </p>
-            <p class="contact-email">
-                <strong>Email:</strong> <a href="mailto:hello@needsofmoms.com">hello@needsofmoms.com</a>
-            </p>
+            <div class="highlight-box">
+                <p><strong>📧 Email Us:</strong> <a href="mailto:hello@needsofmoms.com">hello@needsofmoms.com</a></p>
+                <p>We do our best to respond to all messages within 24-48 hours.</p>
+            </div>
 
             <h2>What We'd Love to Hear</h2>
             <ul>
@@ -95,11 +85,31 @@
                 Stay connected with NeedsOfMoms on social media! Follow us for pregnancy tips, 
                 updates on new features, and a supportive community of expecting parents.
             </p>
-            <div class="social-links">
-                <a href="https://facebook.com/needsofmoms" target="_blank" rel="noopener noreferrer">Facebook</a>
-                <a href="https://instagram.com/needsofmoms" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://twitter.com/needsofmoms" target="_blank" rel="noopener noreferrer">Twitter</a>
-                <a href="https://pinterest.com/needsofmoms" target="_blank" rel="noopener noreferrer">Pinterest</a>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-icon">📘</span>
+                    <h4>Facebook</h4>
+                    <p>Join our community of expecting parents</p>
+                    <a href="https://facebook.com/needsofmoms" target="_blank" rel="noopener noreferrer">Follow us →</a>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">📸</span>
+                    <h4>Instagram</h4>
+                    <p>Daily pregnancy tips and inspiration</p>
+                    <a href="https://instagram.com/needsofmoms" target="_blank" rel="noopener noreferrer">Follow us →</a>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">🐦</span>
+                    <h4>Twitter</h4>
+                    <p>Latest updates and parenting news</p>
+                    <a href="https://twitter.com/needsofmoms" target="_blank" rel="noopener noreferrer">Follow us →</a>
+                </div>
+                <div class="tip-card">
+                    <span class="tip-icon">📌</span>
+                    <h4>Pinterest</h4>
+                    <p>Pregnancy boards and nursery ideas</p>
+                    <a href="https://pinterest.com/needsofmoms" target="_blank" rel="noopener noreferrer">Follow us →</a>
+                </div>
             </div>
 
             <h2>Partner With Us</h2>
@@ -118,19 +128,52 @@
             </p>
             <p>
                 Thank you for being part of the NeedsOfMoms community. We look forward to hearing 
-                from you!
+                from you! 💕
             </p>
-        </section>
-    </main>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 NeedsOfMoms. All rights reserved.</p>
-        <p>Disclaimer: This website is for informational purposes only and is not a substitute for medical advice.</p>
-        <nav>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-    </footer>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="nav-logo" style="margin-bottom: var(--space-sm);">
+                    <span class="logo-icon">🌸</span>
+                    <span>NeedsOfMoms</span>
+                </a>
+                <p>Free pregnancy tools and resources for expecting parents.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <a href="/tools/due-date-calculator">Due Date Calculator</a>
+                <a href="/tools/ovulation-calculator">Ovulation Calculator</a>
+                <a href="/baby-names">Baby Names</a>
+                <a href="/baby-name-generator">Name Generator</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="/week-by-week">Week by Week</a>
+                <a href="/pregnancy-symptoms">Pregnancy Symptoms</a>
+                <a href="/what-to-expect">What to Expect</a>
+                <a href="/breastfeeding-guide">Breastfeeding Guide</a>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <a href="/about">About Us</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+                <a href="/disclaimer">Disclaimer</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NeedsOfMoms. All rights reserved.</p>
+            <p>Made with 💕 for expecting parents everywhere</p>
+        </div>
+    </div>
+</footer>
+
     <script src="/js/app.js"></script>
 </body>
 </html>

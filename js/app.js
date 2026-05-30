@@ -697,6 +697,32 @@
   }
 
   // =========================================================================
+// DARK MODE TOGGLE
+  // =========================================================================
+
+  function initDarkMode() {
+    var toggle = document.createElement("button");
+    toggle.id = "darkModeToggle";
+    toggle.setAttribute("aria-label", "Toggle dark mode");
+    toggle.setAttribute("title", "Toggle dark mode");
+    toggle.innerHTML = "🌙";
+    document.body.appendChild(toggle);
+
+    // Check for saved preference
+    var isDark = localStorage.getItem("darkMode") === "true";
+    if (isDark) {
+      document.documentElement.classList.add("dark-mode");
+      toggle.innerHTML = "☀️";
+    }
+
+    toggle.addEventListener("click", function() {
+      document.documentElement.classList.toggle("dark-mode");
+      var isNowDark = document.documentElement.classList.contains("dark-mode");
+      localStorage.setItem("darkMode", isNowDark);
+      toggle.innerHTML = isNowDark ? "☀️" : "🌙";
+    });
+  }
+
   // BACK TO TOP BUTTON
   // =========================================================================
 
@@ -902,6 +928,7 @@
     initFAQAccordion();
     initSearch();
     initTabs();
+    initDarkMode();
     initBackToTop();
     initLazyLoading();
     initReadingTime();
