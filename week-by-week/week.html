@@ -221,7 +221,7 @@
 
     // Get week number from URL
     var params = new URLSearchParams(window.location.search);
-    var requestedWeek = parseInt(params.get('week'), 10);
+    var requestedWeek = parseInt(params.get('week') || params.get('n'), 10);
 
     if (!requestedWeek || requestedWeek < 4 || requestedWeek > 42) {
       requestedWeek = 4;

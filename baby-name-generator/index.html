@@ -136,7 +136,7 @@
 <!-- TopAppBar -->
 <header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 w-full z-50 border-b border-rose-border">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-7xl mx-auto">
-<a class="flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all" href="/week-by-week">
+<a class="flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-all" href="/">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
 <span class="font-headline-md text-title-sm font-bold tracking-tight">NeedsOfMoms</span>
 </a>
@@ -460,6 +460,7 @@
         function filterNames() {
             const gender = genderSelect.value;
             const origin = originSelect.value;
+            const style = styleSelect.value;
             let filtered = [...allNames];
 
             if (gender !== 'any') {
@@ -472,6 +473,32 @@
 
             if (origin !== 'any') {
                 filtered = filtered.filter(n => n.origin.toLowerCase() === origin.toLowerCase());
+            }
+            
+            // Style filtering based on name characteristics
+            if (style !== 'any') {
+                const natureKeywords = ['flower', 'tree', 'river', 'sun', 'moon', 'star', 'sky', 'sea', 'earth', 'wind', 'rain', 'snow', 'forest', 'garden', 'leaf', 'petal', 'bloom', 'blossom', 'rose', 'lily', 'jasmine', 'violet', 'iris', 'daisy', 'willow', 'oak', 'maple', 'cedar', 'sage', 'amber', 'ruby', 'pearl', 'crystal', 'jade', 'opal', 'ivory'];
+                switch(style) {
+                    case 'modern':
+                        // Modern names: higher popularity, shorter names
+                        filtered = filtered.filter(n => n.popularity > 50 || n.name.length <= 5);
+                        break;
+                    case 'classic':
+                        // Classic names: traditional origins, lower popularity numbers
+                        filtered = filtered.filter(n => n.popularity <= 100 && ['English', 'Hebrew', 'Greek', 'Latin', 'French', 'German'].includes(n.origin));
+                        break;
+                    case 'unique':
+                        // Unique names: less common, higher popularity numbers
+                        filtered = filtered.filter(n => n.popularity > 200);
+                        break;
+                    case 'nature':
+                        // Nature names: check meaning for nature keywords
+                        filtered = filtered.filter(n => {
+                            const meaning = n.meaning.toLowerCase();
+                            return natureKeywords.some(kw => meaning.includes(kw));
+                        });
+                        break;
+                }
             }
 
             // Shuffle and pick 9

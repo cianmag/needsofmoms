@@ -149,7 +149,7 @@
 <!-- Standardized TopAppBar -->
 <header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md sticky top-0 w-full z-50 border-b border-rose-border transition-soft">
 <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-7xl mx-auto">
-<a class="flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-colors duration-300 active:opacity-80 active:scale-95" href="/tools/due-date-calculator">
+<a class="flex items-center gap-2 text-primary dark:text-primary-fixed-dim hover:text-primary-container transition-colors duration-300 active:opacity-80 active:scale-95" href="/">
 <span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">spa</span>
 <div class="text-title-sm font-headline-md font-bold tracking-tight">NeedsOfMoms</div>
 </a>
@@ -439,8 +439,9 @@
         const method = document.querySelector('input[name="calcMethod"]:checked').value;
         
         let dueDate = new Date(inputDate);
+        const cycleLength = parseInt(document.getElementById('cycleLength').value) || 28;
         if (method === 'lmp') {
-            dueDate.setDate(dueDate.getDate() + 280);
+            dueDate.setDate(dueDate.getDate() + 280 + (cycleLength - 28));
         } else {
             dueDate.setDate(dueDate.getDate() + 266);
         }

@@ -142,7 +142,7 @@
 <!-- TopNavBar -->
 <nav class="bg-surface/80 backdrop-blur-lg border-b border-rose-border docked full-width top-0 sticky z-50 shadow-sm transition-all duration-300">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 max-w-7xl mx-auto">
-<div class="flex items-center gap-2 text-primary cursor-pointer" onclick="window.location.href='/week-by-week'">
+<div class="flex items-center gap-2 text-primary cursor-pointer" onclick="window.location.href='/'">
 <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">spa</span>
 <span class="font-headline-md text-title-sm font-bold tracking-tight">NeedsOfMoms</span>
 </div>
@@ -173,8 +173,8 @@
                 Navigate every milestone with confidence. Track your baby's remarkable development and understand the beautiful changes happening in your body.
             </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary font-button-text text-button-text px-10 py-5 rounded-full rose-shadow hover:opacity-95 transition-all active:scale-95">Jump to My Week</button>
-<button class="border-2 border-primary text-primary font-button-text text-button-text px-10 py-5 rounded-full hover:bg-primary/5 transition-all">Growth Calendar</button>
+<button class="bg-primary text-on-primary font-button-text text-button-text px-10 py-5 rounded-full rose-shadow hover:opacity-95 transition-all active:scale-95" onclick="document.getElementById('week-cards').scrollIntoView({behavior:'smooth'})">Jump to My Week</button>
+<button class="border-2 border-primary text-primary font-button-text text-button-text px-10 py-5 rounded-full hover:bg-primary/5 transition-all" onclick="document.getElementById('week-cards').scrollIntoView({behavior:'smooth'})">Growth Calendar</button>
 </div>
 </div>
 <div class="relative fade-in-up" style="animation-delay: 0.2s">
@@ -207,7 +207,7 @@
 </div>
 <main class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap-sm">
 <!-- Weekly Content Cards -->
-<section class="mb-section-gap-lg">
+<section class="mb-section-gap-lg" id="week-cards">
 <div class="flex justify-between items-end mb-12">
 <div>
 <h2 class="font-headline-md text-headline-md text-on-surface mb-2">The First Trimester</h2>
